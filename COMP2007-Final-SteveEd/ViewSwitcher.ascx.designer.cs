@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_Final_SteveEd
-{
-
-
-    public partial class ViewSwitcher
-    {
+namespace COMP2007_Final_SteveEd {
+    
+    
+    public partial class ViewSwitcher {
     }
 }
