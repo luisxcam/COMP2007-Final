@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BSL_Dev_Database
-{
-
-
-    public partial class ViewSwitcher
-    {
+namespace BSL_Dev_Database {
+    
+    
+    public partial class ViewSwitcher {
     }
 }

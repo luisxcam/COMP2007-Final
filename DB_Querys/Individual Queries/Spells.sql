@@ -9,4 +9,4 @@ CREATE TABLE [dbo].[Spells]
 	[Efficiency] INT,
 	[ManaRequired] INT,
 	[ChantingTime] INT,
-)
+);

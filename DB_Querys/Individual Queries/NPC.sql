@@ -4,4 +4,4 @@ CREATE TABLE [dbo].[NPC]
 	[Name] VARCHAR(50),
 	[Description] VARCHAR(400),
 	[Role] VARCHAR(50)
-)
+);

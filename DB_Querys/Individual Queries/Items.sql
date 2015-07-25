@@ -5,4 +5,4 @@ CREATE TABLE [dbo].[Items]
 	[Description] VARCHAR(400),
 	[MonetaryValue] INT,
 	[Weight] INT,
-)
+);

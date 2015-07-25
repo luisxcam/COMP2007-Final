@@ -12,4 +12,4 @@ CREATE TABLE [dbo].[Enemy]
 	[MagicAttack] INT,
 	[MagicDefense] INT,
 	[Speed] INT
-)
+);

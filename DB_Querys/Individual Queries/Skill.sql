@@ -7,4 +7,4 @@ CREATE TABLE [dbo].[Skill]
 	[Rate] INT,
 	[Efficiency] INT,
 	[UsesPerDay] INT
-)
+);
