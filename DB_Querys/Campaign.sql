@@ -5,5 +5,6 @@ CREATE TABLE [dbo].[Campaign]
 	[Title] VARCHAR(50),
 	[Description] VARCHAR(400),
 	[CreationDate] DATE,
-	[NextSessionDate] DATETIME
+	[NextSessionDate] DATETIME,
+	CONSTRAINT Username_Deleted_Campaign FOREIGN KEY (Username) REFERENCES [dbo].[Users](Username) ON DELETE CASCADE
 )

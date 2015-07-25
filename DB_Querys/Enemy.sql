@@ -1,6 +1,6 @@
 CREATE TABLE [dbo].[Enemy]
 (
-	[EnemyId] VARCHAR(50) NOT NULL PRIMARY KEY,
+	[EnemyId] INT NOT NULL PRIMARY KEY,
 	[Name] VARCHAR(50) NOT NULL,
 	[CharLevel] INT,
 	[Race] VARCHAR(50),

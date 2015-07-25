@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].[npc]
+CREATE TABLE [dbo].[NPC]
 (
 	[NPCId] INT NOT NULL PRIMARY KEY,
 	[Name] VARCHAR(50),

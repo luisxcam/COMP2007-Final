@@ -10,5 +10,5 @@ CREATE TABLE [dbo].[Weapon]
 	[Attribute] VARCHAR(50),
 	[Enchantment] VARCHAR(50),
 	[MonetaryValue] INT,
-	[Rarity] VARCHAR(50)
+	[Rarity] VARCHAR(50),
 )
