@@ -1,0 +1,22 @@
+﻿html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.footer {
+  background-color: #000000;
+  bottom: 0;
+  color: white;
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
