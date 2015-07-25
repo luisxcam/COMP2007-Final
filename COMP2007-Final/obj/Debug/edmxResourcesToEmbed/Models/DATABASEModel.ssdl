@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DATABASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Character">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Character_Item">
+    <Key>
+      <PropertyRef Name="CharacterID" />
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="CharacterID" Type="int" Nullable="false" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Character_Item_ToTable">
+    <End Role="Character" Type="Self.Character" Multiplicity="1" />
+    <End Role="Character_Item" Type="Self.Character_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Character">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Character_Item">
+        <PropertyRef Name="CharacterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Character_Item_ToTable_1">
+    <End Role="Item" Type="Self.Item" Multiplicity="1" />
+    <End Role="Character_Item" Type="Self.Character_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Character_Item">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DATABASEModelStoreContainer">
+    <EntitySet Name="Character" EntityType="Self.Character" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Character_Item" EntityType="Self.Character_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Character_Item_ToTable" Association="Self.FK_Character_Item_ToTable">
+      <End Role="Character" EntitySet="Character" />
+      <End Role="Character_Item" EntitySet="Character_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Character_Item_ToTable_1" Association="Self.FK_Character_Item_ToTable_1">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Character_Item" EntitySet="Character_Item" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
