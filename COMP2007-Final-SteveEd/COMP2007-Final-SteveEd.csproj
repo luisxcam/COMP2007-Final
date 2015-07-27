@@ -99,7 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Authenticated\index.aspx" />
+    <Content Include="CharacterSheet.aspx" />
+    <Content Include="Content\images\archer.jpg" />
     <Content Include="Default.Master" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -144,6 +147,13 @@
     </Compile>
     <Compile Include="Authenticated\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterSheet.aspx.cs">
+      <DependentUpon>CharacterSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CharacterSheet.aspx.designer.cs">
+      <DependentUpon>CharacterSheet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

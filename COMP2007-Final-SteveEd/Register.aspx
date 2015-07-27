@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="COMP2007_Final_SteveEd.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Register</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
@@ -12,7 +13,7 @@
             </p>
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="UserName">User name:</asp:Label>
-                <asp:TextBox runat="server" placeholder="Enter a user name with no spaces" CssClass="form-control" ID="UserName" />
+                <asp:TextBox autofocus="true" runat="server" placeholder="Enter a user name with no spaces" CssClass="form-control" ID="UserName" />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="UserFirstName">First Name:</asp:Label>

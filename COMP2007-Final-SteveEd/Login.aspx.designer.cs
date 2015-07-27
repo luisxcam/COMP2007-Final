@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_Final_SteveEd
-{
-
-
-    public partial class Login
-    {
-
+namespace COMP2007_Final_SteveEd {
+    
+    
+    public partial class Login {
+        
         /// <summary>
         /// LoginStatus control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder LoginStatus;
-
+        
         /// <summary>
         /// StatusText control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal StatusText;
-
+        
         /// <summary>
         /// LoginForm control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder LoginForm;
-
+        
         /// <summary>
         /// UserName control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox UserName;
-
+        
         /// <summary>
         /// Password control.
         /// </summary>

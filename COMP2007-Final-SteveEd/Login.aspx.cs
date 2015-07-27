@@ -20,10 +20,12 @@ namespace COMP2007_Final_SteveEd
                 {
                     StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
                     LoginStatus.Visible = true;
+                    LoginForm.Visible = false;
                 }
                 else
                 {
                     LoginForm.Visible = true;
+                    LoginStatus.Visible = false;
                 }
             }
         }
