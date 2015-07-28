@@ -2,7 +2,6 @@
     background-color: #394046;
 }
 
-
 body.loggedOut
 {
 
@@ -99,10 +98,7 @@ hr {
 }
 
 /*Side Bar********************************************************************************************/
-.row {
-    margin-left: 0px;
-    margin-right: 0px;
-}
+
 
 #wrapper {
     padding-left: 70px;
@@ -112,8 +108,8 @@ hr {
 
 #sidebar-wrapper {
     margin-left: -150px;
-    left: 70px;
-    width: 150px;
+    left: 40px;
+    width: 170px;
     background: #222;
     position: fixed;
     height: 100%;
@@ -124,7 +120,7 @@ hr {
 .sidebar-nav {
     display: block;
     float: left;
-    width: 150px;
+    width: 170px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -145,16 +141,12 @@ hr {
         left: 150px;
     }
 
-#page-content-wrapper {
-    width: 100%;
-}
-
 #sidebar_menu li a, .sidebar-nav li a {
     color: #999;
     display: block;
     float: left;
     text-decoration: none;
-    width: 150px;
+    width: 170px;
     background: #252525;
     border-top: 1px solid #373737;
     border-bottom: 1px solid #1A1A1A;
@@ -165,16 +157,10 @@ hr {
     transition: background .5s;
 }
 
-.sidebar_name {
-    padding-top: 25px;
-    color: #fff;
-    opacity: .7;
-}
-
 .sidebar-nav li {
     line-height: 40px;
-
-    text-align:center;
+    /*text-align:center;*/
+    text-indent:10px;
 }
 
     .sidebar-nav li a {
@@ -192,6 +178,7 @@ hr {
         .sidebar-nav li a:active,
         .sidebar-nav li a:focus {
             text-decoration: none;
+            background:#131e4d;
         }
 
 .sidebar-nav > .sidebar-brand {
@@ -209,29 +196,15 @@ hr {
             background: none;
         }
 
-#main_icon {
+#main_icon,.sub_icon {
     float: right;
     padding-right: 25px;
     padding-top: 20px;
 }
 
 .sub_icon {
-    float: right;
-    padding-right: 25px;
     padding-top: 10px;
 }
-
-.content-header {
-    height: 65px;
-    line-height: 65px;
-}
-
-    .content-header h1 {
-        margin: 0;
-        margin-left: 20px;
-        line-height: 65px;
-        display: inline-block;
-    }
 
 @media (max-width:767px) {
     #wrapper {
@@ -240,7 +213,7 @@ hr {
     }
 
     #sidebar-wrapper {
-        left: 70px;
+        left: 40px;
     }
 
     #wrapper.active {
@@ -249,12 +222,12 @@ hr {
 
         #wrapper.active #sidebar-wrapper {
             left: 150px;
-            width: 150px;
+            width: 170px;
             transition: all .4s ease 0s;
         }
 }
 
-/*CHaracter Sheet Form
+/*Character Creation Form
     ***********************************************************************/
 /*text box fields in form*/
 #characterDetails input,.statBox,.modifierBox{
