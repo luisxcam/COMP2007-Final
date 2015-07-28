@@ -15,11 +15,13 @@ namespace COMP2007_Final_SteveEd
             {
                 PrivateNav.Visible = false;
                 PublicNav.Visible = true;
+                body.Attributes["class"] = "loggedOut";
             }
             else
             {
                 PrivateNav.Visible = true;
                 PublicNav.Visible = false;
+                body.Attributes["class"] = "";
             }
         }
     }

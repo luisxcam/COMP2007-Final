@@ -2,6 +2,13 @@
     background-color: #394046;
 }
 
+
+body.loggedOut
+{
+
+ background: url(http://res.cloudinary.com/dffqiamzz/image/upload/v1438086539/dungeons_and_dragons_party_ztbbve.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
 /* Forms
     ************************************************************************/
 

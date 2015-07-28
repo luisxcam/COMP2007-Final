@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_Final_SteveEd
-{
-
-
-    public partial class Default
-    {
-
+namespace COMP2007_Final_SteveEd {
+    
+    
+    public partial class Default {
+        
         /// <summary>
         /// head control.
         /// </summary>
@@ -22,7 +20,16 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-
+        
+        /// <summary>
+        /// body control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl body;
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -31,7 +38,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// PublicNav control.
         /// </summary>
@@ -40,7 +47,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder PublicNav;
-
+        
         /// <summary>
         /// PrivateNav control.
         /// </summary>
@@ -49,7 +56,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder PrivateNav;
-
+        
         /// <summary>
         /// LoginName1 control.
         /// </summary>
@@ -58,7 +65,7 @@ namespace COMP2007_Final_SteveEd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LoginName LoginName1;
-
+        
         /// <summary>
         /// MainContent control.
         /// </summary>
