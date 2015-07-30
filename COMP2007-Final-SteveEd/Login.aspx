@@ -27,10 +27,13 @@
                     <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
                     <asp:TextBox CssClass="form-control" runat="server" ID="Password" TextMode="Password" />
                 </div>
+
                 <div class="button-div">
                     <asp:Button CssClass="btn btn-large btn-custom" runat="server" OnClick="SignIn" Text="Log in" />
                 </div>
+                <p>Don't have an account? Click here to <a href="/Register.aspx">Signup</a>.</p>
+            </div>
+        </div>
     </asp:PlaceHolder>
-    </div>
-    </div>
+
 </asp:Content>

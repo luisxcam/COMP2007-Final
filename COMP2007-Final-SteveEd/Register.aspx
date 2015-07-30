@@ -36,7 +36,7 @@
                 <asp:TextBox runat="server" placeholder="Please confirm your password" CssClass="form-control" ID="ConfirmPassword" TextMode="Password" />
             </div>
             <div class="button-div">
-                <asp:Button runat="server" CssClass="btn btn-medium btn-custom" OnClick="CreateUser_Click" Text="Register" /></div>
+                <asp:Button runat="server" CssClass="btn btn-custom" OnClick="CreateUser_Click" Text="Register" /></div>
         </div>
     </div>
 </asp:Content>

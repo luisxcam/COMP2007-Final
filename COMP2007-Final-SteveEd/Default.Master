@@ -20,7 +20,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body ID="body" runat="server">
+<body id="body" runat="server">
     <div class="container-fluid">
         <form id="form1" runat="server" role="form">
             <div>
@@ -36,13 +36,12 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#">Dungeon<br />
+                                <a class="navbar-brand" href="/">Dungeon<br />
                                     Manager</a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="/">Home</a></li>
                                     <li><a href="About.aspx">About Us</a></li>
                                     <li><a href="Contact.aspx">Contact Us</a></li>
 
@@ -71,20 +70,17 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#">Dungeon<br />
+                                <a class="navbar-brand" href="/">Dungeon<br />
                                     Manager</a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/Todoes/Default.aspx">ToDo List</a></li>
                                     <li><a href="About.aspx">About Us</a></li>
                                     <li><a href="Contact.aspx">Contact Us</a></li>
-
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="navbar-text">Welcome,
+                                    <li id="welcome-text" class="navbar-text">Welcome,
                                         <asp:LoginName ID="LoginName1" runat="server" />
                                     </li>
                                     <li><a href="/Logout.aspx">Logout</a></li>
@@ -97,31 +93,54 @@
 
                     <!--SIDE NAV ##########################################################-->
                     <div id="wrapper" class="active">
-
-                        <!-- Sidebar -->
-                        <!-- Sidebar -->
                         <div id="sidebar-wrapper">
                             <ul id="sidebar_menu" class="sidebar-nav">
                                 <li class="sidebar-brand"><a id="menu-toggle" href="#">Dashboard<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
                             </ul>
                             <ul id="sidebar" class="sidebar-nav">
+                                <li style="color: ghostwhite; text-indent: 30px;">Campaigns<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
+                                    data-target="#createCampaignModal"><span class="button_icon glyphicon glyphicon-plus-sign"></span></a></li>
                                 <li><a href="#">OrcCampaign<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                                 <li><a href="#">BestFriendsCampaign<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                                 <li><a href="#">small<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                             </ul>
                         </div>
-          
-                    <!-- /SIDENAV -->
+
+                        <!-- /SIDENAV -->
                 </asp:PlaceHolder>
                 <!-- PrivateNav -->
 
-                       <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                                </asp:ContentPlaceHolder>
-
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
+            <!-- Modal Window (add campaign) -->
+    <div class="modal fade" id="createCampaignModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Create a new campaign</h4>
+                </div>
+                <div class="modal-body">
+                    <h3></h3>
+                        <div class="form-group">
+                            <asp:Label runat="server" AssociatedControlID="CampaignName">User name</asp:Label>
+                            <asp:TextBox autofocus="true" CssClass="form-control" runat="server" ID="CampaignName" />
+                        </div>
+                        <div class="form-group">
+                            <asp:Label runat="server" AssociatedControlID="CampaignName">Description</asp:Label>
+                            <asp:TextBox CssClass="form-control" TextMode="multiline" Columns="50" Rows="5" runat="server" ID="Description" />
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- /Modal Window(create campaign)-->
         </form>
     </div>
-
+    
     <!-- JavaScript Section -->
     <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
