@@ -1,10 +1,10 @@
-﻿body {
+﻿/*General    ****************************************************************************************************/
+body {
     background-color: #394046;
 }
 
 body.loggedOut
 {
-
  background: url(http://res.cloudinary.com/dffqiamzz/image/upload/v1438086539/dungeons_and_dragons_party_ztbbve.jpg) no-repeat center center fixed; 
   background-size: cover;
 }
@@ -14,6 +14,7 @@ h1,h2,h3,h4{
 p{
     font-family: 'Vollkorn', serif;
 }
+/*Logged out-landing Page    ***********************************************************************************/
  .jumbotron{
     background-color: rgba(245, 245, 245, 0.4);   
 }
@@ -49,8 +50,16 @@ p{
     color:white;
     font-size:1.1em;
 }
-/* Forms
-    ************************************************************************/
+/*Footer    ***************************************************************************************************/
+
+footer .navbar{
+    margin:0;
+}
+
+.loggedin_footer h4{
+    float:right;
+}
+/* Forms    **************************************************************************************************/
 
 #login-form h3, #signup-form h3{ 
     font-size: 50px;
@@ -74,14 +83,14 @@ hr {
     background-color: white;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    border-radius:3px;
 }
 
 .button-div {
     text-align: right;
 }
 
-/*Buttons
-    ******************************************************************************/
+/*Buttons    ******************************************************************************/
 .btn-custom {
   
     background-color: hsl(360, 95%, 34%) !important;
@@ -103,8 +112,7 @@ hr {
         background-color: hsl(360, 60%, 42%) !important;
           background-image: linear-gradient(hsl(0, 70%, 51%), hsl(0, 69%, 36%));
 }
-/*NavBar
-    ************************************************************************/
+/*NavBar    ***************************************************************************************************/
 .navbar-inverse .navbar-brand {
     color: hsl(360, 95%, 34%);
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
@@ -147,7 +155,7 @@ hr {
 
 /*Side Bar********************************************************************************************/
 
-#wrapper {
+#sidenavwrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
     height: 100%;
@@ -173,11 +181,11 @@ hr {
     padding: 0;
 }
 
-#wrapper.active {
+#sidenavwrapper.active {
     padding-left: 150px;
 }
 
-    #wrapper.active #sidebar-wrapper {
+    #sidenavwrapper.active #sidebar-wrapper {
         left: 150px;
     }
 
@@ -251,7 +259,7 @@ hr {
 }
 
 @media (max-width:767px) {
-    #wrapper {
+    #sidenavwrapper {
         padding-left: 70px;
         transition: all .4s ease 0s;
     }
@@ -260,11 +268,11 @@ hr {
         left: 40px;
     }
 
-    #wrapper.active {
+    #sidenavwrapper.active {
         padding-left: 150px;
     }
 
-        #wrapper.active #sidebar-wrapper {
+        #sidenavwrapper.active #sidebar-wrapper {
             left: 150px;
             width: 170px;
             transition: all .4s ease 0s;
@@ -277,8 +285,67 @@ hr {
     width:0 !important;
 }
 
-/*Character Creation Form
-    ***********************************************************************/
+/*View Character Page ******************************************************************************/
+
+/*Courosel###########################*/
+div#myCarousel{
+    margin-left:25px;   
+}
+.carousel-inner>.item>img{
+    display:inline-block;
+}
+#carousel-inner img{
+    width:200px;
+    height:200px;
+}
+
+#carousel-characters {
+    margin:100px;
+}
+
+.character-display-stats label{
+    width:49%;
+    font-size:20px;
+    color:#182662;
+    font-weight:bold;
+    -webkit-text-stroke-width: 0.5px;
+             -webkit-text-stroke-color: black;
+}
+.character-display-stats span{
+    width:39%;
+    color:white;
+    text-align:right;
+    float:right;
+}
+.character-display-stats i{
+    color:#182662;
+    font-size:18px;
+    margin-right:14px;
+}
+ i label{
+     margin-left:4px;
+}
+ #carousel-characters img{
+        box-shadow: 8px 8px 5px #888888;
+        width:100%;
+ }
+#carousel-characters #char-name{
+    color:#d10606;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    text-shadow: 2px 2px black;
+    font-size:30px;
+    font-weight:bold;
+    padding-top:10px;
+}
+#char-name span{
+    padding-left:2%;
+    padding-right:10px;
+}
+
+
+
+/*Character Creation Form    ***********************************************************************/
+
 /*text box fields in form*/
 #characterDetails input,.statBox,.modifierBox{
     margin-top: 5px;
@@ -289,6 +356,7 @@ hr {
     width:60%;
 }
 
+/*labels for whole character sheet*/
 #characterSheet label{
     background-color:red;
     padding:2px 10px 2px 10px;
@@ -297,12 +365,14 @@ hr {
     margin:0;
 }
 
+/*label for top portion of sheet*/
 #stats label{
     text-align:center;
     width:100px;
     line-height:20px;
     margin:0;
 }
+
 .statBox,.modifierBox{
     height:45px;
     margin-bottom:19px;
@@ -323,8 +393,14 @@ hr {
 #characterDetails .form-control{
     display:inline-block;
      width:30%;
-     margin-left:5px;
+     height:29px;
+     margin:5px;
+     padding:2px 12px;
  }
+.dropdownlist{
+    width:120px;
+}
+
 #characterDetails img {
 width:100%;
 padding:20px;
@@ -336,9 +412,9 @@ padding:20px;
         padding: 0 40px 20px 0;
     }
     #characterSheet div {
-padding:0;
-}
-#characterSheet {
-padding:0 80px;
-}
+        padding:0;
     }
+    #characterSheet {
+    padding:0 80px;
+    }
+}

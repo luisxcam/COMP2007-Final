@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-4 banner-grid">
             <h3>Manage Campaigns</h3>
-            <p>It's nver been easier to be a DM. Pick from a database of inventory items, enmeies and NPCs, or add your own cutsom ones that you can share with other DMs.</p>
+            <p>It's never been easier to be a DM. Pick from a database of inventory items, enmeies and NPCs, or add your own cutsom ones that you can share with other DMs.</p>
         </div>
     </div>
 </asp:Content>

@@ -22,13 +22,13 @@ namespace COMP2007_Final_SteveEd {
         protected global::System.Web.UI.WebControls.TextBox CharacterNameTextbox;
         
         /// <summary>
-        /// LevelTextbox control.
+        /// GenderDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LevelTextbox;
+        protected global::System.Web.UI.WebControls.DropDownList GenderDropDownList;
         
         /// <summary>
         /// ClassDropDownList control.
@@ -38,24 +38,6 @@ namespace COMP2007_Final_SteveEd {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ClassDropDownList;
-        
-        /// <summary>
-        /// ExperienceTextbox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ExperienceTextbox;
-        
-        /// <summary>
-        /// GenderDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList GenderDropDownList;
         
         /// <summary>
         /// StrengthTextbox control.
