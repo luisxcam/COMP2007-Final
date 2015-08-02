@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="DB_BSL.Default" %>
+
+<!DOCTYPE html>
+
+<!-- Developer: Luis Acevedo -->
+<!-- Project: -->
+<!-- Description -->
+<!-- Version:  -->
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!--CSS-->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Content/styles.css" rel="stylesheet" />
+</head>
+<body>
+     <div class="container">
+        <form id="form1" runat="server">
+            <div id="PageWrapper">
+                <!--Header-->
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="navbar-brand">
+                        <a href="/">Midterm</a>
+                    </div>
+                    <!--.navbar-brand-->
+                </nav>
+                <!--.navbar navbar-default navbar-fixed-top-->
+
+                <!--Content-->
+                <div class="container-fluid body-content">
+                    <section id="mainContent">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                    </section>
+                    <!--#mainContent-->
+                </div><!--.container body-content-->
+
+                <!--Footer-->
+                <footer class="nav navbar-fixed-bottom navbar-default">
+                    <div class="container-fluid">
+                        <h4 class="navbar-text">© Copyright 2015</h4>
+                    </div>
+                </footer><!--.nav navbar-fixed-bottom navbar-default-->
+            </div>
+            <!--#PageWrapper-->
+        </form>
+        <!--#Form1-->
+    </div>
+    <!--.container-->
+
+    <!--Javascript-->
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/main.js"></script>
+</body>
+</html>
