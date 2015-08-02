@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="500cb10eafff494da96f9db28b37a54d" Name="Diagram1" ZoomLevel="40">
+        <EntityTypeShape EntityType="BSL_DDModel.Armour" Width="1.5" PointX="17" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.Campaign" Width="1.5" PointX="12.125" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.CharacterItem" Width="1.5" PointX="17" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.Character" Width="1.5" PointX="14.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.Enemy" Width="1.5" PointX="9.625" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.Item" Width="1.5" PointX="20.875" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.NPC" Width="1.5" PointX="9.625" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.Skill" Width="1.5" PointX="17" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.Spell" Width="1.5" PointX="18.875" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.User" Width="1.5" PointX="12.125" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSL_DDModel.Weapon" Width="1.5" PointX="14.75" PointY="12.875" IsExpanded="true" />
+        <AssociationConnector Association="BSL_DDModel.ArmourDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.UsernameDeleted_DeleteCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.CharacterDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.ItemDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.FK__Character__Usern__0F2D40CE" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.WeaponDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.CampaignEnemies" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.CampaignNPC" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.CampaignPlayers" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.CharacterSkills" ManuallyRouted="false" />
+        <AssociationConnector Association="BSL_DDModel.CharacterSpells" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
