@@ -34,6 +34,7 @@ CREATE TABLE [dbo].[CampaignEnemies]
 (
 	[CampaignId] INT NOT NULL,
 	[EnemyID] INT NOT NULL,
+	[NullField] CHAR(1) DEFAULT 'X',
 	PRIMARY KEY CLUSTERED ([CampaignId],[EnemyID]),
 );
 
@@ -42,6 +43,7 @@ CREATE TABLE [dbo].[CampaignNPC]
 (
 	[CampaignId] INT NOT NULL,
 	[NPCId] INT NOT NULL,
+	[NullField] CHAR(1) DEFAULT 'X',
 	PRIMARY KEY CLUSTERED ([CampaignId],[NPCId]),
 );
 
@@ -51,6 +53,7 @@ CREATE TABLE [dbo].[CampaignPlayers]
 (
 	[CharacterId] INT NOT NULL,
 	[CampaignId] INT NOT NULL,
+	[NullField] CHAR(1) DEFAULT 'X',
 	PRIMARY KEY CLUSTERED ([CharacterId],[CampaignId]),
 );
 
@@ -94,6 +97,7 @@ CREATE TABLE [dbo].[CharacterSkills]
 (
 	[CharacterId] INT NOT NULL,
 	[SkillId] INT NOT NULL,
+	[NullField] CHAR(1) DEFAULT 'X',
 	PRIMARY KEY CLUSTERED ([CharacterId],[SkillId]),
 );
 
@@ -102,6 +106,7 @@ CREATE TABLE [dbo].[CharacterSpells]
 (
 	[CharacterId] INT NOT NULL,
 	[SpellId] INT NOT NULL,
+	[NullField] CHAR(1) DEFAULT 'X',
 	PRIMARY KEY CLUSTERED ([CharacterId],[SpellId]),
 );
 
