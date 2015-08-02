@@ -35,7 +35,8 @@ CREATE TABLE [dbo].[CampaignEnemies]
 	[CampaignEnemyId] INT NOT NULL IDENTITY(1,1),
 	[CampaignId] INT NOT NULL,
 	[EnemyId] INT NOT NULL,
-	PRIMARY KEY CLUSTERED ([CampaignId],[EnemyID]),
+	PRIMARY KEY CLUSTERED ([CampaignEnemyId]),
+	CONSTRAINT [CampaignEnemiesUnique] UNIQUE ([CampaignId],[EnemyId]),
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
@@ -44,7 +45,8 @@ CREATE TABLE [dbo].[CampaignNPC]
 	[CampaignNPCId] INT NOT NULL IDENTITY(1,1),
 	[CampaignId] INT NOT NULL,
 	[NPCId] INT NOT NULL,
-	PRIMARY KEY CLUSTERED ([CampaignId],[NPCId]),
+	PRIMARY KEY CLUSTERED ([CampaignNPCId]),
+	CONSTRAINT [CampaignNPCUnique] UNIQUE ([CampaignId],[NPCId])
 );
 
 
@@ -54,7 +56,8 @@ CREATE TABLE [dbo].[CampaignPlayers]
 	[CampaignPlayerId] INT NOT NULL IDENTITY(1,1),
 	[CharacterId] INT NOT NULL,
 	[CampaignId] INT NOT NULL,
-	PRIMARY KEY CLUSTERED ([CharacterId],[CampaignId]),
+	PRIMARY KEY CLUSTERED ([CampaignPlayerId]),
+	CONSTRAINT [CampaignPlayersUnique] UNIQUE ([CharacterId],[CampaignId])
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
@@ -90,7 +93,8 @@ CREATE TABLE [dbo].[CharacterItems] (
 	[CharacterId] INT NOT NULL,
 	[ItemId]      INT          NOT NULL,
     [Quantity]    INT          DEFAULT 0,
-    PRIMARY KEY CLUSTERED ([CharacterId],[ItemId])
+    PRIMARY KEY CLUSTERED ([CharacterItemId]),
+	CONSTRAINT [CharacterItemsUnique] UNIQUE ([CharacterId],[ItemId])
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
@@ -99,7 +103,8 @@ CREATE TABLE [dbo].[CharacterSkills]
 	[CharacterSkillsId] INT NOT NULL IDENTITY(1,1),
 	[CharacterId] INT NOT NULL,
 	[SkillId] INT NOT NULL,
-	PRIMARY KEY CLUSTERED ([CharacterId],[SkillId]),
+	PRIMARY KEY CLUSTERED ([CharacterSkillsId]),
+	CONSTRAINT [CharacterSkillsUnique] UNIQUE ([CharacterId],[SkillId])
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
@@ -108,7 +113,8 @@ CREATE TABLE [dbo].[CharacterSpells]
 	[CharacterSpellsId] INT NOT NULL IDENTITY(1,1),
 	[CharacterId] INT NOT NULL,
 	[SpellId] INT NOT NULL,
-	PRIMARY KEY CLUSTERED ([CharacterId],[SpellId]),
+	PRIMARY KEY CLUSTERED ([CharacterSpellsId]),
+	CONSTRAINT [CharacterSpellsUnique] UNIQUE ([CharacterId],[SpellId])
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
