@@ -24,22 +24,38 @@
      <div class="container">
         <form id="form1" runat="server">
             <div id="PageWrapper">
-                <!--Header-->
+               <!--Header-->
                 <nav class="navbar navbar-default navbar-fixed-top">
                     <div class="navbar-brand">
                         <a href="/">Midterm</a>
                     </div>
                     <!--.navbar-brand-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../Users/Default.aspx">Users </a></li>
+                        <li><a href="../NPCs/Default.aspx">NPC </a></li>
+                        <li><a href="../Campaigns/Default.aspx">Campaign </a></li>
+                        <li><a href="../Enemies/Default.aspx">Enemy </a></li>
+                        <li><a href="../Characters/Default.aspx">Characters </a></li>
+                        <li><a href="../CharacterItems/Default.aspx">CharacterItem </a></li>
+                        <li><a href="../Skills/Default.aspx">Skill </a></li>
+                        <li><a href="../Spells/Default.aspx">Spell </a></li>
+                        <li><a href="../Items/Default.aspx">Item </a></li>
+                        <li><a href="../Weapons/Default.aspx">Weapon </a></li>
+                        <li><a href="../Armours/Default.aspx">Armour </a></li>
+                    </ul>
                 </nav>
                 <!--.navbar navbar-default navbar-fixed-top-->
 
                 <!--Content-->
-                <div class="container-fluid body-content">
-                    <section id="mainContent">
-                        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
-                    </section>
-                    <!--#mainContent-->
-                </div><!--.container body-content-->
+                <div id="body-content">
+                    <div class="container-fluid body-content">
+                        <section id="mainContent">
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                        </section>
+                        <!--#mainContent-->
+                    </div>
+                    <!--.container body-content-->
+                </div>
 
                 <!--Footer-->
                 <footer class="nav navbar-fixed-bottom navbar-default">
