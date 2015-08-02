@@ -7,7 +7,7 @@
     </p>
     <div>
         <asp:ListView id="ListView1" runat="server"
-            DataKeyNames="Id" 
+            DataKeyNames="ItemId" 
 			ItemType="COMP2007_Final.Models.Item"
             SelectMethod="GetData">
             <EmptyDataTemplate>
@@ -18,10 +18,19 @@
                     <thead>
                         <tr>
                             <th>
-								<asp:LinkButton Text="Id" CommandName="Sort" CommandArgument="Id" runat="Server" />
+								<asp:LinkButton Text="ItemId" CommandName="Sort" CommandArgument="ItemId" runat="Server" />
 							</th>
                             <th>
 								<asp:LinkButton Text="Name" CommandName="Sort" CommandArgument="Name" runat="Server" />
+							</th>
+                            <th>
+								<asp:LinkButton Text="Description" CommandName="Sort" CommandArgument="Description" runat="Server" />
+							</th>
+                            <th>
+								<asp:LinkButton Text="MonetaryValue" CommandName="Sort" CommandArgument="MonetaryValue" runat="Server" />
+							</th>
+                            <th>
+								<asp:LinkButton Text="Weight" CommandName="Sort" CommandArgument="Weight" runat="Server" />
 							</th>
                             <th>&nbsp;</th>
                         </tr>
@@ -41,15 +50,24 @@
             <ItemTemplate>
                 <tr>
 							<td>
-								<asp:DynamicControl runat="server" DataField="Id" ID="Id" Mode="ReadOnly" />
+								<asp:DynamicControl runat="server" DataField="ItemId" ID="ItemId" Mode="ReadOnly" />
 							</td>
 							<td>
 								<asp:DynamicControl runat="server" DataField="Name" ID="Name" Mode="ReadOnly" />
 							</td>
+							<td>
+								<asp:DynamicControl runat="server" DataField="Description" ID="Description" Mode="ReadOnly" />
+							</td>
+							<td>
+								<asp:DynamicControl runat="server" DataField="MonetaryValue" ID="MonetaryValue" Mode="ReadOnly" />
+							</td>
+							<td>
+								<asp:DynamicControl runat="server" DataField="Weight" ID="Weight" Mode="ReadOnly" />
+							</td>
                     <td>
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Items/Details", Item.Id) %>' Text="Details" /> | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Items/Edit", Item.Id) %>' Text="Edit" /> | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Items/Delete", Item.Id) %>' Text="Delete" />
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Items/Details", Item.ItemId) %>' Text="Details" /> | 
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Items/Edit", Item.ItemId) %>' Text="Edit" /> | 
+                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Items/Delete", Item.ItemId) %>' Text="Delete" />
                     </td>
                 </tr>
             </ItemTemplate>

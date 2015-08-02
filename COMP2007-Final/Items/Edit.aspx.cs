@@ -20,16 +20,16 @@ namespace COMP2007_Final.Items
 
         // This is the Update methd to update the selected Item item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(int  Id)
+        public void UpdateItem(int  ItemId)
         {
             using (_db)
             {
-                var item = _db.Items.Find(Id);
+                var item = _db.Items.Find(ItemId);
 
                 if (item == null)
                 {
                     // The item wasn't found
-                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", Id));
+                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", ItemId));
                     return;
                 }
 
@@ -46,16 +46,16 @@ namespace COMP2007_Final.Items
 
         // This is the Select method to selects a single Item item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public COMP2007_Final.Models.Item GetItem([FriendlyUrlSegmentsAttribute(0)]int? Id)
+        public COMP2007_Final.Models.Item GetItem([FriendlyUrlSegmentsAttribute(0)]int? ItemId)
         {
-            if (Id == null)
+            if (ItemId == null)
             {
                 return null;
             }
 
             using (_db)
             {
-                return _db.Items.Find(Id);
+                return _db.Items.Find(ItemId);
             }
         }
 

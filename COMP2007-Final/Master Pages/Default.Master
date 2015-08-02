@@ -36,12 +36,13 @@
                 <!--navbar-header-->
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/Characters/Default.aspx">Characters</a></li>
                         <li><a href="/Items/Default.aspx">Items</a></li>
+                        <li><a href="/CharacterItems/Default.aspx">CharacterItems</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Login</a></li>
+                        <li><a href="/Users/Default">Login</a></li>
                         <li><a href="#">Register</a></li>
                     </ul>
                 </div>

@@ -4,10 +4,39 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eeac2a02a28544f6a6a59449bad9d800" Name="Diagram1">
-        <EntityTypeShape EntityType="DATABASEModel.Character" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DATABASEModel.Item" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="DATABASEModel.Character_Item" ManuallyRouted="false" />
+      <Diagram DiagramId="6f8050b6af0c4b0790eb0c525843d3ec" Name="Diagram1">
+        <EntityTypeShape EntityType="DATABASEModel.Armour" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.Campaign" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.CampaignEnemy" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.CampaignNPC" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.CampaignPlayer" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.CharacterItem" Width="1.5" PointX="10.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.Character" Width="1.5" PointX="8" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.CharacterSkill" Width="1.5" PointX="10.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.CharacterSpell" Width="1.5" PointX="10.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.Enemy" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.Item" Width="1.5" PointX="8" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.NPC" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.Skill" Width="1.5" PointX="8" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.Spell" Width="1.5" PointX="8" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.User" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASEModel.Weapon" Width="1.5" PointX="5.75" PointY="14.875" IsExpanded="true" />
+        <AssociationConnector Association="DATABASEModel.ArmourDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.CampaignDeleted_DeleteNPCs" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.CampaignDeleted_DeletePlayers" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.CampaingDeleted_DeleteEnemies" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.UsernameIdDeleted_DeleteCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.EnemyDeleted_DeleteEnemyFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.NPCDeleted_DeleteFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.CharactedDeleted_DeleteFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.CharacterDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.ItemDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.CharacterDeleted_DeleteFromCharSkills" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.CharacterDeleted_DeleteFromCharSpell" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.FK__Character__Usern__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.WeaponDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.SkillDeteled_DeleteFromCharSkills" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASEModel.SpellDeleted_DeleteFromCharSpells" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

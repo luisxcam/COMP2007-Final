@@ -4,21 +4,21 @@
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this Item?</h3>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final.Models.Item" DataKeyNames="Id"
+            ItemType="COMP2007_Final.Models.Item" DataKeyNames="ItemId"
             DeleteMethod="DeleteItem" SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
-                Cannot find the Item with Id <%: Request.QueryString["Id"] %>
+                Cannot find the Item with ItemId <%: Request.QueryString["ItemId"] %>
             </EmptyDataTemplate>
             <ItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Delete Item</legend>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>Id</strong>
+									<strong>ItemId</strong>
 								</div>
 								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="Id" ID="Id" Mode="ReadOnly" />
+									<asp:DynamicControl runat="server" DataField="ItemId" ID="ItemId" Mode="ReadOnly" />
 								</div>
 							</div>
 							<div class="row">
@@ -27,6 +27,30 @@
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="Name" ID="Name" Mode="ReadOnly" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 text-right">
+									<strong>Description</strong>
+								</div>
+								<div class="col-sm-4">
+									<asp:DynamicControl runat="server" DataField="Description" ID="Description" Mode="ReadOnly" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 text-right">
+									<strong>MonetaryValue</strong>
+								</div>
+								<div class="col-sm-4">
+									<asp:DynamicControl runat="server" DataField="MonetaryValue" ID="MonetaryValue" Mode="ReadOnly" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 text-right">
+									<strong>Weight</strong>
+								</div>
+								<div class="col-sm-4">
+									<asp:DynamicControl runat="server" DataField="Weight" ID="Weight" Mode="ReadOnly" />
 								</div>
 							</div>
                  	<div class="row">

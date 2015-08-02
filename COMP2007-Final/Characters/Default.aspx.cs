@@ -21,7 +21,7 @@ namespace COMP2007_Final.Characters
         // USAGE: <asp:ListView SelectMethod="GetData">
         public IQueryable<COMP2007_Final.Models.Character> GetData()
         {
-            return _db.Characters;
+            return _db.Characters.Include(m => m.Armour).Include(m => m.User).Include(m => m.Weapon);
         }
     }
 }

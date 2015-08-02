@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Blaine\Documents\School\Year 2\Semester 2\Enterprise Computing\Final Assignment\COMP2007-Final\COMP2007-Final\Models\DATABASEModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Blaine\Documents\School\Year 2\Semester 2\Enterprise Computing\Final Assignment\COMP2007-Final\COMP2007-Final\Models\DatabaseModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -1,29 +1,213 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DATABASEModelStoreContainer" CdmEntityContainer="DefaultConnection">
+    <EntitySetMapping Name="Armours">
+      <EntityTypeMapping TypeName="DATABASEModel.Armour">
+        <MappingFragment StoreEntitySet="Armour">
+          <ScalarProperty Name="ArmourId" ColumnName="ArmourId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ArmourType" ColumnName="ArmourType" />
+          <ScalarProperty Name="JobSpecific" ColumnName="JobSpecific" />
+          <ScalarProperty Name="DefenseRate" ColumnName="DefenseRate" />
+          <ScalarProperty Name="MagicDefense" ColumnName="MagicDefense" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="Enchantment" ColumnName="Enchantment" />
+          <ScalarProperty Name="MonetaryValue" ColumnName="MonetaryValue" />
+          <ScalarProperty Name="Rarity" ColumnName="Rarity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Campaigns">
+      <EntityTypeMapping TypeName="DATABASEModel.Campaign">
+        <MappingFragment StoreEntitySet="Campaign">
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="NextSessionDate" ColumnName="NextSessionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaignEnemies">
+      <EntityTypeMapping TypeName="DATABASEModel.CampaignEnemy">
+        <MappingFragment StoreEntitySet="CampaignEnemies">
+          <ScalarProperty Name="CampaignEnemyId" ColumnName="CampaignEnemyId" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="EnemyId" ColumnName="EnemyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaignNPCs">
+      <EntityTypeMapping TypeName="DATABASEModel.CampaignNPC">
+        <MappingFragment StoreEntitySet="CampaignNPC">
+          <ScalarProperty Name="CampaignNPCId" ColumnName="CampaignNPCId" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="NPCId" ColumnName="NPCId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaignPlayers">
+      <EntityTypeMapping TypeName="DATABASEModel.CampaignPlayer">
+        <MappingFragment StoreEntitySet="CampaignPlayers">
+          <ScalarProperty Name="CampaignPlayerId" ColumnName="CampaignPlayerId" />
+          <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CharacterItems">
+      <EntityTypeMapping TypeName="DATABASEModel.CharacterItem">
+        <MappingFragment StoreEntitySet="CharacterItems">
+          <ScalarProperty Name="CharacterItemId" ColumnName="CharacterItemId" />
+          <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Characters">
       <EntityTypeMapping TypeName="DATABASEModel.Character">
-        <MappingFragment StoreEntitySet="Character">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+        <MappingFragment StoreEntitySet="Characters">
+          <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
+          <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
+          <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
+          <ScalarProperty Name="ArmourId" ColumnName="ArmourId" />
+          <ScalarProperty Name="CharacterName" ColumnName="CharacterName" />
+          <ScalarProperty Name="CharClass" ColumnName="CharClass" />
+          <ScalarProperty Name="CharLevel" ColumnName="CharLevel" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="Mana" ColumnName="Mana" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Dexterity" ColumnName="Dexterity" />
+          <ScalarProperty Name="Constitution" ColumnName="Constitution" />
+          <ScalarProperty Name="Intelligence" ColumnName="Intelligence" />
+          <ScalarProperty Name="Wisdom" ColumnName="Wisdom" />
+          <ScalarProperty Name="Charisma" ColumnName="Charisma" />
+          <ScalarProperty Name="SkillPoints" ColumnName="SkillPoints" />
+          <ScalarProperty Name="StatPoints" ColumnName="StatPoints" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="Gold" ColumnName="Gold" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="CarryWeight" ColumnName="CarryWeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CharacterSkills">
+      <EntityTypeMapping TypeName="DATABASEModel.CharacterSkill">
+        <MappingFragment StoreEntitySet="CharacterSkills">
+          <ScalarProperty Name="CharacterSkillsId" ColumnName="CharacterSkillsId" />
+          <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
+          <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CharacterSpells">
+      <EntityTypeMapping TypeName="DATABASEModel.CharacterSpell">
+        <MappingFragment StoreEntitySet="CharacterSpells">
+          <ScalarProperty Name="CharacterSpellsId" ColumnName="CharacterSpellsId" />
+          <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
+          <ScalarProperty Name="SpellId" ColumnName="SpellId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enemies">
+      <EntityTypeMapping TypeName="DATABASEModel.Enemy">
+        <MappingFragment StoreEntitySet="Enemy">
+          <ScalarProperty Name="EnemyId" ColumnName="EnemyId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CharLevel" ColumnName="CharLevel" />
+          <ScalarProperty Name="Race" ColumnName="Race" />
+          <ScalarProperty Name="CharClass" ColumnName="CharClass" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="Mana" ColumnName="Mana" />
+          <ScalarProperty Name="ArmourRate" ColumnName="ArmourRate" />
+          <ScalarProperty Name="WeaponDamage" ColumnName="WeaponDamage" />
+          <ScalarProperty Name="MagicAttack" ColumnName="MagicAttack" />
+          <ScalarProperty Name="MagicDefense" ColumnName="MagicDefense" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Items">
       <EntityTypeMapping TypeName="DATABASEModel.Item">
-        <MappingFragment StoreEntitySet="Item">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MonetaryValue" ColumnName="MonetaryValue" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Character_Item" TypeName="DATABASEModel.Character_Item" StoreEntitySet="Character_Item">
-      <EndProperty Name="Character">
-        <ScalarProperty Name="Id" ColumnName="CharacterID" />
-      </EndProperty>
-      <EndProperty Name="Item">
-        <ScalarProperty Name="Id" ColumnName="ItemID" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="NPCs">
+      <EntityTypeMapping TypeName="DATABASEModel.NPC">
+        <MappingFragment StoreEntitySet="NPC">
+          <ScalarProperty Name="NPCId" ColumnName="NPCId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="DATABASEModel.Skill">
+        <MappingFragment StoreEntitySet="Skill">
+          <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CharClass" ColumnName="CharClass" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Efficiency" ColumnName="Efficiency" />
+          <ScalarProperty Name="UsesPerDay" ColumnName="UsesPerDay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Spells">
+      <EntityTypeMapping TypeName="DATABASEModel.Spell">
+        <MappingFragment StoreEntitySet="Spells">
+          <ScalarProperty Name="SpellsId" ColumnName="SpellsId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CharClass" ColumnName="CharClass" />
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Efficiency" ColumnName="Efficiency" />
+          <ScalarProperty Name="ManaRequired" ColumnName="ManaRequired" />
+          <ScalarProperty Name="ChantingTime" ColumnName="ChantingTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DATABASEModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Weapons">
+      <EntityTypeMapping TypeName="DATABASEModel.Weapon">
+        <MappingFragment StoreEntitySet="Weapon">
+          <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="WeaponType" ColumnName="WeaponType" />
+          <ScalarProperty Name="JobSpecific" ColumnName="JobSpecific" />
+          <ScalarProperty Name="AttackRate" ColumnName="AttackRate" />
+          <ScalarProperty Name="MagicAttack" ColumnName="MagicAttack" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="Enchantment" ColumnName="Enchantment" />
+          <ScalarProperty Name="MonetaryValue" ColumnName="MonetaryValue" />
+          <ScalarProperty Name="Rarity" ColumnName="Rarity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -1,31 +1,533 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Armour">
+    <Key>
+      <PropertyRef Name="ArmourId" />
+    </Key>
+    <Property Name="ArmourId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArmourType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobSpecific" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DefenseRate" Type="Int32" />
+    <Property Name="MagicDefense" Type="Int32" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="Attribute" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Enchantment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MonetaryValue" Type="Int32" />
+    <Property Name="Rarity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Characters" Relationship="Self.ArmourDeleted_DeleteFromCharacter" FromRole="Armour" ToRole="Characters" />
+  </EntityType>
+  <EntityType Name="Campaign">
+    <Key>
+      <PropertyRef Name="CampaignId" />
+    </Key>
+    <Property Name="CampaignId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsernameId" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="CreationDate" Type="DateTime" Precision="0" />
+    <Property Name="NextSessionDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CampaignNPCs" Relationship="Self.CampaignDeleted_DeleteNPCs" FromRole="Campaign" ToRole="CampaignNPC" />
+    <NavigationProperty Name="CampaignPlayers" Relationship="Self.CampaignDeleted_DeletePlayers" FromRole="Campaign" ToRole="CampaignPlayers" />
+    <NavigationProperty Name="CampaignEnemies" Relationship="Self.CampaingDeleted_DeleteEnemies" FromRole="Campaign" ToRole="CampaignEnemies" />
+    <NavigationProperty Name="User" Relationship="Self.UsernameIdDeleted_DeleteCampaign" FromRole="Campaign" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="CampaignEnemy">
+    <Key>
+      <PropertyRef Name="CampaignId" />
+      <PropertyRef Name="EnemyId" />
+    </Key>
+    <Property Name="CampaignEnemyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CampaignId" Type="Int32" Nullable="false" />
+    <Property Name="EnemyId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Campaign" Relationship="Self.CampaingDeleted_DeleteEnemies" FromRole="CampaignEnemies" ToRole="Campaign" />
+    <NavigationProperty Name="Enemy" Relationship="Self.EnemyDeleted_DeleteEnemyFromCampaign" FromRole="CampaignEnemies" ToRole="Enemy" />
+  </EntityType>
+  <EntityType Name="CampaignNPC">
+    <Key>
+      <PropertyRef Name="CampaignId" />
+      <PropertyRef Name="NPCId" />
+    </Key>
+    <Property Name="CampaignNPCId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CampaignId" Type="Int32" Nullable="false" />
+    <Property Name="NPCId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Campaign" Relationship="Self.CampaignDeleted_DeleteNPCs" FromRole="CampaignNPC" ToRole="Campaign" />
+    <NavigationProperty Name="NPC" Relationship="Self.NPCDeleted_DeleteFromCampaign" FromRole="CampaignNPC" ToRole="NPC" />
+  </EntityType>
+  <EntityType Name="CampaignPlayer">
+    <Key>
+      <PropertyRef Name="CharacterId" />
+      <PropertyRef Name="CampaignId" />
+    </Key>
+    <Property Name="CampaignPlayerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterId" Type="Int32" Nullable="false" />
+    <Property Name="CampaignId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Campaign" Relationship="Self.CampaignDeleted_DeletePlayers" FromRole="CampaignPlayers" ToRole="Campaign" />
+    <NavigationProperty Name="Character" Relationship="Self.CharactedDeleted_DeleteFromCampaign" FromRole="CampaignPlayers" ToRole="Characters" />
+  </EntityType>
+  <EntityType Name="CharacterItem">
+    <Key>
+      <PropertyRef Name="CharacterId" />
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="CharacterItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterId" Type="Int32" Nullable="false" />
+    <Property Name="ItemId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <NavigationProperty Name="Character" Relationship="Self.CharacterDeleted_DeleteFromCharItems" FromRole="CharacterItems" ToRole="Characters" />
+    <NavigationProperty Name="Item" Relationship="Self.ItemDeleted_DeleteFromCharItems" FromRole="CharacterItems" ToRole="Items" />
+  </EntityType>
   <EntityType Name="Character">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="CharacterId" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsernameId" Type="Int32" Nullable="false" />
+    <Property Name="WeaponId" Type="Int32" />
+    <Property Name="ArmourId" Type="Int32" />
+    <Property Name="CharacterName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CharClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CharLevel" Type="Int32" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="HP" Type="Int32" />
+    <Property Name="Mana" Type="Int32" />
+    <Property Name="Strength" Type="Int32" />
+    <Property Name="Dexterity" Type="Int32" />
+    <Property Name="Constitution" Type="Int32" />
+    <Property Name="Intelligence" Type="Int32" />
+    <Property Name="Wisdom" Type="Int32" />
+    <Property Name="Charisma" Type="Int32" />
+    <Property Name="SkillPoints" Type="Int32" />
+    <Property Name="StatPoints" Type="Int32" />
+    <Property Name="Speed" Type="Int32" />
+    <Property Name="Gold" Type="Int32" />
+    <Property Name="Experience" Type="Int32" />
+    <Property Name="CarryWeight" Type="Int32" />
+    <NavigationProperty Name="Armour" Relationship="Self.ArmourDeleted_DeleteFromCharacter" FromRole="Characters" ToRole="Armour" />
+    <NavigationProperty Name="CampaignPlayers" Relationship="Self.CharactedDeleted_DeleteFromCampaign" FromRole="Characters" ToRole="CampaignPlayers" />
+    <NavigationProperty Name="CharacterItems" Relationship="Self.CharacterDeleted_DeleteFromCharItems" FromRole="Characters" ToRole="CharacterItems" />
+    <NavigationProperty Name="CharacterSkills" Relationship="Self.CharacterDeleted_DeleteFromCharSkills" FromRole="Characters" ToRole="CharacterSkills" />
+    <NavigationProperty Name="CharacterSpells" Relationship="Self.CharacterDeleted_DeleteFromCharSpell" FromRole="Characters" ToRole="CharacterSpells" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Character__Usern__3C69FB99" FromRole="Characters" ToRole="Users" />
+    <NavigationProperty Name="Weapon" Relationship="Self.WeaponDeleted_DeleteFromCharacter" FromRole="Characters" ToRole="Weapon" />
+  </EntityType>
+  <EntityType Name="CharacterSkill">
+    <Key>
+      <PropertyRef Name="CharacterId" />
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="CharacterSkillsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterId" Type="Int32" Nullable="false" />
+    <Property Name="SkillId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Character" Relationship="Self.CharacterDeleted_DeleteFromCharSkills" FromRole="CharacterSkills" ToRole="Characters" />
+    <NavigationProperty Name="Skill" Relationship="Self.SkillDeteled_DeleteFromCharSkills" FromRole="CharacterSkills" ToRole="Skill" />
+  </EntityType>
+  <EntityType Name="CharacterSpell">
+    <Key>
+      <PropertyRef Name="CharacterId" />
+      <PropertyRef Name="SpellId" />
+    </Key>
+    <Property Name="CharacterSpellsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterId" Type="Int32" Nullable="false" />
+    <Property Name="SpellId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Character" Relationship="Self.CharacterDeleted_DeleteFromCharSpell" FromRole="CharacterSpells" ToRole="Characters" />
+    <NavigationProperty Name="Spell" Relationship="Self.SpellDeleted_DeleteFromCharSpells" FromRole="CharacterSpells" ToRole="Spells" />
+  </EntityType>
+  <EntityType Name="Enemy">
+    <Key>
+      <PropertyRef Name="EnemyId" />
+    </Key>
+    <Property Name="EnemyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Items" Relationship="Self.Character_Item" FromRole="Character" ToRole="Item" />
+    <Property Name="CharLevel" Type="Int32" />
+    <Property Name="Race" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CharClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HP" Type="Int32" />
+    <Property Name="Mana" Type="Int32" />
+    <Property Name="ArmourRate" Type="Int32" />
+    <Property Name="WeaponDamage" Type="Int32" />
+    <Property Name="MagicAttack" Type="Int32" />
+    <Property Name="MagicDefense" Type="Int32" />
+    <Property Name="Speed" Type="Int32" />
+    <NavigationProperty Name="CampaignEnemies" Relationship="Self.EnemyDeleted_DeleteEnemyFromCampaign" FromRole="Enemy" ToRole="CampaignEnemies" />
   </EntityType>
   <EntityType Name="Item">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="ItemId" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Characters" Relationship="Self.Character_Item" FromRole="Item" ToRole="Character" />
+    <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="MonetaryValue" Type="Int32" />
+    <Property Name="Weight" Type="Int32" />
+    <NavigationProperty Name="CharacterItems" Relationship="Self.ItemDeleted_DeleteFromCharItems" FromRole="Items" ToRole="CharacterItems" />
   </EntityType>
-  <Association Name="Character_Item">
-    <End Role="Character" Type="Self.Character" Multiplicity="*" />
-    <End Role="Item" Type="Self.Item" Multiplicity="*" />
+  <EntityType Name="NPC">
+    <Key>
+      <PropertyRef Name="NPCId" />
+    </Key>
+    <Property Name="NPCId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CampaignNPCs" Relationship="Self.NPCDeleted_DeleteFromCampaign" FromRole="NPC" ToRole="CampaignNPC" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="CharClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rate" Type="Int32" />
+    <Property Name="Efficiency" Type="Int32" />
+    <Property Name="UsesPerDay" Type="Int32" />
+    <NavigationProperty Name="CharacterSkills" Relationship="Self.SkillDeteled_DeleteFromCharSkills" FromRole="Skill" ToRole="CharacterSkills" />
+  </EntityType>
+  <EntityType Name="Spell">
+    <Key>
+      <PropertyRef Name="SpellsId" />
+    </Key>
+    <Property Name="SpellsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="CharClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Attribute" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rate" Type="Int32" />
+    <Property Name="Efficiency" Type="Int32" />
+    <Property Name="ManaRequired" Type="Int32" />
+    <Property Name="ChantingTime" Type="Int32" />
+    <NavigationProperty Name="CharacterSpells" Relationship="Self.SpellDeleted_DeleteFromCharSpells" FromRole="Spells" ToRole="CharacterSpells" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UsernameId" />
+    </Key>
+    <Property Name="UsernameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Campaigns" Relationship="Self.UsernameIdDeleted_DeleteCampaign" FromRole="Users" ToRole="Campaign" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK__Character__Usern__3C69FB99" FromRole="Users" ToRole="Characters" />
+  </EntityType>
+  <EntityType Name="Weapon">
+    <Key>
+      <PropertyRef Name="WeaponId" />
+    </Key>
+    <Property Name="WeaponId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WeaponType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobSpecific" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttackRate" Type="Int32" />
+    <Property Name="MagicAttack" Type="Int32" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="Attribute" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Enchantment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MonetaryValue" Type="Int32" />
+    <Property Name="Rarity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Characters" Relationship="Self.WeaponDeleted_DeleteFromCharacter" FromRole="Weapon" ToRole="Characters" />
+  </EntityType>
+  <Association Name="ArmourDeleted_DeleteFromCharacter">
+    <End Role="Armour" Type="Self.Armour" Multiplicity="0..1" />
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Armour">
+        <PropertyRef Name="ArmourId" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="ArmourId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CampaignDeleted_DeleteNPCs">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CampaignNPC" Type="Self.CampaignNPC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="CampaignId" />
+      </Principal>
+      <Dependent Role="CampaignNPC">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CampaignDeleted_DeletePlayers">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CampaignPlayers" Type="Self.CampaignPlayer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="CampaignId" />
+      </Principal>
+      <Dependent Role="CampaignPlayers">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CampaingDeleted_DeleteEnemies">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CampaignEnemies" Type="Self.CampaignEnemy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="CampaignId" />
+      </Principal>
+      <Dependent Role="CampaignEnemies">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsernameIdDeleted_DeleteCampaign">
+    <End Role="Users" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UsernameId" />
+      </Principal>
+      <Dependent Role="Campaign">
+        <PropertyRef Name="UsernameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EnemyDeleted_DeleteEnemyFromCampaign">
+    <End Role="Enemy" Type="Self.Enemy" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CampaignEnemies" Type="Self.CampaignEnemy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Enemy">
+        <PropertyRef Name="EnemyId" />
+      </Principal>
+      <Dependent Role="CampaignEnemies">
+        <PropertyRef Name="EnemyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NPCDeleted_DeleteFromCampaign">
+    <End Role="NPC" Type="Self.NPC" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CampaignNPC" Type="Self.CampaignNPC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NPC">
+        <PropertyRef Name="NPCId" />
+      </Principal>
+      <Dependent Role="CampaignNPC">
+        <PropertyRef Name="NPCId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CharactedDeleted_DeleteFromCampaign">
+    <End Role="Characters" Type="Self.Character" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CampaignPlayers" Type="Self.CampaignPlayer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Characters">
+        <PropertyRef Name="CharacterId" />
+      </Principal>
+      <Dependent Role="CampaignPlayers">
+        <PropertyRef Name="CharacterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CharacterDeleted_DeleteFromCharItems">
+    <End Role="Characters" Type="Self.Character" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CharacterItems" Type="Self.CharacterItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Characters">
+        <PropertyRef Name="CharacterId" />
+      </Principal>
+      <Dependent Role="CharacterItems">
+        <PropertyRef Name="CharacterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ItemDeleted_DeleteFromCharItems">
+    <End Role="Items" Type="Self.Item" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CharacterItems" Type="Self.CharacterItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemId" />
+      </Principal>
+      <Dependent Role="CharacterItems">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CharacterDeleted_DeleteFromCharSkills">
+    <End Role="Characters" Type="Self.Character" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CharacterSkills" Type="Self.CharacterSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Characters">
+        <PropertyRef Name="CharacterId" />
+      </Principal>
+      <Dependent Role="CharacterSkills">
+        <PropertyRef Name="CharacterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CharacterDeleted_DeleteFromCharSpell">
+    <End Role="Characters" Type="Self.Character" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CharacterSpells" Type="Self.CharacterSpell" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Characters">
+        <PropertyRef Name="CharacterId" />
+      </Principal>
+      <Dependent Role="CharacterSpells">
+        <PropertyRef Name="CharacterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Character__Usern__3C69FB99">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UsernameId" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="UsernameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WeaponDeleted_DeleteFromCharacter">
+    <End Role="Weapon" Type="Self.Weapon" Multiplicity="0..1" />
+    <End Role="Characters" Type="Self.Character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Weapon">
+        <PropertyRef Name="WeaponId" />
+      </Principal>
+      <Dependent Role="Characters">
+        <PropertyRef Name="WeaponId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SkillDeteled_DeleteFromCharSkills">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CharacterSkills" Type="Self.CharacterSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="SkillId" />
+      </Principal>
+      <Dependent Role="CharacterSkills">
+        <PropertyRef Name="SkillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SpellDeleted_DeleteFromCharSpells">
+    <End Role="Spells" Type="Self.Spell" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CharacterSpells" Type="Self.CharacterSpell" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Spells">
+        <PropertyRef Name="SpellsId" />
+      </Principal>
+      <Dependent Role="CharacterSpells">
+        <PropertyRef Name="SpellId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
   <EntityContainer Name="DefaultConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Armours" EntityType="Self.Armour" />
+    <EntitySet Name="Campaigns" EntityType="Self.Campaign" />
+    <EntitySet Name="CampaignEnemies" EntityType="Self.CampaignEnemy" />
+    <EntitySet Name="CampaignNPCs" EntityType="Self.CampaignNPC" />
+    <EntitySet Name="CampaignPlayers" EntityType="Self.CampaignPlayer" />
+    <EntitySet Name="CharacterItems" EntityType="Self.CharacterItem" />
     <EntitySet Name="Characters" EntityType="Self.Character" />
+    <EntitySet Name="CharacterSkills" EntityType="Self.CharacterSkill" />
+    <EntitySet Name="CharacterSpells" EntityType="Self.CharacterSpell" />
+    <EntitySet Name="Enemies" EntityType="Self.Enemy" />
     <EntitySet Name="Items" EntityType="Self.Item" />
-    <AssociationSet Name="Character_Item" Association="Self.Character_Item">
-      <End Role="Character" EntitySet="Characters" />
-      <End Role="Item" EntitySet="Items" />
+    <EntitySet Name="NPCs" EntityType="Self.NPC" />
+    <EntitySet Name="Skills" EntityType="Self.Skill" />
+    <EntitySet Name="Spells" EntityType="Self.Spell" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Weapons" EntityType="Self.Weapon" />
+    <AssociationSet Name="ArmourDeleted_DeleteFromCharacter" Association="Self.ArmourDeleted_DeleteFromCharacter">
+      <End Role="Armour" EntitySet="Armours" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="CampaignDeleted_DeleteNPCs" Association="Self.CampaignDeleted_DeleteNPCs">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="CampaignNPC" EntitySet="CampaignNPCs" />
+    </AssociationSet>
+    <AssociationSet Name="CampaignDeleted_DeletePlayers" Association="Self.CampaignDeleted_DeletePlayers">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="CampaignPlayers" EntitySet="CampaignPlayers" />
+    </AssociationSet>
+    <AssociationSet Name="CampaingDeleted_DeleteEnemies" Association="Self.CampaingDeleted_DeleteEnemies">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="CampaignEnemies" EntitySet="CampaignEnemies" />
+    </AssociationSet>
+    <AssociationSet Name="UsernameIdDeleted_DeleteCampaign" Association="Self.UsernameIdDeleted_DeleteCampaign">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Campaign" EntitySet="Campaigns" />
+    </AssociationSet>
+    <AssociationSet Name="EnemyDeleted_DeleteEnemyFromCampaign" Association="Self.EnemyDeleted_DeleteEnemyFromCampaign">
+      <End Role="Enemy" EntitySet="Enemies" />
+      <End Role="CampaignEnemies" EntitySet="CampaignEnemies" />
+    </AssociationSet>
+    <AssociationSet Name="NPCDeleted_DeleteFromCampaign" Association="Self.NPCDeleted_DeleteFromCampaign">
+      <End Role="NPC" EntitySet="NPCs" />
+      <End Role="CampaignNPC" EntitySet="CampaignNPCs" />
+    </AssociationSet>
+    <AssociationSet Name="CharactedDeleted_DeleteFromCampaign" Association="Self.CharactedDeleted_DeleteFromCampaign">
+      <End Role="Characters" EntitySet="Characters" />
+      <End Role="CampaignPlayers" EntitySet="CampaignPlayers" />
+    </AssociationSet>
+    <AssociationSet Name="CharacterDeleted_DeleteFromCharItems" Association="Self.CharacterDeleted_DeleteFromCharItems">
+      <End Role="Characters" EntitySet="Characters" />
+      <End Role="CharacterItems" EntitySet="CharacterItems" />
+    </AssociationSet>
+    <AssociationSet Name="ItemDeleted_DeleteFromCharItems" Association="Self.ItemDeleted_DeleteFromCharItems">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="CharacterItems" EntitySet="CharacterItems" />
+    </AssociationSet>
+    <AssociationSet Name="CharacterDeleted_DeleteFromCharSkills" Association="Self.CharacterDeleted_DeleteFromCharSkills">
+      <End Role="Characters" EntitySet="Characters" />
+      <End Role="CharacterSkills" EntitySet="CharacterSkills" />
+    </AssociationSet>
+    <AssociationSet Name="CharacterDeleted_DeleteFromCharSpell" Association="Self.CharacterDeleted_DeleteFromCharSpell">
+      <End Role="Characters" EntitySet="Characters" />
+      <End Role="CharacterSpells" EntitySet="CharacterSpells" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Character__Usern__3C69FB99" Association="Self.FK__Character__Usern__3C69FB99">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="WeaponDeleted_DeleteFromCharacter" Association="Self.WeaponDeleted_DeleteFromCharacter">
+      <End Role="Weapon" EntitySet="Weapons" />
+      <End Role="Characters" EntitySet="Characters" />
+    </AssociationSet>
+    <AssociationSet Name="SkillDeteled_DeleteFromCharSkills" Association="Self.SkillDeteled_DeleteFromCharSkills">
+      <End Role="Skill" EntitySet="Skills" />
+      <End Role="CharacterSkills" EntitySet="CharacterSkills" />
+    </AssociationSet>
+    <AssociationSet Name="SpellDeleted_DeleteFromCharSpells" Association="Self.SpellDeleted_DeleteFromCharSpells">
+      <End Role="Spells" EntitySet="Spells" />
+      <End Role="CharacterSpells" EntitySet="CharacterSpells" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

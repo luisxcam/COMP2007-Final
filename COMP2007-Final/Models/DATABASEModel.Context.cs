@@ -25,7 +25,21 @@ namespace COMP2007_Final.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Armour> Armours { get; set; }
+        public virtual DbSet<Campaign> Campaigns { get; set; }
+        public virtual DbSet<CampaignEnemy> CampaignEnemies { get; set; }
+        public virtual DbSet<CampaignNPC> CampaignNPCs { get; set; }
+        public virtual DbSet<CampaignPlayer> CampaignPlayers { get; set; }
+        public virtual DbSet<CharacterItem> CharacterItems { get; set; }
         public virtual DbSet<Character> Characters { get; set; }
+        public virtual DbSet<CharacterSkill> CharacterSkills { get; set; }
+        public virtual DbSet<CharacterSpell> CharacterSpells { get; set; }
+        public virtual DbSet<Enemy> Enemies { get; set; }
         public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<NPC> NPCs { get; set; }
+        public virtual DbSet<Skill> Skills { get; set; }
+        public virtual DbSet<Spell> Spells { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Weapon> Weapons { get; set; }
     }
 }

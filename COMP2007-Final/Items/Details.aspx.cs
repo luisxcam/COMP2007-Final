@@ -21,16 +21,16 @@ namespace COMP2007_Final.Items
 
         // This is the Select methd to selects a single Item item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public COMP2007_Final.Models.Item GetItem([FriendlyUrlSegmentsAttribute(0)]int? Id)
+        public COMP2007_Final.Models.Item GetItem([FriendlyUrlSegmentsAttribute(0)]int? ItemId)
         {
-            if (Id == null)
+            if (ItemId == null)
             {
                 return null;
             }
 
             using (_db)
             {
-	            return _db.Items.Where(m => m.Id == Id).FirstOrDefault();
+	            return _db.Items.Where(m => m.ItemId == ItemId).FirstOrDefault();
             }
         }
 

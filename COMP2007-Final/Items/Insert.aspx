@@ -11,6 +11,9 @@
 				<legend>Insert Item</legend>
 		        <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
 						    <asp:DynamicControl Mode="Insert" DataField="Name" runat="server" />
+						    <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
+						    <asp:DynamicControl Mode="Insert" DataField="MonetaryValue" runat="server" />
+						    <asp:DynamicControl Mode="Insert" DataField="Weight" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />

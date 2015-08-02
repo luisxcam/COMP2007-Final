@@ -16,12 +16,15 @@ namespace COMP2007_Final.Models
     {
         public Item()
         {
-            this.Characters = new HashSet<Character>();
+            this.CharacterItems = new HashSet<CharacterItem>();
         }
     
-        public int Id { get; set; }
+        public int ItemId { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
+        public Nullable<int> MonetaryValue { get; set; }
+        public Nullable<int> Weight { get; set; }
     
-        public virtual ICollection<Character> Characters { get; set; }
+        public virtual ICollection<CharacterItem> CharacterItems { get; set; }
     }
 }
