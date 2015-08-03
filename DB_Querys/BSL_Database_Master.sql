@@ -26,7 +26,7 @@ CREATE TABLE [dbo].[Campaign]
 	[UsernameId] INT NOT NULL,
 	[Title] VARCHAR(50),
 	[Description] VARCHAR(400),
-	[CreationDate] DATE,
+	[CreationDate] DATETIME,
 	[NextSessionDate] DATETIME,
 	PRIMARY KEY CLUSTERED ([CampaignId] ASC)
 );
