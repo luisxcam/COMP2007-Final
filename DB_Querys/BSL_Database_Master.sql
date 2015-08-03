@@ -273,7 +273,7 @@ ADD CONSTRAINT [CharacterDeleted_DeleteFromCharSpell] FOREIGN KEY (CharacterId) 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 /*TRIGGERS - Important: On VS2013 you can only declare one TRIGGER at a time*/
-CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] AFTER DELETE
+CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] FOR DELETE
 AS
 BEGIN
 	--Grab old value for deletion
@@ -296,3 +296,5 @@ BEGIN
 	DELETE FROM [dbo].[Campaign]
 	WHERE [dbo].[Campaign].[UsernameId] = @OldId;
 END
+
+
