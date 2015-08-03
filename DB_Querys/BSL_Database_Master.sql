@@ -216,8 +216,11 @@ CREATE TABLE [dbo].[Weapon]
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 /*CONSTRAINTS*/
+--Had issues with this one, we are going to have to do it manually on the app
 ALTER TABLE [dbo].[Campaign]
-ADD CONSTRAINT [UsernameIdDeleted_DeleteCampaign] FOREIGN KEY (UsernameId) REFERENCES [dbo].[Users](UsernameId) ON DELETE CASCADE;
+--ADD CONSTRAINT [UsernameIdDeleted_DeleteCampaign] FOREIGN KEY (UsernameId) REFERENCES [dbo].[Users](UsernameId) ON DELETE CASCADE;
+ADD FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[Users] ([UsernameId]);
+--Continue
 
 ALTER TABLE [dbo].[CampaignEnemies]
 ADD CONSTRAINT [CampaingDeleted_DeleteEnemies] FOREIGN KEY (CampaignId) REFERENCES [dbo].[Campaign](CampaignId) ON DELETE CASCADE;
@@ -267,3 +270,29 @@ ADD CONSTRAINT [SpellDeleted_DeleteFromCharSpells] FOREIGN KEY (SpellId) REFEREN
 ALTER TABLE [dbo].[CharacterSpells]
 ADD CONSTRAINT [CharacterDeleted_DeleteFromCharSpell] FOREIGN KEY (CharacterId) REFERENCES [dbo].[Characters](CharacterId) ON DELETE CASCADE;
 
+-- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+-- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+/*TRIGGERS - Important: On VS2013 you can only declare one TRIGGER at a time*/
+CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] AFTER DELETE
+AS
+BEGIN
+	--Grab old value for deletion
+	DECLARE @OldId INT;
+	SELECT @OldId = UsernameId FROM deleted;
+
+	--Delete from Campaign table
+	DELETE FROM [dbo].[Characters]
+	WHERE [dbo].[Characters].[UsernameId] = @OldId;
+END
+
+CREATE TRIGGER [DeleteUserData_FromCampaign] ON [dbo].[Users] AFTER DELETE
+AS
+BEGIN
+	--Grab old value for deletion
+	DECLARE @OldId INT;
+	SELECT @OldId = UsernameId FROM deleted;
+
+	--Delete from Campaign table
+	DELETE FROM [dbo].[Campaign]
+	WHERE [dbo].[Campaign].[UsernameId] = @OldId;
+END
