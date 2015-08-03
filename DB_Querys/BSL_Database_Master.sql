@@ -1,4 +1,6 @@
 --Master Query
+--README: After creation of everything, delete the constraints located on the Characters and Campaign tables created by the TRANSACT SQL. // A way to get them is by adding data to Users, Characters, and Campaign tables. Then try deleting the user, the error sent back by the server will contain the name of the constraints.
+
 /*TABLE CREATION*/
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Armour]
@@ -297,4 +299,22 @@ BEGIN
 	WHERE [dbo].[Campaign].[UsernameId] = @OldId;
 END
 
+-- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+-- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+/*SAMPLE DATA*/
+INSERT INTO [dbo].[Armour] VALUES('ChainMail','Heavy Armour','Warrior',75,0,50,'none','none',150,'none'),('ChainMail2','Heavy Armour','Warrior',75,0,50,'none','none',150,'none');
+
+INSERT INTO [dbo].[Enemy] VALUES('Lioness',20,'Beast','Wild Beast',200,0,0,40,0,0,120),('Mercenary',25,'Human','Humanoid',150,20,50,35,10,10,80);
+
+INSERT INTO [dbo].[Items] VALUES('Potion','Healing Potion',20,10),('Dungeon Key','Opens doors in the dungeon',0,1);
+
+INSERT INTO [dbo].[NPC] VALUES('Mark','He is nice','Be nice'),('Helena','She is my girlfriend','Be my GF');
+
+INSERT INTO [dbo].[Skill] VALUES ('Slash','Pokemon kind of attack','Warrior',10,20,5),('Spinning Attack','He likes dancing','Warrior',10,20,5);
+
+INSERT INTO [dbo].[Spells] VALUES ('Fire Ball','Duh...','Black Mage','Fire',10,10,10,10),('Heal','Again, duh...','White Mage','Light',10,10,10,10);
+
+INSERT INTO [dbo].[Users] VALUES('Blaine','Blaine','Parr','stuff','parr@parr.com'),('Luis','Luis','Acevedo','things','asdas@adas.com'),('Stophon','Steve','Ciprian','monicalewisky','clint@rocks.ca');
+
+INSERT INTO [dbo].[Weapon] VALUES('The Torn','Sword','Warrior',20,0,20,'none','none',60,'none'),('Magnus Staff','Staff','Black Mage',1,50,5,'Dark','+2 Int',1200,'Very rare');
 
