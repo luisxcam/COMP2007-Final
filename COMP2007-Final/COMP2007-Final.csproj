@@ -87,6 +87,11 @@
     <Content Include="CampaignNPCs\Details.aspx" />
     <Content Include="CampaignNPCs\Edit.aspx" />
     <Content Include="CampaignNPCs\Insert.aspx" />
+    <Content Include="CampaignPlayers\Default.aspx" />
+    <Content Include="CampaignPlayers\Delete.aspx" />
+    <Content Include="CampaignPlayers\Details.aspx" />
+    <Content Include="CampaignPlayers\Edit.aspx" />
+    <Content Include="CampaignPlayers\Insert.aspx" />
     <Content Include="Campaigns\Default.aspx" />
     <Content Include="Campaigns\Delete.aspx" />
     <Content Include="Campaigns\Details.aspx" />
@@ -323,6 +328,41 @@
     <Compile Include="CampaignNPCs\Insert.aspx.designer.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CampaignPlayers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CampaignPlayers\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignPlayers\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CampaignPlayers\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignPlayers\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CampaignPlayers\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignPlayers\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CampaignPlayers\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignPlayers\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CampaignPlayers\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Campaigns\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -493,6 +533,7 @@
     </Compile>
     <Compile Include="Characters\Insert.aspx.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Characters\Insert.aspx.designer.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
