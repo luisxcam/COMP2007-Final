@@ -31,7 +31,14 @@
 						    <asp:DynamicControl Mode="Insert" DataField="CharacterName" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="CharClass" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="CharLevel" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="Gender" runat="server" />
+						    <!--<asp:DynamicControl Mode="Insert" DataField="Gender" runat="server" />-->
+                            <div class="form-group">
+                                <asp:Label ID="GenderLabel" runat="server" Text="Gender"></asp:Label>
+                                <asp:DropDownList ID="GenderDropDownList" runat="server" CssClass="form-control" SelectedValue="<%# BindItem.Gender %>">
+                                    <asp:ListItem Value="M"></asp:ListItem>
+                                    <asp:ListItem Value="F"></asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
 						    <asp:DynamicControl Mode="Insert" DataField="HP" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="Mana" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="Strength" runat="server" />

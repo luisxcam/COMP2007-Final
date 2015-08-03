@@ -15,7 +15,7 @@ namespace COMP2007_Final.Characters
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         // This is the Insert method to insert the entered Character item
