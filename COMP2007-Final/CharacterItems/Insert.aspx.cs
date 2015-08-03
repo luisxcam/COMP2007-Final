@@ -6,15 +6,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Entity;
 using COMP2007_Final.Models;
-using System.Data.Entity.Infrastructure;
 
 namespace COMP2007_Final.CharacterItems
 {
     public partial class Insert : System.Web.UI.Page
     {
-        //local variables
         protected COMP2007_Final.Models.DefaultConnection _db = new COMP2007_Final.Models.DefaultConnection();
-        bool error;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,38 +22,33 @@ namespace COMP2007_Final.CharacterItems
         // USAGE: <asp:FormView InsertMethod="InsertItem">
         public void InsertItem()
         {
-            //set error to false
-            error = false;
-
             using (_db)
             {
                 var item = new COMP2007_Final.Models.CharacterItem();
 
                 TryUpdateModel(item);
 
+                //check each CharacterItem in the database to see if the data being entered is a duplicate
+                foreach (CharacterItem cI in _db.CharacterItems)
+                {
+                    //if the data is duplicated add a model error
+                    if (item.CharacterId == cI.CharacterId && item.ItemId == cI.ItemId)
+                    {
+                        ModelState.AddModelError("", "Duplicate character-item entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
-                    //try catch to catch any exceptions when inserting to the database
-                    try
-                    {
-                        // Save changes
-                        _db.CharacterItems.Add(item);
-                        _db.SaveChanges();
-                    }
-                    catch (DbUpdateException)
-                    {
-                        error = true; //set error to true
-                        ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Duplicate Entry!\\nPlease only insert unique player-item combinations.\\nIf you wish to update quantity, please use the edit option.');", true);
-                    }
+                    // Save changes
+                    _db.CharacterItems.Add(item);
+                    _db.SaveChanges();
 
-                    //if there wasn't an error, redirect the user to the default page
-                    if (!error)
-                    {
-                        Response.Redirect("Default");
-                    } //if ends
-                }
-            }
-        }
+                    Response.Redirect("Default");
+                } //if ends
+            } //using ends
+        } //method InsertItem ends
 
         protected void ItemCommand(object sender, FormViewCommandEventArgs e)
         {

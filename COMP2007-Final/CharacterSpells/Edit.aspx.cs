@@ -35,6 +35,17 @@ namespace COMP2007_Final.CharacterSpells
 
                 TryUpdateModel(item);
 
+                //check each CharacterSpell in the database to see if the data being entered is a duplicate
+                foreach (CharacterSpell cI in _db.CharacterSpells)
+                {
+                    //if the data is duplicated and does not match the current CharacterSpellId, add a model error
+                    if (item.CharacterId == cI.CharacterId && item.SpellId == cI.SpellId && item.CharacterSpellsId != cI.CharacterSpellsId)
+                    {
+                        ModelState.AddModelError("", "Duplicate character-spell entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
                     // Save changes here

@@ -28,6 +28,17 @@ namespace COMP2007_Final.CampaignNPCs
 
                 TryUpdateModel(item);
 
+                //check each CampaignNPC in the database to see if the data being entered is a duplicate
+                foreach (CampaignNPC cNPC in _db.CampaignNPCs)
+                {
+                    //if the data is duplicated add a model error
+                    if (item.CampaignId == cNPC.CampaignId && item.NPCId == cNPC.NPCId)
+                    {
+                        ModelState.AddModelError("", "Duplicate campaign-NPC entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
                     // Save changes
