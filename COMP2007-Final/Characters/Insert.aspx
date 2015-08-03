@@ -29,16 +29,22 @@
 								DataValueField="ArmourId" 
 								UIHint="ForeignKey" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="CharacterName" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="CharClass" runat="server" />
+						    <!--<asp:DynamicControl Mode="Insert" DataField="CharClass" runat="server" />-->
+                            <asp:Label ID="CharClassLabel" runat="server" Text="CharClass"></asp:Label>
+                            <asp:DropDownList ID="CharClassDropDownList" runat="server" CssClass="dropdown" SelectedValue="<%# BindItem.CharClass %>">
+                                <asp:ListItem Value="Warrior"></asp:ListItem>
+                                <asp:ListItem Value="Archer"></asp:ListItem>
+                                <asp:ListItem Value="Monk"></asp:ListItem>
+                                <asp:ListItem Value="White Mage"></asp:ListItem>
+                                <asp:ListItem Value="Black Mage"></asp:ListItem>
+                            </asp:DropDownList>
 						    <asp:DynamicControl Mode="Insert" DataField="CharLevel" runat="server" />
 						    <!--<asp:DynamicControl Mode="Insert" DataField="Gender" runat="server" />-->
-                            <div class="form-group">
-                                <asp:Label ID="GenderLabel" runat="server" Text="Gender"></asp:Label>
-                                <asp:DropDownList ID="GenderDropDownList" runat="server" CssClass="form-control" SelectedValue="<%# BindItem.Gender %>">
-                                    <asp:ListItem Value="M"></asp:ListItem>
-                                    <asp:ListItem Value="F"></asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
+                            <asp:Label ID="Label1" runat="server" Text="Gender"></asp:Label>
+                            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdown" SelectedValue="<%# BindItem.Gender %>">
+                                <asp:ListItem Value="M"></asp:ListItem>
+                                <asp:ListItem Value="F"></asp:ListItem>
+                            </asp:DropDownList>
 						    <asp:DynamicControl Mode="Insert" DataField="HP" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="Mana" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="Strength" runat="server" />

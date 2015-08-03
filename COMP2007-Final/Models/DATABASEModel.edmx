@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DATABASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Armour">
           <Key>
             <PropertyRef Name="ArmourId" />
@@ -34,8 +34,7 @@
         </EntityType>
         <EntityType Name="CampaignEnemies">
           <Key>
-            <PropertyRef Name="CampaignId" />
-            <PropertyRef Name="EnemyId" />
+            <PropertyRef Name="CampaignEnemyId" />
           </Key>
           <Property Name="CampaignEnemyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CampaignId" Type="int" Nullable="false" />
@@ -43,8 +42,7 @@
         </EntityType>
         <EntityType Name="CampaignNPC">
           <Key>
-            <PropertyRef Name="CampaignId" />
-            <PropertyRef Name="NPCId" />
+            <PropertyRef Name="CampaignNPCId" />
           </Key>
           <Property Name="CampaignNPCId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CampaignId" Type="int" Nullable="false" />
@@ -52,8 +50,7 @@
         </EntityType>
         <EntityType Name="CampaignPlayers">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="CampaignId" />
+            <PropertyRef Name="CampaignPlayerId" />
           </Key>
           <Property Name="CampaignPlayerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CharacterId" Type="int" Nullable="false" />
@@ -61,8 +58,7 @@
         </EntityType>
         <EntityType Name="CharacterItems">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="ItemId" />
+            <PropertyRef Name="CharacterItemId" />
           </Key>
           <Property Name="CharacterItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CharacterId" Type="int" Nullable="false" />
@@ -98,8 +94,7 @@
         </EntityType>
         <EntityType Name="CharacterSkills">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="SkillId" />
+            <PropertyRef Name="CharacterSkillsId" />
           </Key>
           <Property Name="CharacterSkillsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CharacterId" Type="int" Nullable="false" />
@@ -107,8 +102,7 @@
         </EntityType>
         <EntityType Name="CharacterSpells">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="SpellId" />
+            <PropertyRef Name="CharacterSpellsId" />
           </Key>
           <Property Name="CharacterSpellsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CharacterId" Type="int" Nullable="false" />
@@ -327,7 +321,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Character__Usern__3C69FB99">
+        <Association Name="FK__Campaign__Userna__3A81B327">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UsernameId" />
+            </Principal>
+            <Dependent Role="Campaign">
+              <PropertyRef Name="UsernameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Character__Usern__4222D4EF">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Characters" Type="Self.Characters" Multiplicity="*" />
           <ReferentialConstraint>
@@ -395,20 +401,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="UsernameIdDeleted_DeleteCampaign">
-          <End Role="Users" Type="Self.Users" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UsernameId" />
-            </Principal>
-            <Dependent Role="Campaign">
-              <PropertyRef Name="UsernameId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="WeaponDeleted_DeleteFromCharacter">
           <End Role="Weapon" Type="Self.Weapon" Multiplicity="0..1" />
           <End Role="Characters" Type="Self.Characters" Multiplicity="*" />
@@ -421,7 +413,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DATABASEModelStoreContainer">
+        <EntityContainer Name="DatabaseModelStoreContainer">
           <EntitySet Name="Armour" EntityType="Self.Armour" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Campaign" EntityType="Self.Campaign" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CampaignEnemies" EntityType="Self.CampaignEnemies" Schema="dbo" store:Type="Tables" />
@@ -474,7 +466,11 @@
             <End Role="Enemy" EntitySet="Enemy" />
             <End Role="CampaignEnemies" EntitySet="CampaignEnemies" />
           </AssociationSet>
-          <AssociationSet Name="FK__Character__Usern__3C69FB99" Association="Self.FK__Character__Usern__3C69FB99">
+          <AssociationSet Name="FK__Campaign__Userna__3A81B327" Association="Self.FK__Campaign__Userna__3A81B327">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Campaign" EntitySet="Campaign" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Character__Usern__4222D4EF" Association="Self.FK__Character__Usern__4222D4EF">
             <End Role="Users" EntitySet="Users" />
             <End Role="Characters" EntitySet="Characters" />
           </AssociationSet>
@@ -494,10 +490,6 @@
             <End Role="Spells" EntitySet="Spells" />
             <End Role="CharacterSpells" EntitySet="CharacterSpells" />
           </AssociationSet>
-          <AssociationSet Name="UsernameIdDeleted_DeleteCampaign" Association="Self.UsernameIdDeleted_DeleteCampaign">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Campaign" EntitySet="Campaign" />
-          </AssociationSet>
           <AssociationSet Name="WeaponDeleted_DeleteFromCharacter" Association="Self.WeaponDeleted_DeleteFromCharacter">
             <End Role="Weapon" EntitySet="Weapon" />
             <End Role="Characters" EntitySet="Characters" />
@@ -507,7 +499,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Armour">
           <Key>
             <PropertyRef Name="ArmourId" />
@@ -538,12 +530,11 @@
           <NavigationProperty Name="CampaignNPCs" Relationship="Self.CampaignDeleted_DeleteNPCs" FromRole="Campaign" ToRole="CampaignNPC" />
           <NavigationProperty Name="CampaignPlayers" Relationship="Self.CampaignDeleted_DeletePlayers" FromRole="Campaign" ToRole="CampaignPlayers" />
           <NavigationProperty Name="CampaignEnemies" Relationship="Self.CampaingDeleted_DeleteEnemies" FromRole="Campaign" ToRole="CampaignEnemies" />
-          <NavigationProperty Name="User" Relationship="Self.UsernameIdDeleted_DeleteCampaign" FromRole="Campaign" ToRole="Users" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Campaign__Userna__3A81B327" FromRole="Campaign" ToRole="Users" />
         </EntityType>
         <EntityType Name="CampaignEnemy">
           <Key>
-            <PropertyRef Name="CampaignId" />
-            <PropertyRef Name="EnemyId" />
+            <PropertyRef Name="CampaignEnemyId" />
           </Key>
           <Property Name="CampaignEnemyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CampaignId" Type="Int32" Nullable="false" />
@@ -553,8 +544,7 @@
         </EntityType>
         <EntityType Name="CampaignNPC">
           <Key>
-            <PropertyRef Name="CampaignId" />
-            <PropertyRef Name="NPCId" />
+            <PropertyRef Name="CampaignNPCId" />
           </Key>
           <Property Name="CampaignNPCId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CampaignId" Type="Int32" Nullable="false" />
@@ -564,8 +554,7 @@
         </EntityType>
         <EntityType Name="CampaignPlayer">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="CampaignId" />
+            <PropertyRef Name="CampaignPlayerId" />
           </Key>
           <Property Name="CampaignPlayerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -575,8 +564,7 @@
         </EntityType>
         <EntityType Name="CharacterItem">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="ItemId" />
+            <PropertyRef Name="CharacterItemId" />
           </Key>
           <Property Name="CharacterItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -616,13 +604,12 @@
           <NavigationProperty Name="CharacterItems" Relationship="Self.CharacterDeleted_DeleteFromCharItems" FromRole="Characters" ToRole="CharacterItems" />
           <NavigationProperty Name="CharacterSkills" Relationship="Self.CharacterDeleted_DeleteFromCharSkills" FromRole="Characters" ToRole="CharacterSkills" />
           <NavigationProperty Name="CharacterSpells" Relationship="Self.CharacterDeleted_DeleteFromCharSpell" FromRole="Characters" ToRole="CharacterSpells" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Character__Usern__3C69FB99" FromRole="Characters" ToRole="Users" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Character__Usern__4222D4EF" FromRole="Characters" ToRole="Users" />
           <NavigationProperty Name="Weapon" Relationship="Self.WeaponDeleted_DeleteFromCharacter" FromRole="Characters" ToRole="Weapon" />
         </EntityType>
         <EntityType Name="CharacterSkill">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="SkillId" />
+            <PropertyRef Name="CharacterSkillsId" />
           </Key>
           <Property Name="CharacterSkillsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -632,8 +619,7 @@
         </EntityType>
         <EntityType Name="CharacterSpell">
           <Key>
-            <PropertyRef Name="CharacterId" />
-            <PropertyRef Name="SpellId" />
+            <PropertyRef Name="CharacterSpellsId" />
           </Key>
           <Property Name="CharacterSpellsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -718,8 +704,8 @@
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Campaigns" Relationship="Self.UsernameIdDeleted_DeleteCampaign" FromRole="Users" ToRole="Campaign" />
-          <NavigationProperty Name="Characters" Relationship="Self.FK__Character__Usern__3C69FB99" FromRole="Users" ToRole="Characters" />
+          <NavigationProperty Name="Campaigns" Relationship="Self.FK__Campaign__Userna__3A81B327" FromRole="Users" ToRole="Campaign" />
+          <NavigationProperty Name="Characters" Relationship="Self.FK__Character__Usern__4222D4EF" FromRole="Users" ToRole="Characters" />
         </EntityType>
         <EntityType Name="Weapon">
           <Key>
@@ -792,10 +778,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="UsernameIdDeleted_DeleteCampaign">
-          <End Role="Users" Type="Self.User" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="FK__Campaign__Userna__3A81B327">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
@@ -904,7 +888,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Character__Usern__3C69FB99">
+        <Association Name="FK__Character__Usern__4222D4EF">
           <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="Characters" Type="Self.Character" Multiplicity="*" />
           <ReferentialConstraint>
@@ -989,7 +973,7 @@
             <End Role="Campaign" EntitySet="Campaigns" />
             <End Role="CampaignEnemies" EntitySet="CampaignEnemies" />
           </AssociationSet>
-          <AssociationSet Name="UsernameIdDeleted_DeleteCampaign" Association="Self.UsernameIdDeleted_DeleteCampaign">
+          <AssociationSet Name="FK__Campaign__Userna__3A81B327" Association="Self.FK__Campaign__Userna__3A81B327">
             <End Role="Users" EntitySet="Users" />
             <End Role="Campaign" EntitySet="Campaigns" />
           </AssociationSet>
@@ -1021,7 +1005,7 @@
             <End Role="Characters" EntitySet="Characters" />
             <End Role="CharacterSpells" EntitySet="CharacterSpells" />
           </AssociationSet>
-          <AssociationSet Name="FK__Character__Usern__3C69FB99" Association="Self.FK__Character__Usern__3C69FB99">
+          <AssociationSet Name="FK__Character__Usern__4222D4EF" Association="Self.FK__Character__Usern__4222D4EF">
             <End Role="Users" EntitySet="Users" />
             <End Role="Characters" EntitySet="Characters" />
           </AssociationSet>
@@ -1043,9 +1027,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DATABASEModelStoreContainer" CdmEntityContainer="DefaultConnection">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DefaultConnection">
           <EntitySetMapping Name="Armours">
-            <EntityTypeMapping TypeName="DATABASEModel.Armour">
+            <EntityTypeMapping TypeName="DatabaseModel.Armour">
               <MappingFragment StoreEntitySet="Armour">
                 <ScalarProperty Name="ArmourId" ColumnName="ArmourId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1062,7 +1046,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Campaigns">
-            <EntityTypeMapping TypeName="DATABASEModel.Campaign">
+            <EntityTypeMapping TypeName="DatabaseModel.Campaign">
               <MappingFragment StoreEntitySet="Campaign">
                 <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
                 <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
@@ -1074,7 +1058,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CampaignEnemies">
-            <EntityTypeMapping TypeName="DATABASEModel.CampaignEnemy">
+            <EntityTypeMapping TypeName="DatabaseModel.CampaignEnemy">
               <MappingFragment StoreEntitySet="CampaignEnemies">
                 <ScalarProperty Name="CampaignEnemyId" ColumnName="CampaignEnemyId" />
                 <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
@@ -1083,7 +1067,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CampaignNPCs">
-            <EntityTypeMapping TypeName="DATABASEModel.CampaignNPC">
+            <EntityTypeMapping TypeName="DatabaseModel.CampaignNPC">
               <MappingFragment StoreEntitySet="CampaignNPC">
                 <ScalarProperty Name="CampaignNPCId" ColumnName="CampaignNPCId" />
                 <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
@@ -1092,7 +1076,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CampaignPlayers">
-            <EntityTypeMapping TypeName="DATABASEModel.CampaignPlayer">
+            <EntityTypeMapping TypeName="DatabaseModel.CampaignPlayer">
               <MappingFragment StoreEntitySet="CampaignPlayers">
                 <ScalarProperty Name="CampaignPlayerId" ColumnName="CampaignPlayerId" />
                 <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -1101,7 +1085,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CharacterItems">
-            <EntityTypeMapping TypeName="DATABASEModel.CharacterItem">
+            <EntityTypeMapping TypeName="DatabaseModel.CharacterItem">
               <MappingFragment StoreEntitySet="CharacterItems">
                 <ScalarProperty Name="CharacterItemId" ColumnName="CharacterItemId" />
                 <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -1111,7 +1095,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Characters">
-            <EntityTypeMapping TypeName="DATABASEModel.Character">
+            <EntityTypeMapping TypeName="DatabaseModel.Character">
               <MappingFragment StoreEntitySet="Characters">
                 <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
                 <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
@@ -1139,7 +1123,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CharacterSkills">
-            <EntityTypeMapping TypeName="DATABASEModel.CharacterSkill">
+            <EntityTypeMapping TypeName="DatabaseModel.CharacterSkill">
               <MappingFragment StoreEntitySet="CharacterSkills">
                 <ScalarProperty Name="CharacterSkillsId" ColumnName="CharacterSkillsId" />
                 <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -1148,7 +1132,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CharacterSpells">
-            <EntityTypeMapping TypeName="DATABASEModel.CharacterSpell">
+            <EntityTypeMapping TypeName="DatabaseModel.CharacterSpell">
               <MappingFragment StoreEntitySet="CharacterSpells">
                 <ScalarProperty Name="CharacterSpellsId" ColumnName="CharacterSpellsId" />
                 <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -1157,7 +1141,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Enemies">
-            <EntityTypeMapping TypeName="DATABASEModel.Enemy">
+            <EntityTypeMapping TypeName="DatabaseModel.Enemy">
               <MappingFragment StoreEntitySet="Enemy">
                 <ScalarProperty Name="EnemyId" ColumnName="EnemyId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1175,7 +1159,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Items">
-            <EntityTypeMapping TypeName="DATABASEModel.Item">
+            <EntityTypeMapping TypeName="DatabaseModel.Item">
               <MappingFragment StoreEntitySet="Items">
                 <ScalarProperty Name="ItemId" ColumnName="ItemId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1186,7 +1170,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NPCs">
-            <EntityTypeMapping TypeName="DATABASEModel.NPC">
+            <EntityTypeMapping TypeName="DatabaseModel.NPC">
               <MappingFragment StoreEntitySet="NPC">
                 <ScalarProperty Name="NPCId" ColumnName="NPCId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1196,7 +1180,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Skills">
-            <EntityTypeMapping TypeName="DATABASEModel.Skill">
+            <EntityTypeMapping TypeName="DatabaseModel.Skill">
               <MappingFragment StoreEntitySet="Skill">
                 <ScalarProperty Name="SkillId" ColumnName="SkillId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1209,7 +1193,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Spells">
-            <EntityTypeMapping TypeName="DATABASEModel.Spell">
+            <EntityTypeMapping TypeName="DatabaseModel.Spell">
               <MappingFragment StoreEntitySet="Spells">
                 <ScalarProperty Name="SpellsId" ColumnName="SpellsId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1224,7 +1208,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="DATABASEModel.User">
+            <EntityTypeMapping TypeName="DatabaseModel.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
@@ -1236,7 +1220,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Weapons">
-            <EntityTypeMapping TypeName="DATABASEModel.Weapon">
+            <EntityTypeMapping TypeName="DatabaseModel.Weapon">
               <MappingFragment StoreEntitySet="Weapon">
                 <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

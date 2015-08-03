@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DATABASEModelStoreContainer" CdmEntityContainer="DefaultConnection">
+  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DefaultConnection">
     <EntitySetMapping Name="Armours">
-      <EntityTypeMapping TypeName="DATABASEModel.Armour">
+      <EntityTypeMapping TypeName="DatabaseModel.Armour">
         <MappingFragment StoreEntitySet="Armour">
           <ScalarProperty Name="ArmourId" ColumnName="ArmourId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -19,7 +19,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Campaigns">
-      <EntityTypeMapping TypeName="DATABASEModel.Campaign">
+      <EntityTypeMapping TypeName="DatabaseModel.Campaign">
         <MappingFragment StoreEntitySet="Campaign">
           <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
           <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
@@ -31,7 +31,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CampaignEnemies">
-      <EntityTypeMapping TypeName="DATABASEModel.CampaignEnemy">
+      <EntityTypeMapping TypeName="DatabaseModel.CampaignEnemy">
         <MappingFragment StoreEntitySet="CampaignEnemies">
           <ScalarProperty Name="CampaignEnemyId" ColumnName="CampaignEnemyId" />
           <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
@@ -40,7 +40,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CampaignNPCs">
-      <EntityTypeMapping TypeName="DATABASEModel.CampaignNPC">
+      <EntityTypeMapping TypeName="DatabaseModel.CampaignNPC">
         <MappingFragment StoreEntitySet="CampaignNPC">
           <ScalarProperty Name="CampaignNPCId" ColumnName="CampaignNPCId" />
           <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
@@ -49,7 +49,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CampaignPlayers">
-      <EntityTypeMapping TypeName="DATABASEModel.CampaignPlayer">
+      <EntityTypeMapping TypeName="DatabaseModel.CampaignPlayer">
         <MappingFragment StoreEntitySet="CampaignPlayers">
           <ScalarProperty Name="CampaignPlayerId" ColumnName="CampaignPlayerId" />
           <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -58,7 +58,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CharacterItems">
-      <EntityTypeMapping TypeName="DATABASEModel.CharacterItem">
+      <EntityTypeMapping TypeName="DatabaseModel.CharacterItem">
         <MappingFragment StoreEntitySet="CharacterItems">
           <ScalarProperty Name="CharacterItemId" ColumnName="CharacterItemId" />
           <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -68,7 +68,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Characters">
-      <EntityTypeMapping TypeName="DATABASEModel.Character">
+      <EntityTypeMapping TypeName="DatabaseModel.Character">
         <MappingFragment StoreEntitySet="Characters">
           <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
           <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
@@ -96,7 +96,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CharacterSkills">
-      <EntityTypeMapping TypeName="DATABASEModel.CharacterSkill">
+      <EntityTypeMapping TypeName="DatabaseModel.CharacterSkill">
         <MappingFragment StoreEntitySet="CharacterSkills">
           <ScalarProperty Name="CharacterSkillsId" ColumnName="CharacterSkillsId" />
           <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -105,7 +105,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CharacterSpells">
-      <EntityTypeMapping TypeName="DATABASEModel.CharacterSpell">
+      <EntityTypeMapping TypeName="DatabaseModel.CharacterSpell">
         <MappingFragment StoreEntitySet="CharacterSpells">
           <ScalarProperty Name="CharacterSpellsId" ColumnName="CharacterSpellsId" />
           <ScalarProperty Name="CharacterId" ColumnName="CharacterId" />
@@ -114,7 +114,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Enemies">
-      <EntityTypeMapping TypeName="DATABASEModel.Enemy">
+      <EntityTypeMapping TypeName="DatabaseModel.Enemy">
         <MappingFragment StoreEntitySet="Enemy">
           <ScalarProperty Name="EnemyId" ColumnName="EnemyId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -132,7 +132,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Items">
-      <EntityTypeMapping TypeName="DATABASEModel.Item">
+      <EntityTypeMapping TypeName="DatabaseModel.Item">
         <MappingFragment StoreEntitySet="Items">
           <ScalarProperty Name="ItemId" ColumnName="ItemId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -143,7 +143,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NPCs">
-      <EntityTypeMapping TypeName="DATABASEModel.NPC">
+      <EntityTypeMapping TypeName="DatabaseModel.NPC">
         <MappingFragment StoreEntitySet="NPC">
           <ScalarProperty Name="NPCId" ColumnName="NPCId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -153,7 +153,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Skills">
-      <EntityTypeMapping TypeName="DATABASEModel.Skill">
+      <EntityTypeMapping TypeName="DatabaseModel.Skill">
         <MappingFragment StoreEntitySet="Skill">
           <ScalarProperty Name="SkillId" ColumnName="SkillId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -166,7 +166,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Spells">
-      <EntityTypeMapping TypeName="DATABASEModel.Spell">
+      <EntityTypeMapping TypeName="DatabaseModel.Spell">
         <MappingFragment StoreEntitySet="Spells">
           <ScalarProperty Name="SpellsId" ColumnName="SpellsId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -181,7 +181,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="DATABASEModel.User">
+      <EntityTypeMapping TypeName="DatabaseModel.User">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="UsernameId" ColumnName="UsernameId" />
           <ScalarProperty Name="Username" ColumnName="Username" />
@@ -193,7 +193,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Weapons">
-      <EntityTypeMapping TypeName="DATABASEModel.Weapon">
+      <EntityTypeMapping TypeName="DatabaseModel.Weapon">
         <MappingFragment StoreEntitySet="Weapon">
           <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
           <ScalarProperty Name="Name" ColumnName="Name" />

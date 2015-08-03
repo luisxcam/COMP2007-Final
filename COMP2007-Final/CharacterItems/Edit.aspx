@@ -3,11 +3,11 @@
     <div>
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final.Models.CharacterItem" DefaultMode="Edit" DataKeyNames="CharacterId"
+            ItemType="COMP2007_Final.Models.CharacterItem" DefaultMode="Edit" DataKeyNames="CharacterItemId"
             UpdateMethod="UpdateItem" SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
-                Cannot find the CharacterItem with CharacterId <%: Request.QueryString["CharacterId"] %>
+                Cannot find the CharacterItem with CharacterItemId <%: Request.QueryString["CharacterItemId"] %>
             </EmptyDataTemplate>
             <EditItemTemplate>
                 <fieldset class="form-horizontal">

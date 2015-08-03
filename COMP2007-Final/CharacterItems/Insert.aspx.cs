@@ -13,7 +13,7 @@ namespace COMP2007_Final.CharacterItems
     public partial class Insert : System.Web.UI.Page
     {
         //local variables
-		protected COMP2007_Final.Models.DefaultConnection _db = new COMP2007_Final.Models.DefaultConnection();
+        protected COMP2007_Final.Models.DefaultConnection _db = new COMP2007_Final.Models.DefaultConnection();
         bool error;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace COMP2007_Final.CharacterItems
                         _db.CharacterItems.Add(item);
                         _db.SaveChanges();
                     }
-                    catch (DbUpdateException) 
+                    catch (DbUpdateException)
                     {
                         error = true; //set error to true
                         ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Duplicate Entry!\\nPlease only insert unique player-item combinations.\\nIf you wish to update quantity, please use the edit option.');", true);
@@ -54,16 +54,16 @@ namespace COMP2007_Final.CharacterItems
                     {
                         Response.Redirect("Default");
                     } //if ends
-                } //if ends
-            } //using ends
-        } //method InsertItem ends
+                }
+            }
+        }
 
         protected void ItemCommand(object sender, FormViewCommandEventArgs e)
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
                 Response.Redirect("Default");
-            } //if ends
-        } //method ItemCommand ends
-    } //class Insert ends
-} //namespace COMP2007_Final.CharacterItems ends
+            }
+        }
+    }
+}

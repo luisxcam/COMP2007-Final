@@ -7,7 +7,7 @@
     </p>
     <div>
         <asp:ListView id="ListView1" runat="server"
-            DataKeyNames="CharacterId" 
+            DataKeyNames="CharacterItemId" 
 			ItemType="COMP2007_Final.Models.CharacterItem"
             SelectMethod="GetData">
             <EmptyDataTemplate>
@@ -59,12 +59,13 @@
 								<asp:DynamicControl runat="server" DataField="Quantity" ID="Quantity" Mode="ReadOnly" />
 							</td>
                     <td>
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Details", Item.CharacterId) %>' Text="Details" /> | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharactersItems/Edit", Item.CharacterId) %>' Text="Edit" /> | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharactersItems/Delete", Item.CharacterId) %>' Text="Delete" />
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Details", Item.CharacterItemId) %>' Text="Details" /> | 
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Edit", Item.CharacterItemId) %>' Text="Edit" /> | 
+                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Delete", Item.CharacterItemId) %>' Text="Delete" />
                     </td>
                 </tr>
             </ItemTemplate>
         </asp:ListView>
     </div>
 </asp:Content>
+

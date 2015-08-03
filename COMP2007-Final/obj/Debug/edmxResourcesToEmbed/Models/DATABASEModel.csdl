@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Armour">
     <Key>
       <PropertyRef Name="ArmourId" />
@@ -30,12 +30,11 @@
     <NavigationProperty Name="CampaignNPCs" Relationship="Self.CampaignDeleted_DeleteNPCs" FromRole="Campaign" ToRole="CampaignNPC" />
     <NavigationProperty Name="CampaignPlayers" Relationship="Self.CampaignDeleted_DeletePlayers" FromRole="Campaign" ToRole="CampaignPlayers" />
     <NavigationProperty Name="CampaignEnemies" Relationship="Self.CampaingDeleted_DeleteEnemies" FromRole="Campaign" ToRole="CampaignEnemies" />
-    <NavigationProperty Name="User" Relationship="Self.UsernameIdDeleted_DeleteCampaign" FromRole="Campaign" ToRole="Users" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Campaign__Userna__3A81B327" FromRole="Campaign" ToRole="Users" />
   </EntityType>
   <EntityType Name="CampaignEnemy">
     <Key>
-      <PropertyRef Name="CampaignId" />
-      <PropertyRef Name="EnemyId" />
+      <PropertyRef Name="CampaignEnemyId" />
     </Key>
     <Property Name="CampaignEnemyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CampaignId" Type="Int32" Nullable="false" />
@@ -45,8 +44,7 @@
   </EntityType>
   <EntityType Name="CampaignNPC">
     <Key>
-      <PropertyRef Name="CampaignId" />
-      <PropertyRef Name="NPCId" />
+      <PropertyRef Name="CampaignNPCId" />
     </Key>
     <Property Name="CampaignNPCId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CampaignId" Type="Int32" Nullable="false" />
@@ -56,8 +54,7 @@
   </EntityType>
   <EntityType Name="CampaignPlayer">
     <Key>
-      <PropertyRef Name="CharacterId" />
-      <PropertyRef Name="CampaignId" />
+      <PropertyRef Name="CampaignPlayerId" />
     </Key>
     <Property Name="CampaignPlayerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -67,8 +64,7 @@
   </EntityType>
   <EntityType Name="CharacterItem">
     <Key>
-      <PropertyRef Name="CharacterId" />
-      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="CharacterItemId" />
     </Key>
     <Property Name="CharacterItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -108,13 +104,12 @@
     <NavigationProperty Name="CharacterItems" Relationship="Self.CharacterDeleted_DeleteFromCharItems" FromRole="Characters" ToRole="CharacterItems" />
     <NavigationProperty Name="CharacterSkills" Relationship="Self.CharacterDeleted_DeleteFromCharSkills" FromRole="Characters" ToRole="CharacterSkills" />
     <NavigationProperty Name="CharacterSpells" Relationship="Self.CharacterDeleted_DeleteFromCharSpell" FromRole="Characters" ToRole="CharacterSpells" />
-    <NavigationProperty Name="User" Relationship="Self.FK__Character__Usern__3C69FB99" FromRole="Characters" ToRole="Users" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Character__Usern__4222D4EF" FromRole="Characters" ToRole="Users" />
     <NavigationProperty Name="Weapon" Relationship="Self.WeaponDeleted_DeleteFromCharacter" FromRole="Characters" ToRole="Weapon" />
   </EntityType>
   <EntityType Name="CharacterSkill">
     <Key>
-      <PropertyRef Name="CharacterId" />
-      <PropertyRef Name="SkillId" />
+      <PropertyRef Name="CharacterSkillsId" />
     </Key>
     <Property Name="CharacterSkillsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -124,8 +119,7 @@
   </EntityType>
   <EntityType Name="CharacterSpell">
     <Key>
-      <PropertyRef Name="CharacterId" />
-      <PropertyRef Name="SpellId" />
+      <PropertyRef Name="CharacterSpellsId" />
     </Key>
     <Property Name="CharacterSpellsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CharacterId" Type="Int32" Nullable="false" />
@@ -210,8 +204,8 @@
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Campaigns" Relationship="Self.UsernameIdDeleted_DeleteCampaign" FromRole="Users" ToRole="Campaign" />
-    <NavigationProperty Name="Characters" Relationship="Self.FK__Character__Usern__3C69FB99" FromRole="Users" ToRole="Characters" />
+    <NavigationProperty Name="Campaigns" Relationship="Self.FK__Campaign__Userna__3A81B327" FromRole="Users" ToRole="Campaign" />
+    <NavigationProperty Name="Characters" Relationship="Self.FK__Character__Usern__4222D4EF" FromRole="Users" ToRole="Characters" />
   </EntityType>
   <EntityType Name="Weapon">
     <Key>
@@ -284,10 +278,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="UsernameIdDeleted_DeleteCampaign">
-    <End Role="Users" Type="Self.User" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <Association Name="FK__Campaign__Userna__3A81B327">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
     <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Users">
@@ -396,7 +388,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Character__Usern__3C69FB99">
+  <Association Name="FK__Character__Usern__4222D4EF">
     <End Role="Users" Type="Self.User" Multiplicity="1" />
     <End Role="Characters" Type="Self.Character" Multiplicity="*" />
     <ReferentialConstraint>
@@ -481,7 +473,7 @@
       <End Role="Campaign" EntitySet="Campaigns" />
       <End Role="CampaignEnemies" EntitySet="CampaignEnemies" />
     </AssociationSet>
-    <AssociationSet Name="UsernameIdDeleted_DeleteCampaign" Association="Self.UsernameIdDeleted_DeleteCampaign">
+    <AssociationSet Name="FK__Campaign__Userna__3A81B327" Association="Self.FK__Campaign__Userna__3A81B327">
       <End Role="Users" EntitySet="Users" />
       <End Role="Campaign" EntitySet="Campaigns" />
     </AssociationSet>
@@ -513,7 +505,7 @@
       <End Role="Characters" EntitySet="Characters" />
       <End Role="CharacterSpells" EntitySet="CharacterSpells" />
     </AssociationSet>
-    <AssociationSet Name="FK__Character__Usern__3C69FB99" Association="Self.FK__Character__Usern__3C69FB99">
+    <AssociationSet Name="FK__Character__Usern__4222D4EF" Association="Self.FK__Character__Usern__4222D4EF">
       <End Role="Users" EntitySet="Users" />
       <End Role="Characters" EntitySet="Characters" />
     </AssociationSet>

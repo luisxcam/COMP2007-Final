@@ -20,16 +20,16 @@ namespace COMP2007_Final.CharacterItems
 
         // This is the Update methd to update the selected CharacterItem item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(int  CharacterId)
+        public void UpdateItem(int  CharacterItemId)
         {
             using (_db)
             {
-                var item = _db.CharacterItems.Find(CharacterId);
+                var item = _db.CharacterItems.Find(CharacterItemId);
 
                 if (item == null)
                 {
                     // The item wasn't found
-                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", CharacterId));
+                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", CharacterItemId));
                     return;
                 }
 
@@ -46,16 +46,16 @@ namespace COMP2007_Final.CharacterItems
 
         // This is the Select method to selects a single CharacterItem item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public COMP2007_Final.Models.CharacterItem GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterId)
+        public COMP2007_Final.Models.CharacterItem GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterItemId)
         {
-            if (CharacterId == null)
+            if (CharacterItemId == null)
             {
                 return null;
             }
 
             using (_db)
             {
-                return _db.CharacterItems.Find(CharacterId);
+                return _db.CharacterItems.Find(CharacterItemId);
             }
         }
 

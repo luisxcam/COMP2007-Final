@@ -4,11 +4,11 @@
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this CharacterItem?</h3>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final.Models.CharacterItem" DataKeyNames="CharacterId"
+            ItemType="COMP2007_Final.Models.CharacterItem" DataKeyNames="CharacterItemId"
             DeleteMethod="DeleteItem" SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
-                Cannot find the CharacterItem with CharacterId <%: Request.QueryString["CharacterId"] %>
+                Cannot find the CharacterItem with CharacterItemId <%: Request.QueryString["CharacterItemId"] %>
             </EmptyDataTemplate>
             <ItemTemplate>
                 <fieldset class="form-horizontal">

@@ -21,16 +21,16 @@ namespace COMP2007_Final.CharacterItems
 
         // This is the Select methd to selects a single CharacterItem item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public COMP2007_Final.Models.CharacterItem GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterId)
+        public COMP2007_Final.Models.CharacterItem GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterItemId)
         {
-            if (CharacterId == null)
+            if (CharacterItemId == null)
             {
                 return null;
             }
 
             using (_db)
             {
-	            return _db.CharacterItems.Where(m => m.CharacterId == CharacterId).Include(m => m.Character).Include(m => m.Item).FirstOrDefault();
+	            return _db.CharacterItems.Where(m => m.CharacterItemId == CharacterItemId).Include(m => m.Character).Include(m => m.Item).FirstOrDefault();
             }
         }
 
