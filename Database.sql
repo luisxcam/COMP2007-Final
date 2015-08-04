@@ -75,7 +75,7 @@ CREATE TABLE [dbo].[Characters] (
     [Experience]    INT           DEFAULT 0,
     [CarryWeight]   INT           NULL,
     PRIMARY KEY CLUSTERED ([CharacterId] ASC),
-	ADD CONSTRAINT [ASPID_to_Character] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
+	CONSTRAINT [ASPID_to_Character] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
 );
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Campaign]
@@ -87,7 +87,7 @@ CREATE TABLE [dbo].[Campaign]
 	[CreationDate] DATETIME,
 	[NextSessionDate] DATETIME,
 	PRIMARY KEY CLUSTERED ([CampaignId] ASC),
-	ADD CONSTRAINT [ASPID_to_Campaign] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
+	CONSTRAINT [ASPID_to_Campaign] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
 );
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 
