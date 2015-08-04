@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP2007_Final_SteveEd.Default1" %>
-<!--TEST-->
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Dungeon Manager</title>
 </asp:Content>
