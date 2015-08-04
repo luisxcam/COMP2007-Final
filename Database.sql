@@ -3,6 +3,8 @@
 
 /*TABLE CREATION*/
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+
+-- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Armour]
 (
 	[ArmourId] INT NOT NULL IDENTITY (1, 1),
@@ -187,42 +189,13 @@ CREATE TABLE [dbo].[Spells]
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
-CREATE TABLE [dbo].[AspNetUsers] (
-    [Id]                   NVARCHAR (128) NULL,
-    [UserName]             VARCHAR (50)   NOT NULL UNIQUE,
-    [Email]                VARCHAR (50)   NOT NULL UNIQUE,
-    [Password]             VARCHAR (50)   NULL,
-    [EmailConfirmed]       BIT            NULL,
-    [PasswordHash]         NVARCHAR (MAX) NULL,
-    [SecurityStamp]        NVARCHAR (MAX) NULL,
-    [PhoneNumber]          NVARCHAR (MAX) NULL,
-    [PhoneNumberConfirmed] BIT            NULL,
-    [TwoFactorEnabled]     BIT            NULL,
-    [LockoutEndDateUtc]    DATETIME       NULL,
-    [LockoutEnabled]       BIT            NULL,
-    [AccessFailedCount]    INT            NULL,
-    [UsernameId] INT NOT NULL IDENTITY (1, 1),
+CREATE TABLE [dbo].[Users]
+(
+	[UsernameId] INT NOT NULL IDENTITY (1, 1),
+	[Username] VARCHAR(50) NOT NULL UNIQUE,
 	PRIMARY KEY CLUSTERED ([UsernameId] ASC)
+	ADD CONSTRAINT [Copy_Username] FOREIGN KEY ([Username]) REFERENCES 
 );
-
-/*
-CREATE TABLE [dbo].[AspNetUsers] (
-    [Id]                   NVARCHAR (128) NOT NULL,
-    [UserName]             NVARCHAR (250) NULL,
-    [Email]                VARCHAR (50)   NULL,
-    [Password]             VARCHAR (50)   NULL,
-    [EmailConfirmed]       BIT            NULL,
-    [PasswordHash]         NVARCHAR (MAX) NULL,
-    [SecurityStamp]        NVARCHAR (MAX) NULL,
-    [PhoneNumber]          NVARCHAR (MAX) NULL,
-    [PhoneNumberConfirmed] BIT            NULL,
-    [TwoFactorEnabled]     BIT            NULL,
-    [LockoutEndDateUtc]    DATETIME       NULL,
-    [LockoutEnabled]       BIT            NULL,
-    [AccessFailedCount]    INT            NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-*/
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Weapon]
@@ -267,14 +240,14 @@ ADD CONSTRAINT [ArmourDeleted_DeleteFromCharacter] FOREIGN KEY ([ArmourId]) REFE
 
 --Had issues with this one, we are going to have to do it manually on the app
 ALTER TABLE [dbo].[Characters]
---ADD CONSTRAINT [UserDeleted_DeleteCharacter] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[AspNetUsers] ([UsernameId]) ON DELETE CASCADE;
-ADD CONSTRAINT [UserID_On_Characters] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[AspNetUsers] ([UsernameId]);
+--ADD CONSTRAINT [UserDeleted_DeleteCharacter] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[Users] ([UsernameId]) ON DELETE CASCADE;
+ADD CONSTRAINT [UserID_On_Characters] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[Users] ([UsernameId]);
 --Continue
 
 --Had issues with this one, we are going to have to do it manually on the app
 ALTER TABLE [dbo].[Campaign]
---ADD CONSTRAINT [UsernameIdDeleted_DeleteCampaign] FOREIGN KEY (UsernameId) REFERENCES [dbo].[AspNetUsers](UsernameId) ON DELETE CASCADE;
-ADD CONSTRAINT [UserID_On_Campaign] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[AspNetUsers] ([UsernameId]);
+--ADD CONSTRAINT [UsernameIdDeleted_DeleteCampaign] FOREIGN KEY (UsernameId) REFERENCES [dbo].[Users](UsernameId) ON DELETE CASCADE;
+ADD CONSTRAINT [UserID_On_Campaign] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[Users] ([UsernameId]);
 --Continue
 
 --CONSTRAINTS DELETE
@@ -309,7 +282,7 @@ ADD CONSTRAINT [CharacterDeleted_DeleteFromCharSpell] FOREIGN KEY (CharacterId) 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 /*TRIGGERS - Important: On VS2013 you can only declare one TRIGGER at a time*/
-CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[AspNetUsers] FOR DELETE
+CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] FOR DELETE
 AS
 BEGIN
 	--Grab old value for deletion
@@ -321,7 +294,7 @@ BEGIN
 	WHERE [dbo].[Characters].[UsernameId] = @OldId;
 END
 
-CREATE TRIGGER [DeleteUserData_FromCampaign] ON [dbo].[AspNetUsers] AFTER DELETE
+CREATE TRIGGER [DeleteUserData_FromCampaign] ON [dbo].[Users] AFTER DELETE
 AS
 BEGIN
 	--Grab old value for deletion
@@ -348,12 +321,10 @@ INSERT INTO [dbo].[Skill] VALUES ('Slash','Pokemon kind of attack','Warrior',10,
 
 INSERT INTO [dbo].[Spells] VALUES ('Fire Ball','Duh...','Black Mage','Fire',10,10,10,10),('Heal','Again, duh...','White Mage','Light',10,10,10,10);
 
-INSERT INTO [dbo].[AspNetUsers] VALUES('Blaine','Blaine','parr@parr.com','hashed'),('Luis','Luis','Acevedo@email.com','things'),('Stophon','Steve','clint@rocks.ca','thisisnotmypassword');
+INSERT INTO [dbo].[Users] VALUES('Blaine','Blaine','Parr','stuff','parr@parr.com'),('Luis','Luis','Acevedo','things','asdas@adas.com'),('Stophon','Steve','Ciprian','monicalewisky','clint@rocks.ca');
 
 INSERT INTO [dbo].[Weapon] VALUES('The Torn','Sword','Warrior',20,0,20,'none','none',60,'none'),('Magnus Staff','Staff','Black Mage',1,50,5,'Dark','+2 Int',1200,'Very rare');
 
-Insert into dbo.Characters values((select distinct usernameid from dbo.AspNetUsers where Username = 'Blaine'),NULL,NULL,'Blainonidas','Wimpy',10,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.AspNetUsers where Username = 'Luis'),NULL,NULL,'Luis1','Master',100,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.AspNetUsers where Username = 'Luis'),NULL,NULL,'Meta','Sigma',100,'F',120,80,10,10,10,10,10,10,10,10,10,10,10,10);
-
-
+Insert into dbo.Characters values((select distinct usernameid from dbo.Users where Username = 'Blaine'),NULL,NULL,'Blainonidas','Wimpy',10,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.Users where Username = 'Luis'),NULL,NULL,'Luis1','Master',100,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.Users where Username = 'Luis'),NULL,NULL,'Meta','Sigma',100,'F',120,80,10,10,10,10,10,10,10,10,10,10,10,10);
 
 
