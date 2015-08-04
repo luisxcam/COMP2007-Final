@@ -3,8 +3,6 @@
 
 /*TABLE CREATION*/
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
-
--- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Armour]
 (
 	[ArmourId] INT NOT NULL IDENTITY (1, 1),
@@ -19,18 +17,6 @@ CREATE TABLE [dbo].[Armour]
 	[MonetaryValue] INT,
 	[Rarity] VARCHAR(50),
 	PRIMARY KEY CLUSTERED ([ArmourId] ASC)
-);
-
--- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
-CREATE TABLE [dbo].[Campaign]
-(
-	[CampaignId] INT NOT NULL IDENTITY (1, 1),
-	[UsernameId] INT NOT NULL,
-	[Title] VARCHAR(50),
-	[Description] VARCHAR(400),
-	[CreationDate] DATETIME,
-	[NextSessionDate] DATETIME,
-	PRIMARY KEY CLUSTERED ([CampaignId] ASC)
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
@@ -67,7 +53,7 @@ CREATE TABLE [dbo].[CampaignPlayers]
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Characters] (
     [CharacterId]   INT  NOT NULL IDENTITY (1, 1),
-    [UsernameId]    INT  NOT NULL,
+    [Id]    NVARCHAR (128) NOT NULL,
     [WeaponId]      INT           NULL,
     [ArmourId]      INT           NULL,
     [CharacterName] VARCHAR (100) NULL,
@@ -89,9 +75,22 @@ CREATE TABLE [dbo].[Characters] (
     [Experience]    INT           DEFAULT 0,
     [CarryWeight]   INT           NULL,
     PRIMARY KEY CLUSTERED ([CharacterId] ASC),
+	ADD CONSTRAINT [ASPID_to_Character] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
 );
-
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+CREATE TABLE [dbo].[Campaign]
+(
+	[CampaignId] INT NOT NULL IDENTITY (1, 1),
+	[Id]                   NVARCHAR (128) NOT NULL,
+	[Title] VARCHAR(50),
+	[Description] VARCHAR(400),
+	[CreationDate] DATETIME,
+	[NextSessionDate] DATETIME,
+	PRIMARY KEY CLUSTERED ([CampaignId] ASC),
+	ADD CONSTRAINT [ASPID_to_Campaign] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
+);
+-- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+
 CREATE TABLE [dbo].[CharacterItems] (
     [CharacterItemId] INT NOT NULL IDENTITY(1,1),
 	[CharacterId] INT NOT NULL,
@@ -189,13 +188,17 @@ CREATE TABLE [dbo].[Spells]
 );
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
+/*DEPRECATED
 CREATE TABLE [dbo].[Users]
 (
 	[UsernameId] INT NOT NULL IDENTITY (1, 1),
 	[Username] VARCHAR(50) NOT NULL UNIQUE,
+	[FirstName] VARCHAR(50) NOT NULL,
+	[LastName] VARCHAR(50) NOT NULL,
+	[Password] VARCHAR(128) NOT NULL,
+	[Email] VARCHAR(100) NOT NULL UNIQUE,
 	PRIMARY KEY CLUSTERED ([UsernameId] ASC)
-	ADD CONSTRAINT [Copy_Username] FOREIGN KEY ([Username]) REFERENCES 
-);
+);*/
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Weapon]
@@ -238,6 +241,7 @@ ADD CONSTRAINT [CharactedDeleted_DeleteFromCampaign] FOREIGN KEY (CharacterId) R
 ALTER TABLE [dbo].[Characters]
 ADD CONSTRAINT [ArmourDeleted_DeleteFromCharacter] FOREIGN KEY ([ArmourId]) REFERENCES [dbo].[Armour] ([ArmourId]) ON DELETE SET NULL;
 
+/*DEPRECATED
 --Had issues with this one, we are going to have to do it manually on the app
 ALTER TABLE [dbo].[Characters]
 --ADD CONSTRAINT [UserDeleted_DeleteCharacter] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].[Users] ([UsernameId]) ON DELETE CASCADE;
@@ -251,7 +255,6 @@ ADD CONSTRAINT [UserID_On_Campaign] FOREIGN KEY ([UsernameId]) REFERENCES [dbo].
 --Continue
 
 --CONSTRAINTS DELETE
-/*
 ALTER TABLE [dbo].[Characters]
 DROP CONSTRAINT [UserID_On_Characters];
 ALTER TABLE [dbo].[Campaign]
@@ -281,8 +284,9 @@ ADD CONSTRAINT [CharacterDeleted_DeleteFromCharSpell] FOREIGN KEY (CharacterId) 
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
-/*TRIGGERS - Important: On VS2013 you can only declare one TRIGGER at a time*/
-CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] FOR DELETE
+/*DEPRECATED
+TRIGGERS - Important: On VS2013 you can only declare one TRIGGER at a time*/
+/*CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] FOR DELETE
 AS
 BEGIN
 	--Grab old value for deletion
@@ -304,7 +308,7 @@ BEGIN
 	--Delete from Campaign table
 	DELETE FROM [dbo].[Campaign]
 	WHERE [dbo].[Campaign].[UsernameId] = @OldId;
-END
+END*/
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
@@ -321,10 +325,10 @@ INSERT INTO [dbo].[Skill] VALUES ('Slash','Pokemon kind of attack','Warrior',10,
 
 INSERT INTO [dbo].[Spells] VALUES ('Fire Ball','Duh...','Black Mage','Fire',10,10,10,10),('Heal','Again, duh...','White Mage','Light',10,10,10,10);
 
-INSERT INTO [dbo].[Users] VALUES('Blaine','Blaine','Parr','stuff','parr@parr.com'),('Luis','Luis','Acevedo','things','asdas@adas.com'),('Stophon','Steve','Ciprian','monicalewisky','clint@rocks.ca');
+--INSERT INTO [dbo].[Users] VALUES('Blaine','Blaine','Parr','stuff','parr@parr.com'),('Luis','Luis','Acevedo','things','asdas@adas.com'),('Stophon','Steve','Ciprian','monicalewisky','clint@rocks.ca');
 
 INSERT INTO [dbo].[Weapon] VALUES('The Torn','Sword','Warrior',20,0,20,'none','none',60,'none'),('Magnus Staff','Staff','Black Mage',1,50,5,'Dark','+2 Int',1200,'Very rare');
 
-Insert into dbo.Characters values((select distinct usernameid from dbo.Users where Username = 'Blaine'),NULL,NULL,'Blainonidas','Wimpy',10,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.Users where Username = 'Luis'),NULL,NULL,'Luis1','Master',100,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.Users where Username = 'Luis'),NULL,NULL,'Meta','Sigma',100,'F',120,80,10,10,10,10,10,10,10,10,10,10,10,10);
+--Insert into dbo.Characters values((select distinct usernameid from dbo.Users where Username = 'Blaine'),NULL,NULL,'Blainonidas','Wimpy',10,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.Users where Username = 'Luis'),NULL,NULL,'Luis1','Master',100,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.Users where Username = 'Luis'),NULL,NULL,'Meta','Sigma',100,'F',120,80,10,10,10,10,10,10,10,10,10,10,10,10);
 
 
