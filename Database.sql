@@ -196,6 +196,25 @@ CREATE TABLE [dbo].[AspNetUsers] (
 	PRIMARY KEY CLUSTERED ([UsernameId] ASC)
 );
 
+/*
+CREATE TABLE [dbo].[AspNetUsers] (
+    [Id]                   NVARCHAR (128) NOT NULL,
+    [UserName]             NVARCHAR (250) NULL,
+    [Email]                VARCHAR (50)   NULL,
+    [Password]             VARCHAR (50)   NULL,
+    [EmailConfirmed]       BIT            NULL,
+    [PasswordHash]         NVARCHAR (MAX) NULL,
+    [SecurityStamp]        NVARCHAR (MAX) NULL,
+    [PhoneNumber]          NVARCHAR (MAX) NULL,
+    [PhoneNumberConfirmed] BIT            NULL,
+    [TwoFactorEnabled]     BIT            NULL,
+    [LockoutEndDateUtc]    DATETIME       NULL,
+    [LockoutEnabled]       BIT            NULL,
+    [AccessFailedCount]    INT            NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+*/
+
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Weapon]
 (
@@ -325,6 +344,7 @@ INSERT INTO [dbo].[AspNetUsers] VALUES('Blaine','Blaine','parr@parr.com','hashed
 INSERT INTO [dbo].[Weapon] VALUES('The Torn','Sword','Warrior',20,0,20,'none','none',60,'none'),('Magnus Staff','Staff','Black Mage',1,50,5,'Dark','+2 Int',1200,'Very rare');
 
 Insert into dbo.Characters values((select distinct usernameid from dbo.AspNetUsers where Username = 'Blaine'),NULL,NULL,'Blainonidas','Wimpy',10,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.AspNetUsers where Username = 'Luis'),NULL,NULL,'Luis1','Master',100,'M',100,80,10,10,10,10,10,10,10,10,10,10,10,10),((select distinct usernameid from dbo.AspNetUsers where Username = 'Luis'),NULL,NULL,'Meta','Sigma',100,'F',120,80,10,10,10,10,10,10,10,10,10,10,10,10);
+
 
 
 
