@@ -44,8 +44,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="About.aspx">About Us</a></li>
-                            <li><a href="Contact.aspx">Contact Us</a></li>
+                            <li><a href="/AboutUs.aspx">About Us</a></li>
+                            <li><a href="/Contact.aspx">Contact Us</a></li>
 
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -79,8 +79,8 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li><a href="About.aspx">About Us</a></li>
-                                <li><a href="Contact.aspx">Contact Us</a></li>
+                                <li><a href="/AboutUs.aspx">About Us</a></li>
+                                <li><a href="/Contact.aspx">Contact Us</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li id="welcome-text" class="navbar-text">Welcome,
@@ -103,10 +103,10 @@
                     <ul id="sidebar" class="sidebar-nav">
                         <li style="color: ghostwhite; text-indent: 30px;">Campaigns<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
                             data-target="#createCampaignModal"><span class="button_icon glyphicon glyphicon-plus-sign"></span></a></li>
-                        <li><a href="/CharacterSheet.aspx">charactersheet<span ></span></a></li>
-                        <li><a href="#">OrcCampaign<span ></span></a></li>
-                        <li><a href="#">BestFriendsCampaign<span ></span></a></li>
-                        <li><a href="#">small<span ></span></a></li>
+                        <li><a href="/CharacterSheet.aspx">charactersheet<span></span></a></li>
+                        <li><a href="/ViewCampaign">OrcCampaign<span></span></a></li>
+                        <li><a href="#">BestFriendsCampaign<span></span></a></li>
+                        <li><a href="#">small<span></span></a></li>
                     </ul>
                 </div>
 
@@ -115,12 +115,7 @@
         <!-- PrivateNav -->
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
-  
-        <footer runat="server" id="footer">
-            <nav class=" navbar navbar-inverse ">
-                <h4 class="navbar-text">BSL - Web Application Producers &copy Copyright <%=DateTime.Now.Year.ToString()%></h4>
-            </nav>
-        </footer>
+
 
         <!-- Modal Window (add campaign) -->
         <div class="modal fade" id="createCampaignModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
@@ -131,25 +126,43 @@
                         <h4 class="modal-title" id="myModalLabel">Create a new campaign</h4>
                     </div>
                     <div class="modal-body">
-                        <h3></h3>
-                        <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="CampaignName">User name</asp:Label>
-                            <asp:TextBox autofocus="true" CssClass="form-control" runat="server" ID="CampaignName" />
-                        </div>
-                        <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="CampaignName">Description</asp:Label>
-                            <asp:TextBox CssClass="form-control" TextMode="multiline" Columns="50" Rows="5" runat="server" ID="Description" />
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        <asp:FormView runat="server"
+                            ItemType="COMP2007_Final_SteveEd.Models.Campaign" DefaultMode="Insert"
+                            InsertItemPosition="FirstItem" InsertMethod="InsertItem"
+                            OnItemCommand="ItemCommand" RenderOuterTable="false">
+                            <InsertItemTemplate>
+                                <fieldset class="form-horizontal">
+                                    <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                                    <asp:DynamicControl Mode="Insert"
+                                        DataField="UsernameId"
+                                        DataTypeName="COMP2007_Final_SteveEd.Models.User"
+                                        DataTextField="Username"
+                                        DataValueField="UsernameId"
+                                        UIHint="ForeignKey" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="Title" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </InsertItemTemplate>
+                        </asp:FormView>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /Modal Window(create campaign)-->
+            </div>
+            <!-- /Modal Window(create campaign)-->
     </form>
 
+    <footer runat="server" id="footer">
+        <nav class=" navbar navbar-inverse ">
+            <h4 class="navbar-text">BSL - Web Application Producers &copy Copyright <%=DateTime.Now.Year.ToString()%></h4>
+        </nav>
+    </footer>
 
     <!-- JavaScript Section -->
     <script src="Scripts/jquery-2.1.4.min.js"></script>

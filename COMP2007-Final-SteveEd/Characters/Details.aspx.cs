@@ -9,18 +9,17 @@ using System.Data.Entity;
 using Microsoft.AspNet.FriendlyUrls.ModelBinding;
 using COMP2007_Final_SteveEd.Models;
 
-namespace COMP2007_Final_SteveEd
+namespace COMP2007_Final_SteveEd.Characters
 {
-    public partial class ViewCharacters : System.Web.UI.Page
+    public partial class Details : System.Web.UI.Page
     {
-        protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
+		protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
 
-       
         protected void Page_Load(object sender, EventArgs e)
         {
-         }//END pageLoad()
+        }
 
-             // This is the Select methd to selects a single Character item with the id
+        // This is the Select methd to selects a single Character item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
         public COMP2007_Final_SteveEd.Models.Character GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterId)
         {
@@ -31,10 +30,9 @@ namespace COMP2007_Final_SteveEd
 
             using (_db)
             {
-                
-	            return _db.Characters.Where(m => m.CharacterId == CharacterId).Include(m => m.Armour).Include(m => m.User).Include(m => m.Weapon).FirstOrDefault();
-            
+                return _db.Characters.Where(m => m.CharacterId == CharacterId).Include(m => m.Armour).Include(m => m.User).Include(m => m.Weapon).FirstOrDefault();
             }
+
         }
 
         protected void ItemCommand(object sender, FormViewCommandEventArgs e)
@@ -44,6 +42,6 @@ namespace COMP2007_Final_SteveEd
                 Response.Redirect("../Default");
             }
         }
+    }
+}
 
-    }//END ViewCharacters class
-}// END namespace

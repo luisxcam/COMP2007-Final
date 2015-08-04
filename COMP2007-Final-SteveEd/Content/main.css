@@ -8,11 +8,17 @@ body.loggedOut
  background: url(http://res.cloudinary.com/dffqiamzz/image/upload/v1438086539/dungeons_and_dragons_party_ztbbve.jpg) no-repeat center center fixed; 
   background-size: cover;
 }
-h1,h2,h3,h4{
+h1,h2,h3,h4,th{
      font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
 }
-p{
+p,td{
     font-family: 'Vollkorn', serif;
+}
+.container{
+    padding:0;
+}
+.panel{
+    padding:10px;
 }
 /*Logged out-landing Page    ***********************************************************************************/
  .jumbotron{
@@ -59,6 +65,43 @@ footer .navbar{
 .loggedin_footer h4{
     float:right;
 }
+/* Dashboard **************************************************************************************************/
+.dashboard_page{
+    margin-left:180px;
+}
+/*Tables *****************************************************************************************************/
+#default_char {
+    	border:1px solid #000000;
+}
+
+#default_char tr:nth-child(odd){ background-color:#797f84; }
+#default_char tr:nth-child(even)    { background-color:#d9dadb; }
+#default_char td{
+	vertical-align:middle;
+    text-align:center;
+	border:1px solid #000000;
+	border-width:0 1px 1px 0;
+	padding:3px;
+	font-size:14px;
+	font-weight:normal;
+	color:#000000;
+}
+
+#default_char-hover tbody tr:hover td, #default_char-hover tbody tr:hover th {
+  background-color:#455372 ;
+}
+
+#default_char th{
+	background:-o-linear-gradient(bottom, #706c6c 5%, #333333 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #706c6c), color-stop(1, #333333) );
+	background:-moz-linear-gradient( center top, #706c6c 5%, #333333 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#706c6c", endColorstr="#333333");	background: -o-linear-gradient(top,#706c6c,333333);
+	background-color:#706c6c;
+    color:white;
+}
+
+#default_char a{
+    color:white;
+}
 /* Forms    **************************************************************************************************/
 
 #login-form h3, #signup-form h3{ 
@@ -79,7 +122,7 @@ hr {
     border-top: 1px solid #182662;
 }
 
-#signup-form, #login-form {
+#signup-form, #login-form, #contact-form, #about-form {
     background-color: white;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -89,7 +132,6 @@ hr {
 .button-div {
     text-align: right;
 }
-
 /*Buttons    ******************************************************************************/
 .btn-custom {
   
@@ -288,22 +330,8 @@ hr {
 /*View Character Page ******************************************************************************/
 
 /*Courosel###########################*/
-div#myCarousel{
-    margin-left:25px;   
-}
-.carousel-inner>.item>img{
-    display:inline-block;
-}
-#carousel-inner img{
-    width:200px;
-    height:200px;
-}
 
-#carousel-characters {
-    margin:100px;
-}
-
-.character-display-stats label{
+#character_display label{
     width:49%;
     font-size:20px;
     color:#182662;
@@ -311,13 +339,15 @@ div#myCarousel{
     -webkit-text-stroke-width: 0.5px;
              -webkit-text-stroke-color: black;
 }
-.character-display-stats span{
+#character_display span{
     width:39%;
     color:white;
     text-align:right;
     float:right;
+        padding-left:2%;
+    padding-right:10px;
 }
-.character-display-stats i{
+#character_display i{
     color:#182662;
     font-size:18px;
     margin-right:14px;
@@ -325,11 +355,11 @@ div#myCarousel{
  i label{
      margin-left:4px;
 }
- #carousel-characters img{
+#character_display .img{
         box-shadow: 8px 8px 5px #888888;
         width:100%;
  }
-#carousel-characters #char-name{
+#character_display #char_name{
     color:#d10606;
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
     text-shadow: 2px 2px black;
@@ -337,12 +367,6 @@ div#myCarousel{
     font-weight:bold;
     padding-top:10px;
 }
-#char-name span{
-    padding-left:2%;
-    padding-right:10px;
-}
-
-
 
 /*Character Creation Form    ***********************************************************************/
 
