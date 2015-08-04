@@ -188,11 +188,20 @@ CREATE TABLE [dbo].[Spells]
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[AspNetUsers] (
-    [UsernameId] INT NOT NULL IDENTITY (1, 1),
-	[UserName]             NVARCHAR (256) NOT NULL UNIQUE,
-	[Id]                   NVARCHAR (128) NULL,
-    [Email]                NVARCHAR (256) NOT NULL UNIQUE,
+    [Id]                   NVARCHAR (128) NULL,
+    [UserName]             VARCHAR (50)   NOT NULL UNIQUE,
+    [Email]                VARCHAR (50)   NOT NULL UNIQUE,
+    [Password]             VARCHAR (50)   NULL,
+    [EmailConfirmed]       BIT            NULL,
     [PasswordHash]         NVARCHAR (MAX) NULL,
+    [SecurityStamp]        NVARCHAR (MAX) NULL,
+    [PhoneNumber]          NVARCHAR (MAX) NULL,
+    [PhoneNumberConfirmed] BIT            NULL,
+    [TwoFactorEnabled]     BIT            NULL,
+    [LockoutEndDateUtc]    DATETIME       NULL,
+    [LockoutEnabled]       BIT            NULL,
+    [AccessFailedCount]    INT            NULL,
+    [UsernameId] INT NOT NULL IDENTITY (1, 1),
 	PRIMARY KEY CLUSTERED ([UsernameId] ASC)
 );
 
