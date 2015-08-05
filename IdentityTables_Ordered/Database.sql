@@ -276,7 +276,8 @@ ADD CONSTRAINT [CharacterDeleted_DeleteFromCharSpell] FOREIGN KEY (CharacterId) 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 --TRIGGERS - Important: On VS2013 you can only declare one TRIGGER at a time
-/*CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] FOR DELETE
+/*
+CREATE TRIGGER [DeleteUserData_FromCharacters] ON [dbo].[Users] FOR DELETE
 AS
 BEGIN
 	--Grab old value for deletion
@@ -300,16 +301,17 @@ BEGIN
 	WHERE [dbo].[Campaign].[UsernameId] = @OldId;
 END
 
-CREATE TRIGGER [UpdateUsers_FromASPnetId] ON [dbo].[AspNetUsers] AFTER UPDATE
+CREATE TRIGGER [UpdateUsers_FromASPnetId] ON [dbo].[AspNetUsers] AFTER INSERT
 AS
 BEGIN
 	--Grab the new values for adding
 	DECLARE @NewUsername NVARCHAR (256);
-	SELECT @NewUsername = Username FROM updated;
+	SELECT @NewUsername = UserName FROM inserted;
 	
 	--Insert it to out table
 	INSERT INTO [dbo].[Users] VALUES(@NewUsername);
-END*/
+END
+*/
 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 

@@ -578,7 +578,6 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewCampaign.aspx.cs">
       <DependentUpon>ViewCampaign.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewCampaign.aspx.designer.cs">
       <DependentUpon>ViewCampaign.aspx</DependentUpon>
