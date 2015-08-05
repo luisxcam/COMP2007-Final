@@ -53,7 +53,7 @@ CREATE TABLE [dbo].[CampaignPlayers]
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Characters] (
     [CharacterId]   INT  NOT NULL IDENTITY (1, 1),
-    [Id]    NVARCHAR (128) NOT NULL,
+    [UsernameId]    INT NOT NULL,
     [WeaponId]      INT           NULL,
     [ArmourId]      INT           NULL,
     [CharacterName] VARCHAR (100) NULL,
@@ -81,7 +81,7 @@ CREATE TABLE [dbo].[Characters] (
 CREATE TABLE [dbo].[Campaign]
 (
 	[CampaignId] INT NOT NULL IDENTITY (1, 1),
-	[Id]                   NVARCHAR (128) NOT NULL,
+	[UsernameId] INT NOT NULL,
 	[Title] VARCHAR(50),
 	[Description] VARCHAR(400),
 	[CreationDate] DATETIME,
