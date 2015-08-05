@@ -122,9 +122,12 @@
     <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\CustomDataField.ascx" />
+    <Content Include="DynamicData\FieldTemplates\CustomDataField_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
     <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DynamicDataField1_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
     <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
     <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
@@ -340,6 +343,20 @@
     <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
       <DependentUpon>Children_Insert.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDataField.ascx.cs">
+      <DependentUpon>CustomDataField.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDataField.ascx.designer.cs">
+      <DependentUpon>CustomDataField.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDataField_Edit.ascx.cs">
+      <DependentUpon>CustomDataField_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDataField_Edit.ascx.designer.cs">
+      <DependentUpon>CustomDataField_Edit.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
       <DependentUpon>DateTime.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -360,6 +377,13 @@
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
       <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DynamicDataField1_Edit.ascx.cs">
+      <DependentUpon>DynamicDataField1_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DynamicDataField1_Edit.ascx.designer.cs">
+      <DependentUpon>DynamicDataField1_Edit.ascx</DependentUpon>
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.cs">
       <DependentUpon>EmailAddress.ascx</DependentUpon>

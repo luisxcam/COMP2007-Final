@@ -14,9 +14,18 @@ namespace COMP2007_Final_SteveEd.Characters
     public partial class Details : System.Web.UI.Page
     {
 		protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
-
+        string s;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (s == "m" & genderIcon != null)
+            //{
+            //    genderIcon.Attributes.Add("class", "fa fa-mars");
+            //}
+            //else if (s == "f" & genderIcon != null)
+            //{
+            //    genderIcon.Attributes.Add("class", "fa fa-venus");
+            //}
+          
         }
 
         // This is the Select methd to selects a single Character item with the id
@@ -27,6 +36,7 @@ namespace COMP2007_Final_SteveEd.Characters
             {
                 return null;
             }
+              string s = _db.Characters.Where(o => o.CharacterId == CharacterId).Select(o => o.Gender).FirstOrDefault();
 
             using (_db)
             {
@@ -39,7 +49,7 @@ namespace COMP2007_Final_SteveEd.Characters
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
-                Response.Redirect("../Default");
+                Response.Redirect("/ViewCampaign");
             }
         }
     }

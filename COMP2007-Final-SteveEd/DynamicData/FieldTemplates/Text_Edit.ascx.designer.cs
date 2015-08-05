@@ -10,7 +10,7 @@
 
 namespace COMP2007_Final_SteveEd {
     public partial class Text_EditField {
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
+
         protected global::System.Web.UI.WebControls.Label Label1;
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
     }

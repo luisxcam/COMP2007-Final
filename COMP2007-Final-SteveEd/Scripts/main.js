@@ -2,16 +2,6 @@
 
 $(document).ready(function() {
 
-    //FOOTER push footer to bottom of page
-    var docHeight = $(window).height();
-    var footerHeight = $('#footer').height();
-    var footerTop = $('#footer').position().top + footerHeight;
-
-    if (footerTop < docHeight) {
-        $('#footer').css('margin-top',10 + (docHeight - footerTop) + 'px');
-    }
-
-
     //SIDEBAR add elipses when campaign name is too long
     var MAXCHAR = 12;
     var listItems = $("#sidebar li a");
@@ -28,10 +18,13 @@ $(document).ready(function() {
         $("#sidenavwrapper").toggleClass("active");
     });
 
-    $('.carousel').carousel({
-        pause: true,
-        interval: false
-    });
+    $("#charactersFormToggle").click(function (e) {
+        var pageButtons = document.getElementById("charactersForm").getElementsByTagName('span')[0];
+        var icon = document.getElementById("charactersFormToggle").getElementsByTagName('i')[0];
+        pageButtons.style.display = (pageButtons.style.display == "inline") ? "none" : "inline";
 
+        document.getElementById('default_char').style.display = (document.getElementById('default_char').style.display == "table") ? "none" : "table";
+        icon.className = (icon.className == "fa fa-plus-square") ? "fa fa-minus-square" : "fa fa-plus-square";
+    });
 });
 

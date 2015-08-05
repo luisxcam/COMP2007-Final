@@ -4,7 +4,7 @@
     <title>Login</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+    
     <asp:PlaceHolder runat="server" ID="LoginStatus" Visible="false">
         <p>
             <asp:Literal runat="server" ID="StatusText" />
@@ -27,7 +27,6 @@
                     <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
                     <asp:TextBox CssClass="form-control" runat="server" ID="Password" TextMode="Password" />
                 </div>
-
                 <div class="button-div">
                     <asp:Button CssClass="btn btn-large btn-custom" runat="server" OnClick="SignIn" Text="Log in" />
                 </div>

@@ -12,6 +12,7 @@ namespace COMP2007_Final_SteveEd.Characters
     public partial class Default : System.Web.UI.Page
     {
 		protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
+       public int i = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -4,9 +4,7 @@
 
 <html lang="en">
 
-<!-- Author: Tom Tsiliopoulos -->
-<!-- Web App Name: COMP2007- Lesson 10 - Part 1 -->
-<!-- Creation Date: July 16, 2015 -->
+
 <head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +25,6 @@
 
         <asp:PlaceHolder ID="PublicNav" runat="server">
             <!-- PublicNav ############################################################-->
-
             <nav class="navbar  navbar-inverse" role="navigation">
                 <div class="container-fluid navborder">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -111,11 +108,12 @@
                 </div>
 
                 <!-- /SIDENAV -->
-        </asp:PlaceHolder>
+           </asp:PlaceHolder>
         <!-- PrivateNav -->
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
-
+                        
+ 
 
         <!-- Modal Window (add campaign) -->
         <div class="modal fade" id="createCampaignModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
@@ -157,17 +155,18 @@
             </div>
             <!-- /Modal Window(create campaign)-->
     </form>
-
-    <footer runat="server" id="footer">
-        <nav class=" navbar navbar-inverse ">
-            <h4 class="navbar-text">BSL - Web Application Producers &copy Copyright <%=DateTime.Now.Year.ToString()%></h4>
-        </nav>
-    </footer>
+            <footer>
+            <nav class=" navbar navbar-inverse navbar-fixed-bottom">
+                <div class="container-fluid">
+                   <h4 class="navbar-text">BSL - Web Application Producers &copy Copyright <%=DateTime.Now.Year.ToString()%></h4>
+                </div>
+            </nav>
+        </footer>
 
     <!-- JavaScript Section -->
-    <script src="Scripts/jquery-2.1.4.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/main.js"></script>
+    <script src="/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/main.js"></script>
 </body>
 </html>
 
