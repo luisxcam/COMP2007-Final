@@ -12,7 +12,6 @@ namespace COMP2007_Final_SteveEd
     {
 		protected void Page_Init(object sender, EventArgs e) {
             TextBox1.ToolTip = Column.Description;
-			Label1.Text = Column.DisplayName;
         }
 
 		// show bootstrap has-error
@@ -20,7 +19,7 @@ namespace COMP2007_Final_SteveEd
         {
             // if validation error then apply bootstrap has-error CSS class
             var isValid = this.Page.ModelState.IsValidField(Column.Name);
-            Div1.Attributes["class"] = isValid ? "form-group" : "form-group has-error";
+           
 
         }
 
