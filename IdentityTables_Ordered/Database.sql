@@ -58,7 +58,7 @@ CREATE TABLE [dbo].[Characters] (
     [ArmourId]      INT           NULL,
     [CharacterName] VARCHAR (100) NULL,
     [CharClass]     VARCHAR (50)  NULL,
-    [CharLevel]     INT           DEFAULT 0,
+    [CharLevel]     INT           DEFAULT 1,
     [Gender]        CHAR (1)      NULL,
     [HP]            INT           NULL,
     [Mana]          INT           NULL,
