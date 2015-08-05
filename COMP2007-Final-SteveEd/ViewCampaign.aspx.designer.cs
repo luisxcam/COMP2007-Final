@@ -9,7 +9,6 @@
 
 namespace COMP2007_Final_SteveEd {
     
-    
     public partial class ViewCampaign {
         
         /// <summary>
