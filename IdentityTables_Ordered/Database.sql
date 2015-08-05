@@ -75,7 +75,6 @@ CREATE TABLE [dbo].[Characters] (
     [Experience]    INT           DEFAULT 0,
     [CarryWeight]   INT           NULL,
     PRIMARY KEY CLUSTERED ([CharacterId] ASC),
-	CONSTRAINT [ASPID_to_Character] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
 );
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 CREATE TABLE [dbo].[Campaign]
@@ -87,7 +86,6 @@ CREATE TABLE [dbo].[Campaign]
 	[CreationDate] DATETIME,
 	[NextSessionDate] DATETIME,
 	PRIMARY KEY CLUSTERED ([CampaignId] ASC),
-	CONSTRAINT [ASPID_to_Campaign] FOREIGN KEY (Id) REFERENCES [dbo].[AspNetUsers](Id)
 );
 -- * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - 
 
@@ -235,7 +233,6 @@ ADD CONSTRAINT [CharactedDeleted_DeleteFromCampaign] FOREIGN KEY (CharacterId) R
 
 ALTER TABLE [dbo].[Characters]
 ADD CONSTRAINT [ArmourDeleted_DeleteFromCharacter] FOREIGN KEY ([ArmourId]) REFERENCES [dbo].[Armour] ([ArmourId]) ON DELETE SET NULL;
-
 
 --Had issues with this one, we are going to have to do it manually on the app
 ALTER TABLE [dbo].[Characters]
