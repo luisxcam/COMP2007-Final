@@ -6,7 +6,7 @@
     <div class="dashboard_container">
         <div class="panel">
             <asp:FormView runat="server"
-                ItemType="COMP2007_Final_SteveEd.Models.Campaign" DataKeyNames="CampaignId"
+                ItemType="rpgmanager.Models.Campaign" DataKeyNames="CampaignId"
                 SelectMethod="GetItemCampaign"
                 OnItemCommand="ItemCommand" RenderOuterTable="false">
                 <EmptyDataTemplate>
@@ -43,7 +43,7 @@
         <div id="charactersForm">
             <asp:ListView ID="ListView1" runat="server"
                 DataKeyNames="CharacterId"
-                ItemType="COMP2007_Final_SteveEd.Models.Character"
+                ItemType="rpgmanager.Models.Character"
                 SelectMethod="GetData">
                 <EmptyDataTemplate>
                     There are no entries found for Characters
@@ -212,7 +212,7 @@
             </p>
             <asp:ListView ID="ListView2" runat="server"
                 DataKeyNames="CharacterItemId"
-                ItemType="COMP2007_Final_SteveEd.Models.CharacterItem"
+                ItemType="rpgmanager.Models.CharacterItem"
                 SelectMethod="GetData2">
                 <EmptyDataTemplate>
                     There are no entries found for CharacterItems

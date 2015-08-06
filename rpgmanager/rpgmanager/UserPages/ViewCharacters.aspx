@@ -6,7 +6,7 @@
         <p>&nbsp;</p>
 
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Character" DataKeyNames="CharacterId"
+            ItemType="rpgmanager.Models.Character" DataKeyNames="CharacterId"
             SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
