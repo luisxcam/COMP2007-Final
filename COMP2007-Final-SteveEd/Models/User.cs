@@ -22,10 +22,6 @@ namespace COMP2007_Final_SteveEd.Models
     
         public int UsernameId { get; set; }
         public string Username { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
     
         public virtual ICollection<Campaign> Campaigns { get; set; }
         public virtual ICollection<Character> Characters { get; set; }

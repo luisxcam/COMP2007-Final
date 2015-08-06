@@ -34,7 +34,6 @@ namespace COMP2007_Final_SteveEd.Models
         public virtual DbSet<CampaignEnemy> CampaignEnemies { get; set; }
         public virtual DbSet<CampaignNPC> CampaignNPCs { get; set; }
         public virtual DbSet<CampaignPlayer> CampaignPlayers { get; set; }
-        public virtual DbSet<campaign1> campaigns1 { get; set; }
         public virtual DbSet<CharacterItem> CharacterItems { get; set; }
         public virtual DbSet<Character> Characters { get; set; }
         public virtual DbSet<CharacterSkill> CharacterSkills { get; set; }
@@ -44,8 +43,8 @@ namespace COMP2007_Final_SteveEd.Models
         public virtual DbSet<NPC> NPCs { get; set; }
         public virtual DbSet<Skill> Skills { get; set; }
         public virtual DbSet<Spell> Spells { get; set; }
-        public virtual DbSet<Table> Tables { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Weapon> Weapons { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
     }
 }

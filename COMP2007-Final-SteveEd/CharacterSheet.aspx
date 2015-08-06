@@ -19,14 +19,24 @@
                                 <label>Name</label>
                                 <asp:DynamicControl Mode="Insert" DataField="CharacterName" runat="server" />
                             </div>
+                            <div>
+                                <label>Username</label>
+                            <asp:DynamicControl Mode="Insert" 
+								DataField="UsernameId" 
+								DataTypeName="COMP2007_Final_SteveEd.Models.Users" 
+								DataTextField="Username" 
+								DataValueField="UsernameId" 
+								UIHint="ForeignKey" runat="server" />
+                                </div>
+                            <div>
 
                             <div class="form-group">
                                 <label>Gender</label>
                                 <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control" SelectedValue="<%# BindItem.Gender %>">
-                                    <asp:ListItem Text="Male" Value="Male" Selected="True" />
-                                    <asp:ListItem Text="Female" Value="Female" />
-                                    <asp:ListItem Text="Trans" Value="Trans" />
-                                    <asp:ListItem Text="Other" Value="Other" />
+                                    <asp:ListItem Text="A" Value="M" Selected="True" />
+                                    <asp:ListItem Text="B" Value="F" />
+                                    <asp:ListItem Text="C" Value="T" />
+                                    <asp:ListItem Text="D" Value="O" />
                                 </asp:DropDownList>
                             </div>
 

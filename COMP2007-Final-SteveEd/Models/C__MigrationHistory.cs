@@ -12,18 +12,11 @@ namespace COMP2007_Final_SteveEd.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class campaign1
+    public partial class C__MigrationHistory
     {
-        public campaign1()
-        {
-            this.Tables = new HashSet<Table>();
-        }
-    
-        public int Id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public Nullable<int> chars { get; set; }
-    
-        public virtual ICollection<Table> Tables { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

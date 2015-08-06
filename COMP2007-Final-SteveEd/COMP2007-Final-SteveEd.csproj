@@ -497,9 +497,6 @@
     <Compile Include="Models\Campaign.cs">
       <DependentUpon>SupremeEnttity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\campaign1.cs">
-      <DependentUpon>SupremeEnttity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\CampaignEnemy.cs">
       <DependentUpon>SupremeEnttity.tt</DependentUpon>
     </Compile>
@@ -519,6 +516,9 @@
       <DependentUpon>SupremeEnttity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CharacterSpell.cs">
+      <DependentUpon>SupremeEnttity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
       <DependentUpon>SupremeEnttity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Enemy.cs">
@@ -550,9 +550,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SupremeEnttity.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Table.cs">
-      <DependentUpon>SupremeEnttity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
       <DependentUpon>SupremeEnttity.tt</DependentUpon>
