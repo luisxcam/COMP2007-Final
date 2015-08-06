@@ -139,8 +139,8 @@
                                         UIHint="ForeignKey" runat="server" />
                                     <asp:DynamicControl Mode="Insert" DataField="Title" runat="server" />
                                     <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
-                                    <asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />
-                                    <asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" CssClass="hidden"/>
+                                    <asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" CssClass="hidden" />
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />

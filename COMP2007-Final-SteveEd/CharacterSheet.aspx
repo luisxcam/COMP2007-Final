@@ -3,16 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div  class="dashboard_container">
+    <div class="dashboard_container">
         <asp:FormView runat="server"
             ItemType="COMP2007_Final_SteveEd.Models.Character" DefaultMode="Insert"
             InsertItemPosition="FirstItem" InsertMethod="InsertItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <InsertItemTemplate>
-   
-                    <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
-                    <h1>Character Creation Sheet</h1>
-                    <div id="characterSheet">
+
+                <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                <h1>Character Creation Sheet</h1>
+                <div id="characterSheet">
                     <div id="characterDetails" class="row">
                         <div class="col-md-8 col-md-push-4">
                             <div>
@@ -21,22 +21,22 @@
                             </div>
                             <div>
                                 <label>Username</label>
-                            <asp:DynamicControl Mode="Insert" 
-								DataField="UsernameId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Users" 
-								DataTextField="Username" 
-								DataValueField="UsernameId" 
-								UIHint="ForeignKey" runat="server" />
-                                </div>
-                            <div>
+                                <asp:DynamicControl Mode="Insert"
+                                    DataField="UsernameId"
+                                    DataTypeName="COMP2007_Final_SteveEd.Models.User"
+                                    DataTextField="Username"
+                                    DataValueField="UsernameId"
+                                    UIHint="ForeignKey" runat="server" />
+                            </div>
+
 
                             <div class="form-group">
                                 <label>Gender</label>
                                 <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control" SelectedValue="<%# BindItem.Gender %>">
-                                    <asp:ListItem Text="A" Value="M" Selected="True" />
-                                    <asp:ListItem Text="B" Value="F" />
-                                    <asp:ListItem Text="C" Value="T" />
-                                    <asp:ListItem Text="D" Value="O" />
+                                    <asp:ListItem Text="Male" Value="M" Selected="True" />
+                                    <asp:ListItem Text="Female" Value="F" />
+                                    <asp:ListItem Text="Trans Gender" Value="T" />
+                                    <asp:ListItem Text="Other" Value="O" />
                                 </asp:DropDownList>
                             </div>
 
@@ -52,22 +52,22 @@
                             </div>
                             <div>
                                 <label>Weapon</label>
-                            <asp:DynamicControl Mode="Insert" 
-								DataField="WeaponId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Weapon" 
-								DataTextField="Name" 
-								DataValueField="WeaponId" 
-								UIHint="ForeignKey" runat="server" />
-                                </div>
+                                <asp:DynamicControl Mode="Insert"
+                                    DataField="WeaponId"
+                                    DataTypeName="COMP2007_Final_SteveEd.Models.Weapon"
+                                    DataTextField="Name"
+                                    DataValueField="WeaponId"
+                                    UIHint="ForeignKey" runat="server" />
+                            </div>
                             <div>
                                 <label>Armour</label>
-							<asp:DynamicControl Mode="Insert" 
-								DataField="ArmourId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Armour" 
-								DataTextField="Name" 
-								DataValueField="ArmourId" 
-								UIHint="ForeignKey" runat="server" />
-                                </div>
+                                <asp:DynamicControl Mode="Insert"
+                                    DataField="ArmourId"
+                                    DataTypeName="COMP2007_Final_SteveEd.Models.Armour"
+                                    DataTextField="Name"
+                                    DataValueField="ArmourId"
+                                    UIHint="ForeignKey" runat="server" />
+                            </div>
                         </div>
                         <!-- /.col-md-8-->
                         <div class="col-md-4  col-md-pull-8">
@@ -77,42 +77,42 @@
                     <!-- /#characterDetails row -->
                     <div class="row">
                         <div id="attributes" class="col-md-5">
-                            <div >
-                                <label class="alignedLabel">STR <span style="font-size:x-small">(STRENGTH)</span></label>
-                                 <asp:DynamicControl  UIHint="Text" Mode ="Insert" DataField="Strength" runat="server" />
+                            <div>
+                                <label class="alignedLabel">STR <span style="font-size: x-small">(STRENGTH)</span></label>
+                                <asp:DynamicControl UIHint="Text" Mode="Insert" DataField="Strength" runat="server" />
                             </div>
                             <div>
-                                <label>DEX <span style="font-size:x-small">(DETERITY)</span></Label>
-                                	    <asp:DynamicControl Mode="Insert" DataField="Dexterity" runat="server" />
-                               
+                                <label>DEX <span style="font-size: x-small">(DETERITY)</span></label>
+                                <asp:DynamicControl Mode="Insert" DataField="Dexterity" runat="server" />
+
                             </div>
                             <div>
-                                <label>CON <span style="font-size:x-small">(CONSTITTION)</span></label>
-                                   <asp:DynamicControl Mode="Insert" DataField="Constitution" runat="server" />
-                    
+                                <label>CON <span style="font-size: x-small">(CONSTITTION)</span></label>
+                                <asp:DynamicControl Mode="Insert" DataField="Constitution" runat="server" />
+
                             </div>
                             <div>
-                                <label>INT <span style="font-size:x-small">(INTELLIGENCE)</span></label>
-                                  <asp:DynamicControl Mode="Insert" DataField="Intelligence" runat="server" />
-                         
+                                <label>INT <span style="font-size: x-small">(INTELLIGENCE)</span></label>
+                                <asp:DynamicControl Mode="Insert" DataField="Intelligence" runat="server" />
+
                             </div>
                             <div>
-                                <label>WIS <span style="font-size:x-small">(WISDOM)</span></label>
-                               <asp:DynamicControl Mode="Insert" DataField="Wisdom" runat="server" />
-                      </div>
+                                <label>WIS <span style="font-size: x-small">(WISDOM)</span></label>
+                                <asp:DynamicControl Mode="Insert" DataField="Wisdom" runat="server" />
+                            </div>
                             <div>
-                                <label>CHA <span style="font-size:x-small">(CHARISMA)</span></label>
+                                <label>CHA <span style="font-size: x-small">(CHARISMA)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="Charisma" runat="server" />
-                        
+
+                            </div>
                         </div>
-                    </div>
-                    <!-- / col-4-->
+                        <!-- / col-4-->
                         <div id="stats" class="col-md-7">
                             <div>
-                                <label>HP <span style="font-size:x-small">(HIT POINTS)</span></label>
+                                <label>HP <span style="font-size: x-small">(HIT POINTS)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="HP" runat="server" />
                             </div>
-                             <div>
+                            <div>
                                 <label>Mana</label>
                                 <asp:DynamicControl Mode="Insert" DataField="Mana" runat="server" />
                             </div>
@@ -121,20 +121,20 @@
                                 <asp:DynamicControl Mode="Insert" DataField="Speed" runat="server" />
                             </div>
                             <div class="alignedLabel">
-                                <label>MAX CARRY WEIGHT</Label>
+                                <label>MAX CARRY WEIGHT</label>
                                 <asp:DynamicControl Mode="Insert" DataField="CarryWeight" runat="server" />
                             </div>
                         </div>
                     </div>
                     <!--row-->
-            </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
-                            <asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" CssClass="btn btn-default" />
-                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
+                        <asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" CssClass="btn btn-default" />
                     </div>
-                    <!-- /#characterSheet -->
+                </div>
+                <!-- /#characterSheet -->
 
             </InsertItemTemplate>
         </asp:FormView>
