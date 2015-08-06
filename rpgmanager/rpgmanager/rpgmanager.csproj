@@ -184,7 +184,22 @@
     <Content Include="UserPages\Armours\Details.aspx" />
     <Content Include="UserPages\Armours\Edit.aspx" />
     <Content Include="UserPages\Armours\Insert.aspx" />
+    <Content Include="UserPages\Campaigns\Default.aspx" />
+    <Content Include="UserPages\Campaigns\Delete.aspx" />
+    <Content Include="UserPages\Campaigns\Details.aspx" />
+    <Content Include="UserPages\Campaigns\Edit.aspx" />
+    <Content Include="UserPages\Campaigns\Insert.aspx" />
+    <Content Include="UserPages\CharacterItems\Default.aspx" />
+    <Content Include="UserPages\CharacterItems\Delete.aspx" />
+    <Content Include="UserPages\CharacterItems\Details.aspx" />
+    <Content Include="UserPages\CharacterItems\Edit.aspx" />
+    <Content Include="UserPages\CharacterItems\Insert.aspx" />
     <Content Include="UserPages\CharacterSheet.aspx" />
+    <Content Include="UserPages\Characters\Default.aspx" />
+    <Content Include="UserPages\Characters\Delete.aspx" />
+    <Content Include="UserPages\Characters\Details.aspx" />
+    <Content Include="UserPages\Characters\Edit.aspx" />
+    <Content Include="UserPages\Characters\Insert.aspx" />
     <Content Include="UserPages\Enemies\Default.aspx" />
     <Content Include="UserPages\Enemies\Delete.aspx" />
     <Content Include="UserPages\Enemies\Details.aspx" />
@@ -521,12 +536,102 @@
     <Compile Include="UserPages\Armours\Insert.aspx.designer.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserPages\Campaigns\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Campaigns\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterItems\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPages\CharacterSheet.aspx.cs">
       <DependentUpon>CharacterSheet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPages\CharacterSheet.aspx.designer.cs">
       <DependentUpon>CharacterSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Characters\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPages\Enemies\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
