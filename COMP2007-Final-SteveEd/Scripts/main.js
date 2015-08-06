@@ -3,11 +3,11 @@
 $(document).ready(function() {
 
     //SIDEBAR add elipses when campaign name is too long
-    var MAXCHAR = 12;
+    var MAXCHAR = 16;
     var listItems = $("#sidebar li a");
     listItems.each(function (a) {
         if ($(this).text().length >= MAXCHAR) {
-            var string = $(this).text().substring(0, MAXCHAR) + "...";
+            var string = $(this).text().substring(0, MAXCHAR) + " ...";
             $(this).text(string);
         }
     });

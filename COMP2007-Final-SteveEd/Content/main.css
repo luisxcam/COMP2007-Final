@@ -78,6 +78,10 @@ p,td{
     background-image:url("http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg");
     height:100%;
 }
+#login_greeting_header{
+   text-align:center;
+   padding:20px;
+}
 /*Footer    ***************************************************************************************************/
 
 footer .navbar{
@@ -210,6 +214,9 @@ hr {
 
 .button-div {
     text-align: right;
+}
+.button-div-left {
+    
 }
 /*Buttons    ******************************************************************************/
 .btn-custom {
@@ -425,7 +432,7 @@ hr {
 }
 
 #character_display i{
-    color:#182662;
+    color:royalblue;
     font-size:18px;
     margin-right:14px;
 }
@@ -434,13 +441,15 @@ hr {
         box-shadow: 8px 8px 5px #888888;
         width:100%;
  }
-#char_name h1{
+#char-name h1{
     color:#d10606;
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
     text-shadow: 2px 2px black;
     font-size:30px;
     font-weight:bold;
     padding-top:10px;
+
+    margin-left:15px;
 }
 
 /*Character Creation Form    ***********************************************************************/

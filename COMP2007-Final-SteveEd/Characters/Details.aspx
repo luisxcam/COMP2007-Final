@@ -63,13 +63,13 @@
                             </div>
                             <div>
                                 <i class="fa fa-scissors"></i>
-                                    <label>Weapon:</label>
-                                    <span><%#: Item.Weapon != null ? Item.Weapon.Name : "" %></span>
+                                    <label>Weapon</label>
+                                    <span><%#: Item.Weapon != null ? Item.Weapon.Name : "none" %></span>
                             </div>
                             <div>
                                 <i class="fa fa-shield"></i>
                                     <label>Armour</label>
-                                    <span><%#: Item.Armour != null ? Item.Armour.Name : "" %></span>
+                                    <span><%#: Item.Armour != null ? Item.Armour.Name : "none" %></span>
                             </div>
                         </div>
 
@@ -145,12 +145,12 @@
                                     <asp:DynamicControl runat="server" DataField="CarryWeight" ID="CarryWeight" Mode="ReadOnly" />
                                 </span>
                             </div>
-                            <%#: Item.User != null ? Item.User.Username : "" %>
+                         <%//#: Item.User != null ? Item.User.Username : "" %>
                             
                         </div><!-- /col-md-5-->
                     </div><!-- /.row -->
-                    <div class="form-group">
-                                <div style="float:left;">
+                    <div >
+                                <div class="text-left">
                                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Back" CssClass="btn btn-default" />
                                 </div>
                             </div>
@@ -158,6 +158,6 @@
             </ItemTemplate>
         </asp:FormView>
     </div>
-        </div>
+        </div><!-- /.dashboard_container -->
 </asp:Content>
 

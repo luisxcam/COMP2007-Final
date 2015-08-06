@@ -2,12 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-    <a href="#">Manage Items</a>
-    <a href="#">Manage Armour</a>
-    <a href="#">Manage Weapons</a>
-    <a href="#">Manage NPCs</a>
-    <a href="#">Manage Enemies</a>
-
-
+    <div class="dashboard_container">
+    <h1>Dungeon Manager Hub</h1>
+    <div class="btn-group btn-group-vertical">
+    <a href="/Items/" class="btn btn-primary">Manage Items</a>
+    <a href="/Armours/" class="btn btn-primary">Manage Armour</a>
+    <a href="/Weapons/" class="btn btn-primary">Manage Weapons</a>
+    <a href="NPCs" class="btn btn-primary">Manage NPCs</a>
+    <a href="/Enemies/" class="btn btn-primary">Manage Enemies</a>
+        </div>
+    </div>
 </asp:Content>

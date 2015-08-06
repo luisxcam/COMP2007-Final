@@ -18,7 +18,7 @@ namespace COMP2007_Final_SteveEd
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    StatusText.Text = string.Format("Greetings {0}, we have missed you!", User.Identity.GetUserName());
                     LoginStatus.Visible = true;
                     LoginForm.Visible = false;
                 }
