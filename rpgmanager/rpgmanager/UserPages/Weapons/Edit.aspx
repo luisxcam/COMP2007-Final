@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="WeaponEdit" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.Weapons.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Weapon" DefaultMode="Edit" DataKeyNames="WeaponId"

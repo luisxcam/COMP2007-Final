@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="WeaponDelete" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.UserPages.Weapons.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this Weapon?</h3>
         <asp:FormView runat="server"
