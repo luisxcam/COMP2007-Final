@@ -18,7 +18,7 @@ namespace rpgmanager
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    StatusText.Text = string.Format("Greetings {0}, we missed you!", User.Identity.GetUserName());
                     LoginStatus.Visible = true;
                     //LogoutButton.Visible = true;
                 }

@@ -102,9 +102,16 @@ footer .navbar{
 
 }
 
-
-
 /*Tables *****************************************************************************************************/
+legend{
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    text-shadow:2px 1px 1px #999;
+   font-weight:bold;
+   font-size:26px;
+   color:#222;
+}
+
+
 #styledTable {
     	border:1px solid #000000;
 }

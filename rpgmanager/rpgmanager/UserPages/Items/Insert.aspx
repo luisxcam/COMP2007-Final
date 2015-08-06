@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="ItemInsert" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.UserPages.Items.Insert" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Item" DefaultMode="Insert"

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Enemy Details" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.UserPages.Enemies.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
 		<p>&nbsp;</p>
       
         <asp:FormView runat="server"

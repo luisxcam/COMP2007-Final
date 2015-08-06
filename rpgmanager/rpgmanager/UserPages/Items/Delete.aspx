@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="ItemDelete" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.UserPages.Items.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this Item?</h3>
         <asp:FormView runat="server"

@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="Armour Details" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.UserPages.Armours.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
 		<p>&nbsp;</p>
-      
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Armour" DataKeyNames="ArmourId"
             SelectMethod="GetItem"
@@ -15,14 +14,6 @@
                     <legend>Armour Details</legend>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>ArmourId</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="ArmourId" ID="ArmourId" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
 									<strong>Name</strong>
 								</div>
 								<div class="col-sm-4">
@@ -31,7 +22,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>ArmourType</strong>
+									<strong>Armour Type</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="ArmourType" ID="ArmourType" Mode="ReadOnly" />
