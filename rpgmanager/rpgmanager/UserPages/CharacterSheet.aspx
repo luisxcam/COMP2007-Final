@@ -74,48 +74,48 @@
                         </div>
                     </div>
                     <!-- /#characterDetails row -->
-                    <div class="row">
+                    <div id="stats" class="row">
                         <div id="attributes" class="col-md-5">
-                            <div >
+                            <div class="alignedLabel">
                                 <label class="alignedLabel">STR <span style="font-size:x-small">(STRENGTH)</span></label>
                                  <asp:DynamicControl  UIHint="Text" Mode ="Insert" DataField="Strength" runat="server" />
                             </div>
-                            <div>
+                            <div class="alignedLabel">
                                 <label>DEX <span style="font-size:x-small">(DETERITY)</span></Label>
                                 	    <asp:DynamicControl Mode="Insert" DataField="Dexterity" runat="server" />
                                
                             </div>
-                            <div>
+                            <div class="alignedLabel">
                                 <label>CON <span style="font-size:x-small">(CONSTITTION)</span></label>
                                    <asp:DynamicControl Mode="Insert" DataField="Constitution" runat="server" />
                     
                             </div>
-                            <div>
+                            <div class="alignedLabel">
                                 <label>INT <span style="font-size:x-small">(INTELLIGENCE)</span></label>
                                   <asp:DynamicControl Mode="Insert" DataField="Intelligence" runat="server" />
                          
                             </div>
-                            <div>
+                            <div class="alignedLabel">
                                 <label>WIS <span style="font-size:x-small">(WISDOM)</span></label>
                                <asp:DynamicControl Mode="Insert" DataField="Wisdom" runat="server" />
                       </div>
-                            <div>
+                            <div class="alignedLabel">
                                 <label>CHA <span style="font-size:x-small">(CHARISMA)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="Charisma" runat="server" />
                         
                         </div>
                     </div>
                     <!-- / col-4-->
-                        <div id="stats" class="col-md-7">
-                            <div>
+                        <div class="col-md-7">
+                            <div class="alignedLabel">
                                 <label>HP <span style="font-size:x-small">(HIT POINTS)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="HP" runat="server" />
                             </div>
-                             <div>
+                             <div class="alignedLabel">
                                 <label>Mana</label>
                                 <asp:DynamicControl Mode="Insert" DataField="Mana" runat="server" />
                             </div>
-                            <div>
+                            <div class="alignedLabel">
                                 <label>SPEED</label>
                                 <asp:DynamicControl Mode="Insert" DataField="Speed" runat="server" />
                             </div>
