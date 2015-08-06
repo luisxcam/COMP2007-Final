@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Default.Master" AutoEventWireup="true" CodeBehind="ViewCampaign.aspx.cs" Inherits="rpgmanager.UserPages.ViewCampaign" %>
 
+<%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -39,6 +41,7 @@
                 </ItemTemplate>
             </asp:FormView>
         </div>
+
         <div><a href="#" id="charactersFormToggle">Characters<i class="fa fa-plus-square"></i></a></div>
         <div id="charactersForm">
             <asp:ListView ID="ListView1" runat="server"
