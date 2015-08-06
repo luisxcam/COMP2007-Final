@@ -16,6 +16,7 @@ namespace COMP2007_Final_SteveEd
     {
         protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
         protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db2 = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
+        protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db3 = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -44,6 +45,13 @@ namespace COMP2007_Final_SteveEd
             {
                 return _db2.Campaigns.Where(m => m.CampaignId == CampaignId).Include(m => m.User).FirstOrDefault();
             }
+        }
+
+        // Model binding method to get List of CharacterItem entries
+        // USAGE: <asp:ListView SelectMethod="GetData">
+        public IQueryable<COMP2007_Final_SteveEd.Models.CharacterItem> GetData2()
+        {
+            return _db3.CharacterItems.Include(m => m.Character).Include(m => m.Item);
         }
 
         protected void ItemCommand(object sender, FormViewCommandEventArgs e)

@@ -73,6 +73,11 @@ p,td{
     color:white;
     font-size:1.1em;
 }
+/*Logged in-landing Page    ***********************************************************************************/
+#dashbaordHomePage{
+    background-image:url("http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg");
+    height:100%;
+}
 /*Footer    ***************************************************************************************************/
 
 footer .navbar{
@@ -96,13 +101,13 @@ footer .navbar{
 
 
 /*Tables *****************************************************************************************************/
-#default_char {
+#styledTable {
     	border:1px solid #000000;
 }
 
-#default_char tr:nth-child(odd){ background-color:#797f84; }
-#default_char tr:nth-child(even)    { background-color:#d9dadb; }
-#default_char td{
+#styledTable tr:nth-child(odd){ background-color:#797f84; }
+#styledTable tr:nth-child(even)    { background-color:#d9dadb; }
+#styledTable td{
 	vertical-align:middle;
     text-align:center;
 	border:1px solid #000000;
@@ -117,7 +122,7 @@ footer .navbar{
   background-color:#455372 ;
 }
 
-#default_char th{
+#styledTable th{
 	background:-o-linear-gradient(bottom, #706c6c 5%, #333333 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #706c6c), color-stop(1, #333333) );
 	background:-moz-linear-gradient( center top, #706c6c 5%, #333333 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#706c6c", endColorstr="#333333");	background: -o-linear-gradient(top,#706c6c,333333);
@@ -125,10 +130,10 @@ footer .navbar{
     color:white;
 }
 
-#default_char a{
+#styledTable a{
     color:white;
 }
-td#crud_function_td a{
+td#styledTable a{
     color:#9c0202;
 }
 
