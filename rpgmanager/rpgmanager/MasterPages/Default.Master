@@ -113,6 +113,7 @@
                                 <li><a href="#">small<span></span></a></li>
                             </ul>
                         </div>
+                    </div>
                 </asp:PlaceHolder>
                 <!-- PrivateNav -->
 
@@ -144,15 +145,20 @@
                                             <asp:DynamicControl Mode="Insert" DataField="Title" runat="server" />
                                             <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
                                             <!--<asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />-->
-                                            <div>
-                                                <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-                                                <asp:Calendar ID="CreationDateCalendar" runat="server" SelectedDate="<%# BindItem.CreationDate %>"></asp:Calendar>
-                                            </div>
-                                            <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
-                                            <div>
-                                                <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-                                                <asp:Calendar ID="NextSessionCalendar" runat="server" SelectedDate="<%# BindItem.NextSessionDate %>"></asp:Calendar>
-                                            </div>
+                                            <asp:ScriptManager runat="server" />
+                                            <asp:UpdatePanel runat="server">
+                                                <ContentTemplate>
+                                                    <div>
+                                                        <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
+                                                        <asp:Calendar ID="CreationDateCalendar" runat="server" SelectedDate="<%# BindItem.CreationDate %>"></asp:Calendar>
+                                                    </div>
+                                                    <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
+                                                    <div>
+                                                        <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
+                                                        <asp:Calendar ID="NextSessionCalendar" runat="server" SelectedDate="<%# BindItem.NextSessionDate %>"></asp:Calendar>
+                                                    </div>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
                                                     <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
