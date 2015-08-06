@@ -2,39 +2,33 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div>
-         <h4 style="font-size: medium">Log In</h4>
-         <hr />
-         <asp:PlaceHolder runat="server" ID="LoginStatus" Visible="false">
-            <p>
-               <asp:Literal runat="server" ID="StatusText" />
-            </p>
-         </asp:PlaceHolder>
-         <asp:PlaceHolder runat="server" ID="LoginForm" Visible="false">
-            <div style="margin-bottom: 10px">
-               <asp:Label runat="server" AssociatedControlID="UserName">User name</asp:Label>
-               <div>
-                  <asp:TextBox runat="server" ID="UserName" />
-               </div>
+    <asp:PlaceHolder runat="server" ID="LoginStatus" Visible="false">
+        <p>
+            <asp:Literal runat="server" ID="StatusText" />
+        </p>
+    </asp:PlaceHolder>
+    <asp:PlaceHolder runat="server" ID="LoginForm" Visible="false">
+        <div class="row">
+            <div class="col-md-7">
+                <!--TODO-->
             </div>
-            <div style="margin-bottom: 10px">
-               <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
-               <div>
-                  <asp:TextBox runat="server" ID="Password" TextMode="Password" />
-               </div>
+            <div id="login-form" class="col-md-4 col-md-pull-1">
+
+                <h3>Log In</h3>
+                <hr />
+                <div class="form-group">
+                    <asp:Label runat="server" AssociatedControlID="UserName">User name</asp:Label>
+                    <asp:TextBox autofocus="true" CssClass="form-control" runat="server" ID="UserName" />
+                </div>
+                <div class="form-group">
+                    <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
+                    <asp:TextBox CssClass="form-control" runat="server" ID="Password" TextMode="Password" />
+                </div>
+                <div class="button-div">
+                    <asp:Button CssClass="btn btn-large btn-custom" runat="server" OnClick="SignIn" Text="Log in" />
+                </div>
+                <p>Don't have an account? Click here to <a href="/Register.aspx">Signup</a>.</p>
             </div>
-            <div style="margin-bottom: 10px">
-               <div>
-                  <asp:Button runat="server" OnClick="SignIn" Text="Log in" />
-               </div>
-            </div>
-         </asp:PlaceHolder>
-         <!--<asp:PlaceHolder runat="server" ID="LogoutButton" Visible="false">
-            <div>
-               <div>
-                  <asp:Button runat="server" OnClick="SignOut" Text="Log out" />
-               </div>
-            </div>
-         </asp:PlaceHolder>-->
-      </div>
+        </div>
+    </asp:PlaceHolder>
 </asp:Content>

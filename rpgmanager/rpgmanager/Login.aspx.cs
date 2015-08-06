@@ -20,7 +20,7 @@ namespace rpgmanager
                 {
                     StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
                     LoginStatus.Visible = true;
-                    LogoutButton.Visible = true;
+                    //LogoutButton.Visible = true;
                 }
                 else
                 {
