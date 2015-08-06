@@ -11,7 +11,7 @@ using COMP2007_Final.Models;
 namespace COMP2007_Final {
     public partial class ForeignKey_EditField : System.Web.DynamicData.FieldTemplateUserControl {
 
-		protected COMP2007_Final.Models.DefaultConnection _db = new COMP2007_Final.Models.DefaultConnection();
+		protected COMP2007_Final.Models.DatabaseConnection _db = new COMP2007_Final.Models.DatabaseConnection();
 
 		public string DataTypeName { get; set; }
 

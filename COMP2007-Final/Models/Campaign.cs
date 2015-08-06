@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class Campaign
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Campaign()
         {
             this.CampaignNPCs = new HashSet<CampaignNPC>();
@@ -28,8 +29,11 @@ namespace COMP2007_Final.Models
         public Nullable<System.DateTime> CreationDate { get; set; }
         public Nullable<System.DateTime> NextSessionDate { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CampaignNPC> CampaignNPCs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CampaignPlayer> CampaignPlayers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CampaignEnemy> CampaignEnemies { get; set; }
         public virtual User User { get; set; }
     }

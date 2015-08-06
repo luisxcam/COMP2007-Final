@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class Spell
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Spell()
         {
             this.CharacterSpells = new HashSet<CharacterSpell>();
@@ -29,6 +30,7 @@ namespace COMP2007_Final.Models
         public Nullable<int> ManaRequired { get; set; }
         public Nullable<int> ChantingTime { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CharacterSpell> CharacterSpells { get; set; }
     }
 }

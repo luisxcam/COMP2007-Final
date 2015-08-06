@@ -12,7 +12,7 @@ namespace COMP2007_Final.Characters
 {
     public partial class Edit : System.Web.UI.Page
     {
-		protected COMP2007_Final.Models.DefaultConnection _db = new COMP2007_Final.Models.DefaultConnection();
+		protected COMP2007_Final.Models.DatabaseConnection _db = new COMP2007_Final.Models.DatabaseConnection();
 
         protected void Page_Load(object sender, EventArgs e)
         {

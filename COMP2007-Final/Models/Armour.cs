@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class Armour
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Armour()
         {
             this.Characters = new HashSet<Character>();
@@ -31,6 +32,7 @@ namespace COMP2007_Final.Models
         public Nullable<int> MonetaryValue { get; set; }
         public string Rarity { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Character> Characters { get; set; }
     }
 }

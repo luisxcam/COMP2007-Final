@@ -11,7 +11,10 @@ namespace COMP2007_Final.Master_Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*if()
+            {
 
+            } //if ends*/
         }
     }
 }

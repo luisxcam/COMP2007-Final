@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class Character
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Character()
         {
             this.CampaignPlayers = new HashSet<CampaignPlayer>();
@@ -46,11 +47,14 @@ namespace COMP2007_Final.Models
         public Nullable<int> CarryWeight { get; set; }
     
         public virtual Armour Armour { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CampaignPlayer> CampaignPlayers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CharacterItem> CharacterItems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CharacterSkill> CharacterSkills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CharacterSpell> CharacterSpells { get; set; }
-        public virtual User User { get; set; }
         public virtual Weapon Weapon { get; set; }
     }
 }

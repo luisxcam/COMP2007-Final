@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class NPC
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NPC()
         {
             this.CampaignNPCs = new HashSet<CampaignNPC>();
@@ -24,6 +25,7 @@ namespace COMP2007_Final.Models
         public string Description { get; set; }
         public string Role { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CampaignNPC> CampaignNPCs { get; set; }
     }
 }

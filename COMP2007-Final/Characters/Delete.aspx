@@ -26,7 +26,7 @@
 									<strong>UsernameId</strong>
 								</div>
 								<div class="col-sm-4">
-									<%#: Item.User != null ? Item.User.Username : "" %>
+									<asp:DynamicControl runat="server" DataField="UsernameId" ID="UsernameId" Mode="ReadOnly" />
 								</div>
 							</div>
 							<div class="row">

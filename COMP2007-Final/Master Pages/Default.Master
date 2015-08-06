@@ -21,35 +21,64 @@
 
 <body>
     <div class="container-fluid">
-        <!-- Static navbar -->
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">RPG THING</a>
+        <asp:PlaceHolder ID="PublicNav" runat="server">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">RPG THING</a>
+                    </div>
+                    <!--navbar-header-->
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/">Home</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/Login.aspx">Login</a></li>
+                            <li><a href="/Register.aspx">Register</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
                 </div>
-                <!--navbar-header-->
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/Characters/Default.aspx">Characters</a></li>
-                        <li><a href="/Items/Default.aspx">Items</a></li>
-                        <li><a href="/CharacterItems/Default.aspx">CharacterItems</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/Users/Default">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                    </ul>
+                <!--container-->
+            </nav>
+        </asp:PlaceHolder>
+
+        <asp:PlaceHolder ID="PrivateNav" runat="server">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">RPG THING</a>
+                    </div>
+                    <!--navbar-header-->
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/Users">Users</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>Welcome, <asp:LoginName ID="LoginName1" runat="server" /></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
                 </div>
-                <!--/.nav-collapse -->
-            </div>
-            <!--container-->
-        </nav>
+                <!--container-->
+            </nav>
+        </asp:PlaceHolder>
+
         <form id="form1" runat="server">
             <div>
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">

@@ -13,10 +13,10 @@ namespace COMP2007_Final.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DefaultConnection : DbContext
+    public partial class DatabaseConnection : DbContext
     {
-        public DefaultConnection()
-            : base("name=DefaultConnection")
+        public DatabaseConnection()
+            : base("name=DatabaseConnection")
         {
         }
     

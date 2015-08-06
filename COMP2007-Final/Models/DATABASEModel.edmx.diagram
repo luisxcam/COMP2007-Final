@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3215042299cb45e9a0e350c9aa7bb062" Name="Diagram1">
-        <EntityTypeShape EntityType="DatabaseModel.Armour" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Campaign" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.CampaignEnemy" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.CampaignNPC" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.CampaignPlayer" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.CharacterItem" Width="1.5" PointX="10.25" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Character" Width="1.5" PointX="8" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.CharacterSkill" Width="1.5" PointX="10.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.CharacterSpell" Width="1.5" PointX="10.25" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Enemy" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Item" Width="1.5" PointX="8" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.NPC" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Skill" Width="1.5" PointX="8" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Spell" Width="1.5" PointX="8" PointY="18" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.User" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Weapon" Width="1.5" PointX="5.75" PointY="14.875" IsExpanded="true" />
+      <Diagram DiagramId="b6481c8c7c1444e281ac26cef38a1113" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.Armour" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Campaign" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CampaignEnemy" Width="1.5" PointX="8.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CampaignNPC" Width="1.5" PointX="8.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CampaignPlayer" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CharacterItem" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Character" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CharacterSkill" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.CharacterSpell" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Enemy" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Item" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.NPC" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Skill" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Spell" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.User" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Weapon" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="DatabaseModel.ArmourDeleted_DeleteFromCharacter" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.CampaignDeleted_DeleteNPCs" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.CampaignDeleted_DeletePlayers" ManuallyRouted="false" />
@@ -33,7 +33,6 @@
         <AssociationConnector Association="DatabaseModel.ItemDeleted_DeleteFromCharItems" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.CharacterDeleted_DeleteFromCharSkills" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.CharacterDeleted_DeleteFromCharSpell" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK__Character__Usern__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.WeaponDeleted_DeleteFromCharacter" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.SkillDeteled_DeleteFromCharSkills" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.SpellDeleted_DeleteFromCharSpells" ManuallyRouted="false" />

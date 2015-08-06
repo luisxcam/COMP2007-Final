@@ -328,18 +328,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Character__Usern__4222D4EF">
-    <End Role="Users" Type="Self.Users" Multiplicity="1" />
-    <End Role="Characters" Type="Self.Characters" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Users">
-        <PropertyRef Name="UsernameId" />
-      </Principal>
-      <Dependent Role="Characters">
-        <PropertyRef Name="UsernameId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="ItemDeleted_DeleteFromCharItems">
     <End Role="Items" Type="Self.Items" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -464,10 +452,6 @@
     <AssociationSet Name="FK__Campaign__Userna__3A81B327" Association="Self.FK__Campaign__Userna__3A81B327">
       <End Role="Users" EntitySet="Users" />
       <End Role="Campaign" EntitySet="Campaign" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Character__Usern__4222D4EF" Association="Self.FK__Character__Usern__4222D4EF">
-      <End Role="Users" EntitySet="Users" />
-      <End Role="Characters" EntitySet="Characters" />
     </AssociationSet>
     <AssociationSet Name="ItemDeleted_DeleteFromCharItems" Association="Self.ItemDeleted_DeleteFromCharItems">
       <End Role="Items" EntitySet="Items" />

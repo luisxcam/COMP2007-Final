@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class Item
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Item()
         {
             this.CharacterItems = new HashSet<CharacterItem>();
@@ -25,6 +26,7 @@ namespace COMP2007_Final.Models
         public Nullable<int> MonetaryValue { get; set; }
         public Nullable<int> Weight { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CharacterItem> CharacterItems { get; set; }
     }
 }

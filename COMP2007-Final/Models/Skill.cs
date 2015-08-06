@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class Skill
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Skill()
         {
             this.CharacterSkills = new HashSet<CharacterSkill>();
@@ -27,6 +28,7 @@ namespace COMP2007_Final.Models
         public Nullable<int> Efficiency { get; set; }
         public Nullable<int> UsesPerDay { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CharacterSkill> CharacterSkills { get; set; }
     }
 }

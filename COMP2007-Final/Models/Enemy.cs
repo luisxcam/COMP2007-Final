@@ -14,6 +14,7 @@ namespace COMP2007_Final.Models
     
     public partial class Enemy
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Enemy()
         {
             this.CampaignEnemies = new HashSet<CampaignEnemy>();
@@ -32,6 +33,7 @@ namespace COMP2007_Final.Models
         public Nullable<int> MagicDefense { get; set; }
         public Nullable<int> Speed { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CampaignEnemy> CampaignEnemies { get; set; }
     }
 }

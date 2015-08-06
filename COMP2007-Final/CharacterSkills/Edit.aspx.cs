@@ -12,7 +12,7 @@ namespace COMP2007_Final.CharacterSkills
 {
     public partial class Edit : System.Web.UI.Page
     {
-		protected COMP2007_Final.Models.DefaultConnection _db = new COMP2007_Final.Models.DefaultConnection();
+        protected COMP2007_Final.Models.DatabaseConnection _db = new COMP2007_Final.Models.DatabaseConnection();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +20,7 @@ namespace COMP2007_Final.CharacterSkills
 
         // This is the Update methd to update the selected CharacterSkill item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(int  CharacterSkillsId)
+        public void UpdateItem(int CharacterSkillsId)
         {
             using (_db)
             {

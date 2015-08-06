@@ -14,10 +14,10 @@ namespace COMP2007_Final.Models
     
     public partial class User
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
             this.Campaigns = new HashSet<Campaign>();
-            this.Characters = new HashSet<Character>();
         }
     
         public int UsernameId { get; set; }
@@ -27,7 +27,7 @@ namespace COMP2007_Final.Models
         public string Password { get; set; }
         public string Email { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Campaign> Campaigns { get; set; }
-        public virtual ICollection<Character> Characters { get; set; }
     }
 }

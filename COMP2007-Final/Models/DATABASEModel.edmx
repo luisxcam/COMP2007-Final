@@ -333,18 +333,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Character__Usern__4222D4EF">
-          <End Role="Users" Type="Self.Users" Multiplicity="1" />
-          <End Role="Characters" Type="Self.Characters" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UsernameId" />
-            </Principal>
-            <Dependent Role="Characters">
-              <PropertyRef Name="UsernameId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="ItemDeleted_DeleteFromCharItems">
           <End Role="Items" Type="Self.Items" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -469,10 +457,6 @@
           <AssociationSet Name="FK__Campaign__Userna__3A81B327" Association="Self.FK__Campaign__Userna__3A81B327">
             <End Role="Users" EntitySet="Users" />
             <End Role="Campaign" EntitySet="Campaign" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Character__Usern__4222D4EF" Association="Self.FK__Character__Usern__4222D4EF">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Characters" EntitySet="Characters" />
           </AssociationSet>
           <AssociationSet Name="ItemDeleted_DeleteFromCharItems" Association="Self.ItemDeleted_DeleteFromCharItems">
             <End Role="Items" EntitySet="Items" />
@@ -604,7 +588,6 @@
           <NavigationProperty Name="CharacterItems" Relationship="Self.CharacterDeleted_DeleteFromCharItems" FromRole="Characters" ToRole="CharacterItems" />
           <NavigationProperty Name="CharacterSkills" Relationship="Self.CharacterDeleted_DeleteFromCharSkills" FromRole="Characters" ToRole="CharacterSkills" />
           <NavigationProperty Name="CharacterSpells" Relationship="Self.CharacterDeleted_DeleteFromCharSpell" FromRole="Characters" ToRole="CharacterSpells" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Character__Usern__4222D4EF" FromRole="Characters" ToRole="Users" />
           <NavigationProperty Name="Weapon" Relationship="Self.WeaponDeleted_DeleteFromCharacter" FromRole="Characters" ToRole="Weapon" />
         </EntityType>
         <EntityType Name="CharacterSkill">
@@ -705,7 +688,6 @@
           <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Campaigns" Relationship="Self.FK__Campaign__Userna__3A81B327" FromRole="Users" ToRole="Campaign" />
-          <NavigationProperty Name="Characters" Relationship="Self.FK__Character__Usern__4222D4EF" FromRole="Users" ToRole="Characters" />
         </EntityType>
         <EntityType Name="Weapon">
           <Key>
@@ -888,18 +870,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Character__Usern__4222D4EF">
-          <End Role="Users" Type="Self.User" Multiplicity="1" />
-          <End Role="Characters" Type="Self.Character" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="UsernameId" />
-            </Principal>
-            <Dependent Role="Characters">
-              <PropertyRef Name="UsernameId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="WeaponDeleted_DeleteFromCharacter">
           <End Role="Weapon" Type="Self.Weapon" Multiplicity="0..1" />
           <End Role="Characters" Type="Self.Character" Multiplicity="*" />
@@ -940,7 +910,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DefaultConnection" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DatabaseConnection" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Armours" EntityType="Self.Armour" />
           <EntitySet Name="Campaigns" EntityType="Self.Campaign" />
           <EntitySet Name="CampaignEnemies" EntityType="Self.CampaignEnemy" />
@@ -1005,10 +975,6 @@
             <End Role="Characters" EntitySet="Characters" />
             <End Role="CharacterSpells" EntitySet="CharacterSpells" />
           </AssociationSet>
-          <AssociationSet Name="FK__Character__Usern__4222D4EF" Association="Self.FK__Character__Usern__4222D4EF">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Characters" EntitySet="Characters" />
-          </AssociationSet>
           <AssociationSet Name="WeaponDeleted_DeleteFromCharacter" Association="Self.WeaponDeleted_DeleteFromCharacter">
             <End Role="Weapon" EntitySet="Weapons" />
             <End Role="Characters" EntitySet="Characters" />
@@ -1027,7 +993,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DefaultConnection">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseConnection">
           <EntitySetMapping Name="Armours">
             <EntityTypeMapping TypeName="DatabaseModel.Armour">
               <MappingFragment StoreEntitySet="Armour">

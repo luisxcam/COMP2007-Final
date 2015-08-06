@@ -12,7 +12,7 @@ namespace COMP2007_Final.Armours
 {
     public partial class Edit : System.Web.UI.Page
     {
-		protected COMP2007_Final.Models.DefaultConnection _db = new COMP2007_Final.Models.DefaultConnection();
+        protected COMP2007_Final.Models.DatabaseConnection _db = new COMP2007_Final.Models.DatabaseConnection();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +20,7 @@ namespace COMP2007_Final.Armours
 
         // This is the Update methd to update the selected Armour item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(int  ArmourId)
+        public void UpdateItem(int ArmourId)
         {
             using (_db)
             {

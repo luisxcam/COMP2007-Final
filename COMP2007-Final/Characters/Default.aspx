@@ -104,7 +104,7 @@
 								<asp:DynamicControl runat="server" DataField="CharacterId" ID="CharacterId" Mode="ReadOnly" />
 							</td>
 							<td>
-								<%#: Item.User != null ? Item.User.Username : "" %>
+								<asp:DynamicControl runat="server" DataField="UsernameId" ID="UsernameId" Mode="ReadOnly" />
 							</td>
 							<td>
 								<%#: Item.Weapon != null ? Item.Weapon.Name : "" %>
