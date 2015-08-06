@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="251f483d33c948b184571173127d0634" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="databaseSupremeModel.Armour" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.AspNetRole" Width="1.5" PointX="12.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.AspNetUserClaim" Width="1.5" PointX="17.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.AspNetUserLogin" Width="1.5" PointX="17.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.AspNetUser" Width="1.5" PointX="15" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.Campaign" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.CampaignEnemy" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.CampaignNPC" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.CampaignPlayer" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.CharacterItem" Width="1.5" PointX="10.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.Character" Width="1.5" PointX="8" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.CharacterSkill" Width="1.5" PointX="10.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.CharacterSpell" Width="1.5" PointX="10.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.Enemy" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.Item" Width="1.5" PointX="8" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.NPC" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.Skill" Width="1.5" PointX="8" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.Spell" Width="1.5" PointX="13" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.User" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.Weapon" Width="1.5" PointX="5.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="databaseSupremeModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="databaseSupremeModel.ArmourDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.CampaignDeleted_DeleteNPCs" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.CampaignDeleted_DeletePlayers" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.CampaingDeleted_DeleteEnemies" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.UserID_On_Campaign" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.EnemyDeleted_DeleteEnemyFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.NPCDeleted_DeleteFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.CharactedDeleted_DeleteFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.CharacterDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.ItemDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.CharacterDeleted_DeleteFromCharSkills" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.CharacterDeleted_DeleteFromCharSpell" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.UserID_On_Characters" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.WeaponDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.SkillDeteled_DeleteFromCharSkills" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.SpellDeleted_DeleteFromCharSpells" ManuallyRouted="false" />
+        <AssociationConnector Association="databaseSupremeModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
