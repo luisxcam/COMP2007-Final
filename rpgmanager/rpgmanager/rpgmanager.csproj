@@ -99,8 +99,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Integer_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
     <Content Include="ErrorPage.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="MasterPages\Default.Master" />
@@ -159,18 +179,187 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="UserPages\Armours\Default.aspx" />
+    <Content Include="UserPages\Armours\Delete.aspx" />
+    <Content Include="UserPages\Armours\Details.aspx" />
+    <Content Include="UserPages\Armours\Edit.aspx" />
+    <Content Include="UserPages\Armours\Insert.aspx" />
+    <Content Include="UserPages\CharacterSheet.aspx" />
+    <Content Include="UserPages\Enemies\Default.aspx" />
+    <Content Include="UserPages\Enemies\Delete.aspx" />
+    <Content Include="UserPages\Enemies\Details.aspx" />
+    <Content Include="UserPages\Enemies\Edit.aspx" />
+    <Content Include="UserPages\Enemies\Insert.aspx" />
+    <Content Include="UserPages\Items\Default.aspx" />
+    <Content Include="UserPages\Items\Delete.aspx" />
+    <Content Include="UserPages\Items\Details.aspx" />
+    <Content Include="UserPages\Items\Edit.aspx" />
+    <Content Include="UserPages\Items\Insert.aspx" />
+    <Content Include="UserPages\ManagementHub.aspx" />
+    <Content Include="UserPages\NPCs\Default.aspx" />
+    <Content Include="UserPages\NPCs\Delete.aspx" />
+    <Content Include="UserPages\NPCs\Details.aspx" />
+    <Content Include="UserPages\NPCs\Edit.aspx" />
+    <Content Include="UserPages\NPCs\Insert.aspx" />
+    <Content Include="UserPages\ViewCampaign.aspx" />
+    <Content Include="UserPages\ViewCharacters.aspx" />
+    <Content Include="UserPages\Weapons\Default.aspx" />
+    <Content Include="UserPages\Weapons\Delete.aspx" />
+    <Content Include="UserPages\Weapons\Details.aspx" />
+    <Content Include="UserPages\Weapons\Edit.aspx" />
+    <Content Include="UserPages\Weapons\Insert.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.designer.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.designer.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.designer.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.designer.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.designer.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.designer.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.designer.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.designer.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.designer.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
     </Compile>
     <Compile Include="ErrorPage.aspx.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
@@ -297,6 +486,209 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UserPages\Armours\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Armours\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Armours\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Armours\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Armours\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Armours\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Armours\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Armours\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Armours\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Armours\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterSheet.aspx.cs">
+      <DependentUpon>CharacterSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CharacterSheet.aspx.designer.cs">
+      <DependentUpon>CharacterSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Enemies\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Items\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Items\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Items\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Items\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Items\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Items\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Items\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Items\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Items\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Items\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\ManagementHub.aspx.cs">
+      <DependentUpon>ManagementHub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\ManagementHub.aspx.designer.cs">
+      <DependentUpon>ManagementHub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\NPCs\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\ViewCampaign.aspx.cs">
+      <DependentUpon>ViewCampaign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\ViewCampaign.aspx.designer.cs">
+      <DependentUpon>ViewCampaign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\ViewCharacters.aspx.cs">
+      <DependentUpon>ViewCharacters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\ViewCharacters.aspx.designer.cs">
+      <DependentUpon>ViewCharacters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Weapons\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,7 +699,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="UserPages\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
