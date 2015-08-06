@@ -1,10 +1,10 @@
-﻿<%@ Page Title="CharacterItem Details" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Details.aspx.cs" Inherits="COMP2007_Final_SteveEd.CharacterItems.Details" %>
+﻿<%@ Page Title="CharacterItem Details" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.CharacterItems.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
       
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.CharacterItem" DataKeyNames="CharacterItemId"
+            ItemType="rpgmanager.Models.CharacterItem" DataKeyNames="CharacterItemId"
             SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>

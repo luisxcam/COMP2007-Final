@@ -7,13 +7,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Entity;
 using Microsoft.AspNet.FriendlyUrls.ModelBinding;
-using COMP2007_Final_SteveEd.Models;
+using rpgmanager.Models;
 
-namespace COMP2007_Final_SteveEd.Characters
+namespace rpgmanager.Characters
 {
     public partial class Details : System.Web.UI.Page
     {
-		protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
+		protected rpgmanager.Models.rpg_entities _db = new rpgmanager.Models.rpg_entities();
         string s;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,7 +30,7 @@ namespace COMP2007_Final_SteveEd.Characters
 
         // This is the Select methd to selects a single Character item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public COMP2007_Final_SteveEd.Models.Character GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterId)
+        public rpgmanager.Models.Character GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterId)
         {
             if (CharacterId == null)
             {

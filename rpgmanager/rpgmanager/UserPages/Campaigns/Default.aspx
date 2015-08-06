@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CampaignList" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Default.aspx.cs" Inherits="COMP2007_Final_SteveEd.Campaigns.Default" %>
+﻿<%@ Page Title="CampaignList" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Default.aspx.cs" Inherits="rpgmanager.Campaigns.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <h2>Campaigns List</h2>
@@ -8,7 +8,7 @@
     <div>
         <asp:ListView id="ListView1" runat="server"
             DataKeyNames="CampaignId" 
-			ItemType="COMP2007_Final_SteveEd.Models.Campaign"
+			ItemType="rpgmanager.Models.Campaign"
             SelectMethod="GetData">
             <EmptyDataTemplate>
                 There are no entries found for Campaigns

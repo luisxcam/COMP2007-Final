@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CharacterList" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Default.aspx.cs" Inherits="COMP2007_Final_SteveEd.Characters.Default" %>
+﻿<%@ Page Title="CharacterList" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Default.aspx.cs" Inherits="rpgmanager.Characters.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <h2>Characters List</h2>
@@ -8,7 +8,7 @@
     <div>
         <asp:ListView id="ListView1" runat="server"
             DataKeyNames="CharacterId" 
-			ItemType="COMP2007_Final_SteveEd.Models.Character"
+			ItemType="rpgmanager.Models.Character"
             SelectMethod="GetData">
             <EmptyDataTemplate>
                 There are no entries found for Characters

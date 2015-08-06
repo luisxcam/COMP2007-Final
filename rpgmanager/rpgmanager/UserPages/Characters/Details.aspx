@@ -1,11 +1,11 @@
-﻿<%@ Page Title="Character Details" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Details.aspx.cs" Inherits="COMP2007_Final_SteveEd.Characters.Details" AutoEventWireup="True" %>
+﻿<%@ Page Title="Character Details" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.Characters.Details" AutoEventWireup="True" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container">
     <div id="character_display">
         <p>&nbsp;</p>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Character" DataKeyNames="CharacterId"
+            ItemType="rpgmanager.Models.Character" DataKeyNames="CharacterId"
             SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>

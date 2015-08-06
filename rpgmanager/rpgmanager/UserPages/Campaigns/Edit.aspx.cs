@@ -7,12 +7,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Entity;
 using Microsoft.AspNet.FriendlyUrls.ModelBinding;
-using COMP2007_Final_SteveEd.Models;
-namespace COMP2007_Final_SteveEd.Campaigns
+using rpgmanager.Models;
+namespace rpgmanager.Campaigns
 {
     public partial class Edit : System.Web.UI.Page
     {
-		protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
+		protected rpgmanager.Models.rpg_entities _db = new rpgmanager.Models.rpg_entities();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,7 +46,7 @@ namespace COMP2007_Final_SteveEd.Campaigns
 
         // This is the Select method to selects a single Campaign item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public COMP2007_Final_SteveEd.Models.Campaign GetItem([FriendlyUrlSegmentsAttribute(0)]int? CampaignId)
+        public rpgmanager.Models.Campaign GetItem([FriendlyUrlSegmentsAttribute(0)]int? CampaignId)
         {
             if (CampaignId == null)
             {

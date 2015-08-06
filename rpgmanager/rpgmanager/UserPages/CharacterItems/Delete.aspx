@@ -1,10 +1,10 @@
-﻿<%@ Page Title="CharacterItemDelete" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="COMP2007_Final_SteveEd.CharacterItems.Delete" %>
+﻿<%@ Page Title="CharacterItemDelete" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.CharacterItems.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this CharacterItem?</h3>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.CharacterItem" DataKeyNames="CharacterItemId"
+            ItemType="rpgmanager.Models.CharacterItem" DataKeyNames="CharacterItemId"
             DeleteMethod="DeleteItem" SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
