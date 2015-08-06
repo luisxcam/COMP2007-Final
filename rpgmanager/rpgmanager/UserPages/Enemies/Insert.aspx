@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="EnemyInsert" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.UserPages.Enemies.Insert" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
         <p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Enemy" DefaultMode="Insert"

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="EnemyEdit" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.Enemies.Edit" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
         <p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Enemy" DefaultMode="Edit" DataKeyNames="EnemyId"
