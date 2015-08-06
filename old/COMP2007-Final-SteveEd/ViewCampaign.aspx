@@ -51,7 +51,7 @@
                 </EmptyDataTemplate>
                 <LayoutTemplate>
                     <div class="table-responsive">
-                    <table id="default_char" class="table table-hover table-responsive">
+                    <table id="styledTable" class="table table-hover table-responsive">
                         <thead class="verticalLabel">
                             <tr>
                                 <th>
@@ -204,6 +204,75 @@
                     </tr>
                 </ItemTemplate>
             </asp:ListView>
-        </div>
+        </div><!-- /characterForm -->
+
+          <div>
+                              <p class="btn btn-custom">
+        <asp:HyperLink runat="server" NavigateUrl="CharacterItems/Insert" Text="Give Character Item" />
+    </p>
+        <asp:ListView id="ListView2" runat="server"
+            DataKeyNames="CharacterItemId" 
+			ItemType="COMP2007_Final_SteveEd.Models.CharacterItem"
+            SelectMethod="GetData2">
+            <EmptyDataTemplate>
+                There are no entries found for CharacterItems
+            </EmptyDataTemplate>
+
+            <LayoutTemplate>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+								<asp:LinkButton Text="CharacterItemId" CommandName="Sort" CommandArgument="CharacterItemId" runat="Server" />
+							</th>
+                            <th>
+								<asp:LinkButton Text="CharacterId" CommandName="Sort" CommandArgument="CharacterId" runat="Server" />
+							</th>
+                            <th>
+								<asp:LinkButton Text="ItemId" CommandName="Sort" CommandArgument="ItemId" runat="Server" />
+							</th>
+                            <th>
+								<asp:LinkButton Text="Quantity" CommandName="Sort" CommandArgument="Quantity" runat="Server" />
+							</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr runat="server" id="itemPlaceholder" />
+                    </tbody>
+                </table>
+				<asp:DataPager PageSize="5"  runat="server">
+					<Fields>
+                        <asp:NextPreviousPagerField ShowLastPageButton="False" ShowNextPageButton="False" ButtonType="Button" ButtonCssClass="btn" />
+                        <asp:NumericPagerField ButtonType="Button"  NumericButtonCssClass="btn" CurrentPageLabelCssClass="btn disabled" NextPreviousButtonCssClass="btn" />
+                        <asp:NextPreviousPagerField ShowFirstPageButton="False" ShowPreviousPageButton="False" ButtonType="Button" ButtonCssClass="btn" />
+                    </Fields>
+				</asp:DataPager>
+            </LayoutTemplate>
+            <ItemTemplate>
+                <tr>
+							<td>
+								<asp:DynamicControl runat="server" DataField="CharacterItemId" ID="CharacterItemId" Mode="ReadOnly" />
+							</td>
+							<td>
+								<%#: Item.Character != null ? Item.Character.CharacterName : "" %>
+							</td>
+							<td>
+								<%#: Item.Item != null ? Item.Item.Name : "" %>
+							</td>
+							<td>
+								<asp:DynamicControl runat="server" DataField="Quantity" ID="Quantity" Mode="ReadOnly" />
+							</td>
+                    <td>
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Details", Item.CharacterItemId) %>' Text="Details" /> | 
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Edit", Item.CharacterItemId) %>' Text="Edit" /> | 
+                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Delete", Item.CharacterItemId) %>' Text="Delete" />
+                    </td>
+                </tr>
+            </ItemTemplate>
+        </asp:ListView>
     </div>
-</asp:Content>
+
+    </div><!-- /dashboard_container-->
+    </asp:Content>
+   

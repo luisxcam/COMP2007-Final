@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_Final_SteveEd {
+namespace COMP2007_Final_SteveEd.NPCs {
     
     
-    public partial class ViewCampaign {
+    public partial class Default {
         
         /// <summary>
         /// ListView1 control.
@@ -20,14 +20,5 @@ namespace COMP2007_Final_SteveEd {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView ListView1;
-        
-        /// <summary>
-        /// ListView2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView2;
     }
 }

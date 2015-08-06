@@ -4,11 +4,14 @@
     <title>Login</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+    
     <asp:PlaceHolder runat="server" ID="LoginStatus" Visible="false">
-        <p>
+        <div id="dashbaordHomePage">
+        <h1 id="login_greeting_header" class="fa-align-center">
             <asp:Literal runat="server" ID="StatusText" />
-        </p>
+        </h1>
+               <img src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg" alt="" />
+            </div>
     </asp:PlaceHolder>
     <asp:PlaceHolder runat="server" ID="LoginForm" Visible="false">
         <div class="row">
