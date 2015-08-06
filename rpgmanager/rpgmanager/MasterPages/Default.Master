@@ -106,7 +106,7 @@
                             <ul id="sidebar" class="sidebar-nav">
                                 <li style="color: ghostwhite; text-indent: 30px;">Campaigns<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
                                     data-target="#createCampaignModal"><span class="button_icon glyphicon glyphicon-plus-sign"></span></a></li>
-                                <!--<li style="color: ghostwhite; text-indent: 30px;">Managment<a class="icon nav-inline-glyph" href="/DatabaseManagmentHub.aspx"><span class="button_icon glyphicon glyphicon-cog"></span></a></li>-->
+                                <li style="color: ghostwhite; text-indent: 30px;">Managment<a class="icon nav-inline-glyph" href="/UserPages/CharacterSheet.aspx"><span class="button_icon glyphicon glyphicon-knight"></span></a></li>
                                 <li><a href="/CharacterSheet.aspx">charactersheet<span></span></a></li>
                                 <li><a href="/ViewCampaign">OrcCampaign<span></span></a></li>
                                 <li><a href="#">BestFriendsCampaign<span></span></a></li>
