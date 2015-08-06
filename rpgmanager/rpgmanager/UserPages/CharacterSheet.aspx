@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div  class="dashboard_container">
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Character" DefaultMode="Insert"
+            ItemType="rpgmanager.Models.Character" DefaultMode="Insert"
             InsertItemPosition="FirstItem" InsertMethod="InsertItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <InsertItemTemplate>
