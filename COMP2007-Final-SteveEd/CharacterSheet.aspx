@@ -20,9 +20,9 @@
                                 <asp:DynamicControl Mode="Insert" DataField="CharacterName" runat="server" />
                             </div>
 
-                            <div>
+                            <div class="form-group">
                                 <label>Gender</label>
-                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="dropdown" SelectedValue="<%# BindItem.Gender %>">
+                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control" SelectedValue="<%# BindItem.Gender %>">
                                     <asp:ListItem Text="Male" Value="Male" Selected="True" />
                                     <asp:ListItem Text="Female" Value="Female" />
                                     <asp:ListItem Text="Trans" Value="Trans" />
@@ -30,9 +30,9 @@
                                 </asp:DropDownList>
                             </div>
 
-                            <div>
+                            <div class="form-group">
                                 <label>Class</label>
-                                <asp:DropDownList ID="CharClassDropDownList" runat="server" CssClass="dropdown" SelectedValue="<%# BindItem.CharClass %>">
+                                <asp:DropDownList ID="CharClassDropDownList" runat="server" CssClass=" form-control" SelectedValue="<%# BindItem.CharClass %>">
                                     <asp:ListItem Value="Warrior"></asp:ListItem>
                                     <asp:ListItem Value="Archer"></asp:ListItem>
                                     <asp:ListItem Value="Monk"></asp:ListItem>
@@ -40,6 +40,24 @@
                                     <asp:ListItem Value="Black Mage"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
+                            <div>
+                                <label>Weapon</label>
+                            <asp:DynamicControl Mode="Insert" 
+								DataField="WeaponId" 
+								DataTypeName="COMP2007_Final_SteveEd.Models.Weapon" 
+								DataTextField="Name" 
+								DataValueField="WeaponId" 
+								UIHint="ForeignKey" runat="server" />
+                                </div>
+                            <div>
+                                <label>Armour</label>
+							<asp:DynamicControl Mode="Insert" 
+								DataField="ArmourId" 
+								DataTypeName="COMP2007_Final_SteveEd.Models.Armour" 
+								DataTextField="Name" 
+								DataValueField="ArmourId" 
+								UIHint="ForeignKey" runat="server" />
+                                </div>
                         </div>
                         <!-- /.col-md-8-->
                         <div class="col-md-4  col-md-pull-8">

@@ -11,7 +11,6 @@ namespace COMP2007_Final_SteveEd {
         private Type _enumType;
     
         protected void Page_Init(object sender, EventArgs e) {
-			Label1.Text = Column.DisplayName;
             DropDownList1.ToolTip = Column.Description;
     
             if (DropDownList1.Items.Count == 0) {

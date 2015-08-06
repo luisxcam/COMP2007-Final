@@ -439,7 +439,9 @@ hr {
 }
 
 /*Character Creation Form    ***********************************************************************/
-
+div#characterDetails {
+    margin-bottom: 30px;
+}
 
 #characterDetails img {
 width:100%;
