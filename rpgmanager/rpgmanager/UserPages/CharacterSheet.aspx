@@ -19,13 +19,23 @@
                                 <asp:DynamicControl Mode="Insert" DataField="CharacterName" runat="server" />
                             </div>
 
+                            <div>
+                                <label>Username</label>
+                            <asp:DynamicControl Mode="Insert" 
+								DataField="UsernameId" 
+								DataTypeName="rpgmanager.Models.User" 
+								DataTextField="Username" 
+								DataValueField="UsernameId" 
+								UIHint="ForeignKey" runat="server" />
+                                </div>
+
                             <div class="form-group">
                                 <label>Gender</label>
                                 <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control" SelectedValue="<%# BindItem.Gender %>">
-                                    <asp:ListItem Text="Male" Value="Male" Selected="True" />
-                                    <asp:ListItem Text="Female" Value="Female" />
-                                    <asp:ListItem Text="Trans" Value="Trans" />
-                                    <asp:ListItem Text="Other" Value="Other" />
+                                    <asp:ListItem Text="Male" Value="M" Selected="True" />
+                                    <asp:ListItem Text="Female" Value="F" />
+                                    <asp:ListItem Text="Trans" Value="T" />
+                                    <asp:ListItem Text="Other" Value="O" />
                                 </asp:DropDownList>
                             </div>
 
@@ -43,7 +53,7 @@
                                 <label>Weapon</label>
                             <asp:DynamicControl Mode="Insert" 
 								DataField="WeaponId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Weapon" 
+								DataTypeName="rpgmanager.Models.Weapon" 
 								DataTextField="Name" 
 								DataValueField="WeaponId" 
 								UIHint="ForeignKey" runat="server" />
@@ -52,7 +62,7 @@
                                 <label>Armour</label>
 							<asp:DynamicControl Mode="Insert" 
 								DataField="ArmourId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Armour" 
+								DataTypeName="rpgmanager.Models.Armour" 
 								DataTextField="Name" 
 								DataValueField="ArmourId" 
 								UIHint="ForeignKey" runat="server" />
