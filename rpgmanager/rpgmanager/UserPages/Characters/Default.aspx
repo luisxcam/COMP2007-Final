@@ -3,9 +3,6 @@
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container">
         <h2>Characters List</h2>
-        <p>
-            <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
-        </p>
         <div>
             <asp:ListView ID="ListView1" runat="server"
                 DataKeyNames="CharacterId"

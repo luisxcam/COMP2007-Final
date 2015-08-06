@@ -188,7 +188,6 @@
     <Content Include="UserPages\Campaigns\Delete.aspx" />
     <Content Include="UserPages\Campaigns\Details.aspx" />
     <Content Include="UserPages\Campaigns\Edit.aspx" />
-    <Content Include="UserPages\Campaigns\Insert.aspx" />
     <Content Include="UserPages\CharacterItems\Default.aspx" />
     <Content Include="UserPages\CharacterItems\Delete.aspx" />
     <Content Include="UserPages\CharacterItems\Details.aspx" />
@@ -199,7 +198,6 @@
     <Content Include="UserPages\Characters\Delete.aspx" />
     <Content Include="UserPages\Characters\Details.aspx" />
     <Content Include="UserPages\Characters\Edit.aspx" />
-    <Content Include="UserPages\Characters\Insert.aspx" />
     <Content Include="UserPages\Enemies\Default.aspx" />
     <Content Include="UserPages\Enemies\Delete.aspx" />
     <Content Include="UserPages\Enemies\Details.aspx" />
@@ -538,6 +536,7 @@
     </Compile>
     <Compile Include="UserPages\Campaigns\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPages\Campaigns\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -560,14 +559,9 @@
     <Compile Include="UserPages\Campaigns\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserPages\Campaigns\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserPages\Campaigns\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UserPages\CharacterItems\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPages\CharacterItems\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -605,6 +599,7 @@
     </Compile>
     <Compile Include="UserPages\Characters\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPages\Characters\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -626,12 +621,6 @@
     </Compile>
     <Compile Include="UserPages\Characters\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserPages\Characters\Insert.aspx.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserPages\Characters\Insert.aspx.designer.cs">
-      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPages\Enemies\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -17,15 +17,14 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
-    <!--<link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">-->
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
     <link href="../Content/main.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<!--<body runat="server" ID="body">-->
-<body>
+<body runat="server" ID="body">
     <div class="container-fluid">
         <form id="form1" runat="server">
             <div>

@@ -8,7 +8,7 @@
             <p>Whichever tabletop game you play, we can help you manage all of your campaigns in one convenient location.</p>
             <div class="button-div">
                 <a class="btn btn-lg btn-custom" href="/Register.aspx">Create an account now!</a>
-                <!--<img src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438178645/twenty_sided_die_small_jiaots.png" alt="twenty sided orange die" />-->
+                <img src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438178645/twenty_sided_die_small_jiaots.png" alt="twenty sided orange die" />
             </div>
         </div>
     </div>
