@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Entity;
-using COMP2007_Final_SteveEd.Models;
+using rpgmanager.Models;
 
-namespace COMP2007_Final_SteveEd.Characters
+namespace rpgmanager.Characters
 {
     public partial class Insert : System.Web.UI.Page
     {
-		protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
+		protected rpgmanager.Models.rpg_entities _db = new rpgmanager.Models.rpg_entities();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace COMP2007_Final_SteveEd.Characters
         {
             using (_db)
             {
-                var item = new COMP2007_Final_SteveEd.Models.Character();
+                var item = new rpgmanager.Models.Character();
 
                 TryUpdateModel(item);
 

@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Campaign Details" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Details.aspx.cs" Inherits="COMP2007_Final_SteveEd.Campaigns.Details" %>
+﻿<%@ Page Title="Campaign Details" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.Campaigns.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
       
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Campaign" DataKeyNames="CampaignId"
+            ItemType="rpgmanager.Models.Campaign" DataKeyNames="CampaignId"
             SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_Final_SteveEd.Characters {
+namespace rpgmanager.Characters {
     
     
     public partial class Details {

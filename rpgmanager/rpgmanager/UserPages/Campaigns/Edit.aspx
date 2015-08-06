@@ -1,9 +1,9 @@
-﻿<%@ Page Title="CampaignEdit" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="COMP2007_Final_SteveEd.Campaigns.Edit" %>
+﻿<%@ Page Title="CampaignEdit" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.Campaigns.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Campaign" DefaultMode="Edit" DataKeyNames="CampaignId"
+            ItemType="rpgmanager.Models.Campaign" DefaultMode="Edit" DataKeyNames="CampaignId"
             UpdateMethod="UpdateItem" SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
@@ -15,7 +15,7 @@
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
 							<asp:DynamicControl Mode="Edit" 
 								DataField="UsernameId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.User" 
+								DataTypeName="rpgmanager.Models.User" 
 								DataTextField="Username" 
 								DataValueField="UsernameId" 
 								UIHint="ForeignKey" runat="server" />

@@ -1,9 +1,9 @@
-﻿<%@ Page Title="CharacterEdit" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="COMP2007_Final_SteveEd.Characters.Edit" %>
+﻿<%@ Page Title="CharacterEdit" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.Characters.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Character" DefaultMode="Edit" DataKeyNames="CharacterId"
+            ItemType="rpgmanager.Models.Character" DefaultMode="Edit" DataKeyNames="CharacterId"
             UpdateMethod="UpdateItem" SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
@@ -15,19 +15,19 @@
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
 							<asp:DynamicControl Mode="Edit" 
 								DataField="UsernameId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.User" 
+								DataTypeName="rpgmanager.Models.User" 
 								DataTextField="Username" 
 								DataValueField="UsernameId" 
 								UIHint="ForeignKey" runat="server" />
 							<asp:DynamicControl Mode="Edit" 
 								DataField="WeaponId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Weapon" 
+								DataTypeName="rpgmanager.Models.Weapon" 
 								DataTextField="Name" 
 								DataValueField="WeaponId" 
 								UIHint="ForeignKey" runat="server" />
 							<asp:DynamicControl Mode="Edit" 
 								DataField="ArmourId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Armour" 
+								DataTypeName="rpgmanager.Models.Armour" 
 								DataTextField="Name" 
 								DataValueField="ArmourId" 
 								UIHint="ForeignKey" runat="server" />

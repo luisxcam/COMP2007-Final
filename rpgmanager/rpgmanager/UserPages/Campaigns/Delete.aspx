@@ -1,10 +1,10 @@
-﻿<%@ Page Title="CampaignDelete" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="COMP2007_Final_SteveEd.Campaigns.Delete" %>
+﻿<%@ Page Title="CampaignDelete" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.Campaigns.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this Campaign?</h3>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Campaign" DataKeyNames="CampaignId"
+            ItemType="rpgmanager.Models.Campaign" DataKeyNames="CampaignId"
             DeleteMethod="DeleteItem" SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>

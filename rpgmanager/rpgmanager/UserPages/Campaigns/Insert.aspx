@@ -1,9 +1,9 @@
-﻿<%@ Page Title="CampaignInsert" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="COMP2007_Final_SteveEd.Campaigns.Insert" %>
+﻿<%@ Page Title="CampaignInsert" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.Campaigns.Insert" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Campaign" DefaultMode="Insert"
+            ItemType="rpgmanager.Models.Campaign" DefaultMode="Insert"
             InsertItemPosition="FirstItem" InsertMethod="InsertItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <InsertItemTemplate>
@@ -12,7 +12,7 @@
 		        <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
 							<asp:DynamicControl Mode="Insert" 
 								DataField="UsernameId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.User" 
+								DataTypeName="rpgmanager.Models.User" 
 								DataTextField="Username" 
 								DataValueField="UsernameId" 
 								UIHint="ForeignKey" runat="server" />

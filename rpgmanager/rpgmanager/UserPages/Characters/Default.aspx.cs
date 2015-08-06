@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Entity;
-using COMP2007_Final_SteveEd.Models;
+using rpgmanager.Models;
 
-namespace COMP2007_Final_SteveEd.Characters
+namespace rpgmanager.Characters
 {
     public partial class Default : System.Web.UI.Page
     {
-		protected COMP2007_Final_SteveEd.Models.DungeonTestEntities1 _db = new COMP2007_Final_SteveEd.Models.DungeonTestEntities1();
+		protected rpgmanager.Models.rpg_entities _db = new rpgmanager.Models.rpg_entities();
        public int i = 0;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -20,7 +20,7 @@ namespace COMP2007_Final_SteveEd.Characters
 
         // Model binding method to get List of Character entries
         // USAGE: <asp:ListView SelectMethod="GetData">
-        public IQueryable<COMP2007_Final_SteveEd.Models.Character> GetData()
+        public IQueryable<rpgmanager.Models.Character> GetData()
         {
         
            // "../Content/images/archer.jpg"

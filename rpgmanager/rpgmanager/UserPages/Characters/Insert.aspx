@@ -1,9 +1,9 @@
-﻿<%@ Page Title="CharacterInsert" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="COMP2007_Final_SteveEd.Characters.Insert" %>
+﻿<%@ Page Title="CharacterInsert" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.Characters.Insert" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
-            ItemType="COMP2007_Final_SteveEd.Models.Character" DefaultMode="Insert"
+            ItemType="rpgmanager.Models.Character" DefaultMode="Insert"
             InsertItemPosition="FirstItem" InsertMethod="InsertItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <InsertItemTemplate>
@@ -12,19 +12,19 @@
 		        <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
 							<asp:DynamicControl Mode="Insert" 
 								DataField="UsernameId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.User" 
+								DataTypeName="rpgmanager.Models.User" 
 								DataTextField="Username" 
 								DataValueField="UsernameId" 
 								UIHint="ForeignKey" runat="server" />
 							<asp:DynamicControl Mode="Insert" 
 								DataField="WeaponId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Weapon" 
+								DataTypeName="rpgmanager.Models.Weapon" 
 								DataTextField="Name" 
 								DataValueField="WeaponId" 
 								UIHint="ForeignKey" runat="server" />
 							<asp:DynamicControl Mode="Insert" 
 								DataField="ArmourId" 
-								DataTypeName="COMP2007_Final_SteveEd.Models.Armour" 
+								DataTypeName="rpgmanager.Models.Armour" 
 								DataTextField="Name" 
 								DataValueField="ArmourId" 
 								UIHint="ForeignKey" runat="server" />
