@@ -26,7 +26,7 @@ namespace rpgmanager {
         } 
 
         protected void Page_Init(object sender, EventArgs e) {
-			Label1.Text = Column.DisplayName;
+
         }
 		
 		// show bootstrap has-error
@@ -34,7 +34,7 @@ namespace rpgmanager {
         {
             // if validation error then apply bootstrap has-error CSS class
             var isValid = this.Page.ModelState.IsValidField(Column.Name);
-            Div1.Attributes["class"] = isValid ? "form-group" : "form-group has-error";
+
         }
 
 

@@ -11,7 +11,7 @@ namespace rpgmanager {
         private Type _enumType;
     
         protected void Page_Init(object sender, EventArgs e) {
-			Label1.Text = Column.DisplayName;
+	
             DropDownList1.ToolTip = Column.Description;
     
             if (DropDownList1.Items.Count == 0) {
@@ -27,7 +27,7 @@ namespace rpgmanager {
         {
             // if validation error then apply bootstrap has-error CSS class
             var isValid = this.Page.ModelState.IsValidField(Column.Name);
-            Div1.Attributes["class"] = isValid ? "form-group" : "form-group has-error";
+        
         }
 
         protected override void OnDataBinding(EventArgs e) {

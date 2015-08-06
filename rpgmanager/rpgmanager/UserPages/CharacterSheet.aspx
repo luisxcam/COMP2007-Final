@@ -70,7 +70,7 @@
                         </div>
                         <!-- /.col-md-8-->
                         <div class="col-md-4  col-md-pull-8">
-                            <img src="Content/images/archer.jpg" />
+                            <img src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438866077/archer_zk5z9s.jpg" />
                         </div>
                     </div>
                     <!-- /#characterDetails row -->
@@ -78,7 +78,7 @@
                         <div id="attributes" class="col-md-5">
                             <div class="alignedLabel">
                                 <label class="alignedLabel">STR <span style="font-size:x-small">(STRENGTH)</span></label>
-                                 <asp:DynamicControl  UIHint="Text" Mode ="Insert" DataField="Strength" runat="server" />
+                                 <asp:DynamicControl  Mode ="Insert" DataField="Strength" runat="server" />
                             </div>
                             <div class="alignedLabel">
                                 <label>DEX <span style="font-size:x-small">(DETERITY)</span></Label>
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                     <!-- / col-4-->
-                        <div class="col-md-7">
+                        <div id="attributes" class="col-md-7">
                             <div class="alignedLabel">
                                 <label>HP <span style="font-size:x-small">(HIT POINTS)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="HP" runat="server" />
@@ -127,11 +127,9 @@
                     </div>
                     <!--row-->
             </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
+                    <div class="button-div-scaffold">
                             <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
                             <asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" CssClass="btn btn-default" />
-                        </div>
                     </div>
                     <!-- /#characterSheet -->
 
