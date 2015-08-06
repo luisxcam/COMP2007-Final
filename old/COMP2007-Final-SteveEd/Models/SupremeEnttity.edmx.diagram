@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="73f4f6d324fe405f9536d49ff0e70034" Name="Diagram1" ZoomLevel="114">
+        <EntityTypeShape EntityType="DungeonTestModel.Armour" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.AspNetRole" Width="1.5" PointX="12.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.AspNetUserClaim" Width="1.5" PointX="17.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.AspNetUserLogin" Width="1.5" PointX="17.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.AspNetUser" Width="1.5" PointX="15" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Campaign" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.CampaignEnemy" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.CampaignNPC" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.CampaignPlayer" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.campaign1" Width="1.5" PointX="12.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.CharacterItem" Width="1.5" PointX="10.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Character" Width="1.5" PointX="8" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.CharacterSkill" Width="1.5" PointX="10.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.CharacterSpell" Width="1.5" PointX="10.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Enemy" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Item" Width="1.5" PointX="8" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.NPC" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Skill" Width="1.5" PointX="8" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Spell" Width="1.5" PointX="8" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Table" Width="1.5" PointX="15" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.User" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonTestModel.Weapon" Width="1.5" PointX="5.75" PointY="14.875" IsExpanded="true" />
+        <AssociationConnector Association="DungeonTestModel.ArmourDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.CampaignDeleted_DeleteNPCs" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.CampaignDeleted_DeletePlayers" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.CampaingDeleted_DeleteEnemies" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.FK__Campaign__Userna__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.EnemyDeleted_DeleteEnemyFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.NPCDeleted_DeleteFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.CharactedDeleted_DeleteFromCampaign" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.FK_Table_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.CharacterDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.ItemDeleted_DeleteFromCharItems" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.CharacterDeleted_DeleteFromCharSkills" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.CharacterDeleted_DeleteFromCharSpell" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.FK__Character__Usern__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.WeaponDeleted_DeleteFromCharacter" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.SkillDeteled_DeleteFromCharSkills" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.SpellDeleted_DeleteFromCharSpells" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonTestModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

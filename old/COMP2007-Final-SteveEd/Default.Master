@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="COMP2007_Final_SteveEd.Default" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Section -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="body" runat="server">
+
+    <form id="form1" runat="server" role="form">
+
+        <asp:PlaceHolder ID="PublicNav" runat="server">
+            <!-- PublicNav ############################################################-->
+            <nav class="navbar  navbar-inverse" role="navigation">
+                <div class="container-fluid navborder">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Dungeon<br />
+                            Manager</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/AboutUs.aspx">About Us</a></li>
+                            <li><a href="/Contact.aspx">Contact Us</a></li>
+
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/Register.aspx">Register</a></li>
+                            <li><a href="/Login.aspx">Login</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </asp:PlaceHolder>
+        <!-- /PublicNav-->
+
+        <!--Private Nav ################################################################-->
+        <asp:PlaceHolder ID="PrivateNav" runat="server">
+            <div class="container-fluid">
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="container-fluid navborder">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/">Dungeon<br />
+                                Manager</a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/AboutUs.aspx">About Us</a></li>
+                                <li><a href="/Contact.aspx">Contact Us</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li id="welcome-text" class="navbar-text">Welcome,
+                                        <asp:LoginName ID="LoginName1" runat="server" />
+                                </li>
+                                <li><a href="/Logout.aspx">Logout</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+            <!--SIDE NAV ##########################################################-->
+            <div id="sidenavwrapper" class="active">
+                <div id="sidebar-wrapper">
+                    <ul id="sidebar_menu" class="sidebar-nav">
+                        <li class="sidebar-brand"><a id="menu-toggle" href="#">Dashboard<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+                    </ul>
+                    <ul id="sidebar" class="sidebar-nav">
+                        <li style="color: ghostwhite; text-indent: 30px;">Campaigns<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
+                            data-target="#createCampaignModal"><span class="button_icon glyphicon glyphicon-plus-sign"></span></a></li>
+                        <li><a href="/CharacterSheet.aspx">charactersheet<span></span></a></li>
+                        <li><a href="/ViewCampaign">OrcCampaign<span></span></a></li>
+                        <li><a href="#">BestFriendsCampaign<span></span></a></li>
+                        <li><a href="#">small<span></span></a></li>
+                    </ul>
+                </div>
+
+                <!-- /SIDENAV -->
+           </asp:PlaceHolder>
+        <!-- PrivateNav -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+                        
+ 
+
+        <!-- Modal Window (add campaign) -->
+        <div class="modal fade" id="createCampaignModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Create a new campaign</h4>
+                    </div>
+                    <div class="modal-body">
+                        <asp:FormView runat="server"
+                            ItemType="COMP2007_Final_SteveEd.Models.Campaign" DefaultMode="Insert"
+                            InsertItemPosition="FirstItem" InsertMethod="InsertItem"
+                            OnItemCommand="ItemCommand" RenderOuterTable="false">
+                            <InsertItemTemplate>
+                                <fieldset class="form-horizontal">
+                                    <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                                    <asp:DynamicControl Mode="Insert"
+                                        DataField="UsernameId"
+                                        DataTypeName="COMP2007_Final_SteveEd.Models.User"
+                                        DataTextField="Username"
+                                        DataValueField="UsernameId"
+                                        UIHint="ForeignKey" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="Title" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />
+                                    <asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </InsertItemTemplate>
+                        </asp:FormView>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- /Modal Window(create campaign)-->
+    </form>
+            <footer>
+            <nav class=" navbar navbar-inverse navbar-fixed-bottom">
+                <div class="container-fluid">
+                   <h4 class="navbar-text">BSL - Web Application Producers &copy Copyright <%=DateTime.Now.Year.ToString()%></h4>
+                </div>
+            </nav>
+        </footer>
+
+    <!-- JavaScript Section -->
+    <script src="/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>
+
