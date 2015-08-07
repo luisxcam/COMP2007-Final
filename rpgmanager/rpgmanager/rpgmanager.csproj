@@ -959,12 +959,14 @@
     </Compile>
     <Compile Include="UserPages\Spells\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPages\Spells\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPages\Spells\Delete.aspx.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPages\Spells\Delete.aspx.designer.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
@@ -985,6 +987,7 @@
     </Compile>
     <Compile Include="UserPages\Spells\Insert.aspx.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPages\Spells\Insert.aspx.designer.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
