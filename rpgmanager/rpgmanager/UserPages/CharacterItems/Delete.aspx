@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CharacterItemDelete" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.CharacterItems.Delete" %>
+﻿<%@ Page Title="CharacterItemDelete" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.CharacterItems.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>

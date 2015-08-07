@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CharacterItemInsert" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.CharacterItems.Insert" %>
+﻿<%@ Page Title="CharacterItemInsert" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.CharacterItems.Insert" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>

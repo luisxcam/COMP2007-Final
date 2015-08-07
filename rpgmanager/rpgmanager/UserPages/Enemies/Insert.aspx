@@ -12,8 +12,29 @@
 		        <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
 						    <asp:DynamicControl Mode="Insert" DataField="Name" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="CharLevel" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="Race" runat="server" />
-						    <asp:DynamicControl Mode="Insert" DataField="CharClass" runat="server" />
+						    <!--<asp:DynamicControl Mode="Edit" DataField="Race" runat="server" />-->
+                            <div>
+                                <asp:Label ID="RaceLabel" runat="server" Text="Race"></asp:Label>
+                                <asp:DropDownList ID="RaceDropDownList" runat="server" SelectedValue="<%# BindItem.Race %>">
+                                    <asp:ListItem Value="Human"></asp:ListItem>
+                                    <asp:ListItem Value="Elf"></asp:ListItem>
+                                    <asp:ListItem Value="Dwarf"></asp:ListItem>
+                                    <asp:ListItem Value="Gnome"></asp:ListItem>
+                                    <asp:ListItem Value="Half-Orc"></asp:ListItem>
+                                    <asp:ListItem Value="Halfling"></asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+						    <!--<asp:DynamicControl Mode="Edit" DataField="CharClass" runat="server" />-->
+                            <div>
+                                <asp:Label ID="CharClassLabel" runat="server" Text="CharClass"></asp:Label>
+                                <asp:DropDownList ID="CharClassDropDownList" runat="server" SelectedValue="<%# BindItem.CharClass %>">
+                                    <asp:ListItem Value="Warrior"></asp:ListItem>
+                                    <asp:ListItem Value="Archer"></asp:ListItem>
+                                    <asp:ListItem Value="Monk"></asp:ListItem>
+                                    <asp:ListItem Value="White Mage"></asp:ListItem>
+                                    <asp:ListItem Value="Black Mage"></asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
 						    <asp:DynamicControl Mode="Insert" DataField="HP" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="Mana" runat="server" />
 						    <asp:DynamicControl Mode="Insert" DataField="ArmourRate" runat="server" />

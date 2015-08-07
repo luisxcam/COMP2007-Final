@@ -32,9 +32,28 @@
 								DataValueField="ArmourId" 
 								UIHint="ForeignKey" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="CharacterName" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="CharClass" runat="server" />
+						    <!--<asp:DynamicControl Mode="Edit" DataField="CharClass" runat="server" />-->
+                            <div>
+                                <asp:Label ID="CharClassLabel" runat="server" Text="CharClass"></asp:Label>
+                                <asp:DropDownList ID="CharClassDropDownList" runat="server" CssClass="dropdown" SelectedValue="<%# BindItem.CharClass %>">
+                                    <asp:ListItem Value="Warrior"></asp:ListItem>
+                                    <asp:ListItem Value="Archer"></asp:ListItem>
+                                    <asp:ListItem Value="Monk"></asp:ListItem>
+                                    <asp:ListItem Value="White Mage"></asp:ListItem>
+                                    <asp:ListItem Value="Black Mage"></asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
 						    <asp:DynamicControl Mode="Edit" DataField="CharLevel" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="Gender" runat="server" />
+						    <!--<asp:DynamicControl Mode="Edit" DataField="Gender" runat="server" />-->
+                            <div>
+                                <asp:Label ID="GenderLabel" runat="server" Text="Gender"></asp:Label>
+                                <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue="<%# BindItem.Gender %>">
+                                    <asp:ListItem Value="M" Text="Male"></asp:ListItem>
+                                    <asp:ListItem Value="F" Text="Female"></asp:ListItem>
+                                    <asp:ListItem Value="T" Text="Trans"></asp:ListItem>
+                                    <asp:ListItem Value="O" Text="Other"></asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
 						    <asp:DynamicControl Mode="Edit" DataField="HP" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Mana" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Strength" runat="server" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CharacterItemEdit" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.CharacterItems.Edit" %>
+﻿<%@ Page Title="CharacterItemEdit" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.CharacterItems.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>

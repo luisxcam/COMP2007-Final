@@ -13,7 +13,7 @@
                     <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
                     <asp:DynamicControl Mode="Insert" DataField="Name" runat="server" />
                     <!--<asp:DynamicControl Mode="Insert" DataField="ArmourType" runat="server" />-->
-                    <div class="form-group">
+                    <div>
                         <asp:Label ID="ArmourTypeLabel" runat="server" Text="ArmourType"></asp:Label>
                         <asp:DropDownList ID="ArmourTypeDropDownList" runat="server" SelectedValue="<%# BindItem.ArmourType %>">
                             <asp:ListItem Value="Cloth"></asp:ListItem>
@@ -23,7 +23,7 @@
                         </asp:DropDownList>
                     </div>
                     <!--<asp:DynamicControl Mode="Insert" DataField="JobSpecific" runat="server" />-->
-                    <div class="form-group">
+                    <div>
                         <asp:Label ID="JobSpecificLabel" runat="server" Text="JobSpecific"></asp:Label>
                         <asp:DropDownList ID="JobSpecificDropDownList" runat="server" SelectedValue="<%# BindItem.JobSpecific %>">
                             <asp:ListItem Value="None"></asp:ListItem>
@@ -38,7 +38,7 @@
                     <asp:DynamicControl Mode="Insert" DataField="MagicDefense" runat="server" />
                     <asp:DynamicControl Mode="Insert" DataField="Weight" runat="server" />
                     <!--<asp:DynamicControl Mode="Insert" DataField="Attribute" runat="server" />-->
-                    <div class="form-group">
+                    <div>
                         <asp:Label ID="AttributeLabel" runat="server" Text="Attribute"></asp:Label>
                         <asp:DropDownList ID="AttributeDropDownList" runat="server" SelectedValue="<%# BindItem.Attribute %>">
                             <asp:ListItem Value="None"></asp:ListItem>
@@ -54,7 +54,7 @@
                     <asp:DynamicControl Mode="Insert" DataField="Enchantment" runat="server" />
                     <asp:DynamicControl Mode="Insert" DataField="MonetaryValue" runat="server" />
                     <!--<asp:DynamicControl Mode="Insert" DataField="Rarity" runat="server" />-->
-                    <div class="form-group">
+                    <div>
                         <asp:Label ID="RarityLabel" runat="server" Text="Rarity"></asp:Label>
                         <asp:DropDownList ID="RarityDropDownList" runat="server" SelectedValue="<%# BindItem.Rarity %>">
                             <asp:ListItem Value="Common"></asp:ListItem>
