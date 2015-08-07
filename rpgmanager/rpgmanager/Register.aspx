@@ -3,9 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container-fluid">
     <div class="row">
         <div id="signup-form" class="col-md-6 col-md-push-3">
-            <h3>Register a new user</h3>
+            <h3>Register <span class="no_mobile">a new user</span></h3>
             <hr />
             <p>
                 <asp:Literal runat="server" ID="StatusMessage" />
@@ -31,4 +32,5 @@
             </div>
         </div>
     </div>
+        </div>
 </asp:Content>

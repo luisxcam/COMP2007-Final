@@ -2,13 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-     <div class="container">
+     <div class="container-fluid">
         <div class="row" id="contact-form">
             <div>
                 <h1>Contact Us</h1>
             </div>
             <div class="col-md-5">
-                <p>We would love to hear from you. If you have any questions or concerns with using our product feel free to contact us</p>
+                <p>We would love to hear from you. If you have any questions or concerns with using our product feel free to contact us.</p>
                 <p><i class="fa fa-phone"></i>Phone:705-555-5555</p>
                 <p><i class="fa fa-envelope"></i>Email:BTS@DungeonManaager.com</p>
                 <p>

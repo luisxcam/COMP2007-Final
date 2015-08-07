@@ -11,7 +11,16 @@ namespace rpgmanager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                AuthenticatedHomePage.Visible = true;
+                NotAuthenticatedHomePage.Visible = false;               
+            }
+            else
+            {
+                AuthenticatedHomePage.Visible = false;
+                NotAuthenticatedHomePage.Visible = true;
+            }
+        }
         }
     }
-}

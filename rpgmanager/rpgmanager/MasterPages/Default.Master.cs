@@ -51,6 +51,7 @@ namespace rpgmanager
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
+
                 Response.Redirect("Default");
             }
         }
