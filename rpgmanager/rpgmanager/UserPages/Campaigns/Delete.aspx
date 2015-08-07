@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CampaignDelete" Language="C#" MasterPageFile="~/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.Campaigns.Delete" %>
+﻿<%@ Page Title="CampaignDelete" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.Campaigns.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div>
 		<p>&nbsp;</p>

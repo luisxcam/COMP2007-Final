@@ -49,7 +49,7 @@ namespace rpgmanager.Characters
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
-                Response.Redirect("/ViewCampaign");
+                Response.Redirect("../Default");
             }
         }
     }

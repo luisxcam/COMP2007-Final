@@ -1,5 +1,4 @@
-﻿<%@ Page Title="EnemyEdit" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.Enemies.Edit" %>
-
+﻿<%@ Page Title="EnemyEdit" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.Enemies.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container">
         <p>&nbsp;</p>

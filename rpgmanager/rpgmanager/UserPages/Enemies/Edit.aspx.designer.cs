@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rpgmanager.UserPages.Enemies {
+namespace rpgmanager.Enemies {
     
     
     public partial class Edit {
