@@ -24,7 +24,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body runat="server" ID="body">
+<body runat="server" id="body">
     <div class="container-fluid">
         <form id="form1" runat="server">
             <div>
@@ -98,7 +98,7 @@
                     </div>
 
                     <!--SIDE NAV ##########################################################-->
-                    <<div id="sidenavwrapper" class="active">
+                    <div id="sidenavwrapper" class="active">
                         <div id="sidebar-wrapper">
                             <ul id="sidebar_menu" class="sidebar-nav">
                                 <li class="sidebar-brand"><a id="menu-toggle" href="#">Dashboard<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
@@ -115,7 +115,6 @@
                                 <li><a href="/UserPages/NPCs/Default.aspx">NPCs<span></span></a></li>
                             </ul>
                         </div>
-                    </div>
                 </asp:PlaceHolder>
                 <!-- PrivateNav -->
 
@@ -152,12 +151,12 @@
                                                 <ContentTemplate>
                                                     <div>
                                                         <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-                                                        <asp:Calendar ID="CreationDateCalendar" runat="server" SelectedDate="<%# BindItem.CreationDate %>"></asp:Calendar>
+
                                                     </div>
                                                     <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
                                                     <div>
                                                         <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-                                                        <asp:Calendar ID="NextSessionCalendar" runat="server" SelectedDate="<%# BindItem.NextSessionDate %>"></asp:Calendar>
+
                                                     </div>
                                                 </ContentTemplate>
                                             </asp:UpdatePanel>

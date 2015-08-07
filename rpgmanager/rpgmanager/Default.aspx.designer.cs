@@ -29,5 +29,17 @@ namespace rpgmanager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder AuthenticatedHomePage;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new rpgmanager.Default Master {
+            get {
+                return ((rpgmanager.Default)(base.Master));
+            }
+        }
     }
 }

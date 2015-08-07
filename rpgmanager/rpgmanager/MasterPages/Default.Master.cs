@@ -20,13 +20,15 @@ namespace rpgmanager
             {
                 PrivateNav.Visible = false;
                 PublicNav.Visible = true;
-                body.Attributes["class"] = "loggedOut";
+              //  body.Attributes["class"] = "loggedOut";
+                body.Attributes.Add("class", "loggedOut");
             }
             else
             {
                 PrivateNav.Visible = true;
                 PublicNav.Visible = false;
-                body.Attributes["class"] = "";
+             //   body.Attributes["class"] = "";
+                body.Attributes.Remove("loggedOut");
             }
         }
         // This is the Insert method to insert the entered Campaign item
