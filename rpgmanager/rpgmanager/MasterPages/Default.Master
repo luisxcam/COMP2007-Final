@@ -17,14 +17,15 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
+    <!--<link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">-->
     <link href="../Content/main.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body runat="server" id="body">
+<!--<body runat="server" ID="body">-->
+<body>
     <div class="container-fluid">
         <form id="form1" runat="server">
             <div>
@@ -47,7 +48,7 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
                                     <li><a href="/AboutUs.aspx">About Us</a></li>
-                                    <li><a href="/Contact.aspx">Contact Us</a></li>
+                                    <li><a href="/ContactUs.aspx">Contact Us</a></li>
 
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
@@ -82,7 +83,7 @@
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
                                         <li><a href="/AboutUs.aspx">About Us</a></li>
-                                        <li><a href="/Contact.aspx">Contact Us</a></li>
+                                        <li><a href="/ContactUs.aspx">Contact Us</a></li>
                                     </ul>
                                     <ul class="nav navbar-nav navbar-right">
                                         <li id="welcome-text" class="navbar-text">Welcome,
@@ -98,19 +99,21 @@
                     </div>
 
                     <!--SIDE NAV ##########################################################-->
-                    <div id="sidenavwrapper" class="active">
+                    <<div id="sidenavwrapper" class="active">
                         <div id="sidebar-wrapper">
                             <ul id="sidebar_menu" class="sidebar-nav">
                                 <li class="sidebar-brand"><a id="menu-toggle" href="#">Dashboard<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
                             </ul>
                             <ul id="sidebar" class="sidebar-nav">
-                                <li style="color: ghostwhite; text-indent: 30px;">Campaigns<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
+                                <li style="color: ghostwhite; text-indent: 30px;">New Campaign<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
                                     data-target="#createCampaignModal"><span class="button_icon glyphicon glyphicon-plus-sign"></span></a></li>
-                                <!--<li style="color: ghostwhite; text-indent: 30px;">Managment<a class="icon nav-inline-glyph" href="/DatabaseManagmentHub.aspx"><span class="button_icon glyphicon glyphicon-cog"></span></a></li>-->
-                                <li><a href="/CharacterSheet.aspx">charactersheet<span></span></a></li>
-                                <li><a href="/ViewCampaign">OrcCampaign<span></span></a></li>
-                                <li><a href="#">BestFriendsCampaign<span></span></a></li>
-                                <li><a href="#">small<span></span></a></li>
+                                <li style="color: ghostwhite; text-indent: 30px;">New Character<a class="icon nav-inline-glyph" href="/UserPages/CharacterSheet.aspx"><span class="button_icon glyphicon glyphicon-knight"></span></a></li>
+                                <li><a href="/UserPages/Campaigns/Default.aspx">Campaigns<span></span></a></li>
+                                <li><a href="/UserPages/Characters/Default.aspx">Characters<span></span></a></li>
+                                <li><a href="/UserPages/Armours/Default.aspx">Armours<span></span></a></li>
+                                <li><a href="/UserPages/Items/Default.aspx">Items<span></span></a></li>
+                                <li><a href="/UserPages/Enemies/Default.aspx">Enemies<span></span></a></li>
+                                <li><a href="/UserPages/NPCs/Default.aspx">NPCs<span></span></a></li>
                             </ul>
                         </div>
                 </asp:PlaceHolder>
