@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Default.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="rpgmanager.Default1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Default.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="rpgmanager.Default1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -10,7 +10,7 @@
             <p>Whichever tabletop game you play, we can help you manage all of your campaigns in one convenient location.</p>
             <div class="button-div">
                 <a class="btn btn-lg btn-custom" href="/Register.aspx">Create an account now!</a>
-                <!--<img src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438178645/twenty_sided_die_small_jiaots.png" alt="twenty sided orange die" />-->
+                <img src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438178645/twenty_sided_die_small_jiaots.png" alt="twenty sided orange die" />
             </div>
         </div>
     </div>
