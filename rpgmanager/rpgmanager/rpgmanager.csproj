@@ -184,6 +184,21 @@
     <Content Include="UserPages\Armours\Details.aspx" />
     <Content Include="UserPages\Armours\Edit.aspx" />
     <Content Include="UserPages\Armours\Insert.aspx" />
+    <Content Include="UserPages\CampaignEnemies\Default.aspx" />
+    <Content Include="UserPages\CampaignEnemies\Delete.aspx" />
+    <Content Include="UserPages\CampaignEnemies\Details.aspx" />
+    <Content Include="UserPages\CampaignEnemies\Edit.aspx" />
+    <Content Include="UserPages\CampaignEnemies\Insert.aspx" />
+    <Content Include="UserPages\CampaignNPCs\Default.aspx" />
+    <Content Include="UserPages\CampaignNPCs\Delete.aspx" />
+    <Content Include="UserPages\CampaignNPCs\Details.aspx" />
+    <Content Include="UserPages\CampaignNPCs\Edit.aspx" />
+    <Content Include="UserPages\CampaignNPCs\Insert.aspx" />
+    <Content Include="UserPages\CampaignPlayers\Default.aspx" />
+    <Content Include="UserPages\CampaignPlayers\Delete.aspx" />
+    <Content Include="UserPages\CampaignPlayers\Details.aspx" />
+    <Content Include="UserPages\CampaignPlayers\Edit.aspx" />
+    <Content Include="UserPages\CampaignPlayers\Insert.aspx" />
     <Content Include="UserPages\Campaigns\Default.aspx" />
     <Content Include="UserPages\Campaigns\Delete.aspx" />
     <Content Include="UserPages\Campaigns\Details.aspx" />
@@ -194,6 +209,11 @@
     <Content Include="UserPages\CharacterItems\Edit.aspx" />
     <Content Include="UserPages\CharacterItems\Insert.aspx" />
     <Content Include="UserPages\CharacterSheet.aspx" />
+    <Content Include="UserPages\CharacterSkills\Default.aspx" />
+    <Content Include="UserPages\CharacterSkills\Delete.aspx" />
+    <Content Include="UserPages\CharacterSkills\Details.aspx" />
+    <Content Include="UserPages\CharacterSkills\Edit.aspx" />
+    <Content Include="UserPages\CharacterSkills\Insert.aspx" />
     <Content Include="UserPages\Characters\Default.aspx" />
     <Content Include="UserPages\Characters\Delete.aspx" />
     <Content Include="UserPages\Characters\Details.aspx" />
@@ -534,6 +554,111 @@
     <Compile Include="UserPages\Armours\Insert.aspx.designer.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignEnemies\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignNPCs\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CampaignPlayers\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPages\Campaigns\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -603,6 +728,41 @@
     </Compile>
     <Compile Include="UserPages\CharacterSheet.aspx.designer.cs">
       <DependentUpon>CharacterSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\CharacterSkills\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPages\Characters\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
