@@ -35,6 +35,17 @@ namespace rpgmanager.UserPages.CampaignNPCs
 
                 TryUpdateModel(item);
 
+                //check each CampaignNPC in the database to see if the data being entered is a duplicate
+                foreach (CampaignNPC cNPC in _db.CampaignNPCs)
+                {
+                    //if the data is duplicated and does not match the current CampaignNPCId, add a model error
+                    if (item.CampaignId == cNPC.CampaignId && item.NPCId == cNPC.NPCId && item.CampaignNPCId != cNPC.CampaignNPCId)
+                    {
+                        ModelState.AddModelError("", "Duplicate campaign-NPC entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
                     // Save changes here

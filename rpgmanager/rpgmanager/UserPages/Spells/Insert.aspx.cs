@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.Entity;
 using rpgmanager.Models;
 
-namespace rpgmanager.UserPages.CharacterSkills
+namespace rpgmanager.UserPages.Spells
 {
     public partial class Insert : System.Web.UI.Page
     {
@@ -18,31 +18,20 @@ namespace rpgmanager.UserPages.CharacterSkills
 
         }
 
-        // This is the Insert method to insert the entered CharacterSkill item
+        // This is the Insert method to insert the entered Spell item
         // USAGE: <asp:FormView InsertMethod="InsertItem">
         public void InsertItem()
         {
             using (_db)
             {
-                var item = new rpgmanager.Models.CharacterSkill();
+                var item = new rpgmanager.Models.Spell();
 
                 TryUpdateModel(item);
-
-                //check each CharacterSkill in the database to see if the data being entered is a duplicate
-                foreach (CharacterSkill cS in _db.CharacterSkills)
-                {
-                    //if the data is duplicated add a model error
-                    if (item.CharacterId == cS.CharacterId && item.SkillId == cS.SkillId)
-                    {
-                        ModelState.AddModelError("", "Duplicate character-skill entries are not allowed!");
-                        return;
-                    } //if ends
-                } //foreach ends
 
                 if (ModelState.IsValid)
                 {
                     // Save changes
-                    _db.CharacterSkills.Add(item);
+                    _db.Spells.Add(item);
                     _db.SaveChanges();
 
                     Response.Redirect("Default");

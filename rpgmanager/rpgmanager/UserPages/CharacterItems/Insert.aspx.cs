@@ -28,6 +28,17 @@ namespace rpgmanager.CharacterItems
 
                 TryUpdateModel(item);
 
+                //check each CharacterItem in the database to see if the data being entered is a duplicate
+                foreach (CharacterItem cI in _db.CharacterItems)
+                {
+                    //if the data is duplicated add a model error
+                    if (item.CharacterId == cI.CharacterId && item.ItemId == cI.ItemId)
+                    {
+                        ModelState.AddModelError("", "Duplicate character-item entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
                     // Save changes

@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Data.Entity;
 using Microsoft.AspNet.FriendlyUrls.ModelBinding;
 using rpgmanager.Models;
-namespace rpgmanager.CharacterItems
+namespace rpgmanager.UserPages.CharacterSpells
 {
     public partial class Edit : System.Web.UI.Page
     {
@@ -18,30 +18,30 @@ namespace rpgmanager.CharacterItems
         {
         }
 
-        // This is the Update methd to update the selected CharacterItem item
+        // This is the Update methd to update the selected CharacterSpell item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(int  CharacterItemId)
+        public void UpdateItem(int  CharacterSpellsId)
         {
             using (_db)
             {
-                var item = _db.CharacterItems.Find(CharacterItemId);
+                var item = _db.CharacterSpells.Find(CharacterSpellsId);
 
                 if (item == null)
                 {
                     // The item wasn't found
-                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", CharacterItemId));
+                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", CharacterSpellsId));
                     return;
                 }
 
                 TryUpdateModel(item);
 
-                //check each CharacterItem in the database to see if the data being entered is a duplicate
-                foreach (CharacterItem cI in _db.CharacterItems)
+                //check each CharacterSpell in the database to see if the data being entered is a duplicate
+                foreach (CharacterSpell cI in _db.CharacterSpells)
                 {
-                    //if the data is duplicated and does not match the current CharacterItemId, add a model error
-                    if (item.CharacterId == cI.CharacterId && item.ItemId == cI.ItemId && item.CharacterItemId != cI.CharacterItemId)
+                    //if the data is duplicated and does not match the current CharacterSpellId, add a model error
+                    if (item.CharacterId == cI.CharacterId && item.SpellId == cI.SpellId && item.CharacterSpellsId != cI.CharacterSpellsId)
                     {
-                        ModelState.AddModelError("", "Duplicate character-item entries are not allowed!");
+                        ModelState.AddModelError("", "Duplicate character-spell entries are not allowed!");
                         return;
                     } //if ends
                 } //foreach ends
@@ -55,18 +55,18 @@ namespace rpgmanager.CharacterItems
             }
         }
 
-        // This is the Select method to selects a single CharacterItem item with the id
+        // This is the Select method to selects a single CharacterSpell item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public rpgmanager.Models.CharacterItem GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterItemId)
+        public rpgmanager.Models.CharacterSpell GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterSpellsId)
         {
-            if (CharacterItemId == null)
+            if (CharacterSpellsId == null)
             {
                 return null;
             }
 
             using (_db)
             {
-                return _db.CharacterItems.Find(CharacterItemId);
+                return _db.CharacterSpells.Find(CharacterSpellsId);
             }
         }
 

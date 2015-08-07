@@ -35,6 +35,17 @@ namespace rpgmanager.UserPages.CharacterSkills
 
                 TryUpdateModel(item);
 
+                //check each CharacterSkill in the database to see if the data being entered is a duplicate
+                foreach (CharacterSkill cS in _db.CharacterSkills)
+                {
+                    //if the data is duplicated and does not match the current CharacterSkillId, add a model error
+                    if (item.CharacterId == cS.CharacterId && item.SkillId == cS.SkillId && item.CharacterSkillsId != cS.CharacterSkillsId)
+                    {
+                        ModelState.AddModelError("", "Duplicate character-skill entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
                     // Save changes here

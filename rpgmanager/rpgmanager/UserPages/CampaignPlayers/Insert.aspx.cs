@@ -28,6 +28,17 @@ namespace rpgmanager.UserPages.CampaignPlayers
 
                 TryUpdateModel(item);
 
+                //check each CampaignPlayer in the database to see if the data being entered is a duplicate
+                foreach (CampaignPlayer cP in _db.CampaignPlayers)
+                {
+                    //if the data is duplicated add a model error
+                    if (item.CampaignId == cP.CampaignId && item.CharacterId == cP.CharacterId)
+                    {
+                        ModelState.AddModelError("", "Duplicate campaign-character entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
                     // Save changes

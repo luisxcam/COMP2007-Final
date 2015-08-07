@@ -35,6 +35,17 @@ namespace rpgmanager.UserPages.CampaignEnemies
 
                 TryUpdateModel(item);
 
+                //check each CampaignEnemy in the database to see if the data being entered is a duplicate
+                foreach (CampaignEnemy cE in _db.CampaignEnemies)
+                {
+                    //if the data is duplicated and does not match the current CampaignEnemyId, add a model error
+                    if (item.CampaignId == cE.CampaignId && item.EnemyId == cE.EnemyId && item.CampaignEnemyId != cE.CampaignEnemyId)
+                    {
+                        ModelState.AddModelError("", "Duplicate campaign-enemy entries are not allowed!");
+                        return;
+                    } //if ends
+                } //foreach ends
+
                 if (ModelState.IsValid)
                 {
                     // Save changes here

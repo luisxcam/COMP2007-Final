@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Data.Entity;
 using Microsoft.AspNet.FriendlyUrls.ModelBinding;
 using rpgmanager.Models;
-namespace rpgmanager.CharacterItems
+namespace rpgmanager.UserPages.Spells
 {
     public partial class Edit : System.Web.UI.Page
     {
@@ -18,33 +18,22 @@ namespace rpgmanager.CharacterItems
         {
         }
 
-        // This is the Update methd to update the selected CharacterItem item
+        // This is the Update methd to update the selected Spell item
         // USAGE: <asp:FormView UpdateMethod="UpdateItem">
-        public void UpdateItem(int  CharacterItemId)
+        public void UpdateItem(int  SpellsId)
         {
             using (_db)
             {
-                var item = _db.CharacterItems.Find(CharacterItemId);
+                var item = _db.Spells.Find(SpellsId);
 
                 if (item == null)
                 {
                     // The item wasn't found
-                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", CharacterItemId));
+                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", SpellsId));
                     return;
                 }
 
                 TryUpdateModel(item);
-
-                //check each CharacterItem in the database to see if the data being entered is a duplicate
-                foreach (CharacterItem cI in _db.CharacterItems)
-                {
-                    //if the data is duplicated and does not match the current CharacterItemId, add a model error
-                    if (item.CharacterId == cI.CharacterId && item.ItemId == cI.ItemId && item.CharacterItemId != cI.CharacterItemId)
-                    {
-                        ModelState.AddModelError("", "Duplicate character-item entries are not allowed!");
-                        return;
-                    } //if ends
-                } //foreach ends
 
                 if (ModelState.IsValid)
                 {
@@ -55,18 +44,18 @@ namespace rpgmanager.CharacterItems
             }
         }
 
-        // This is the Select method to selects a single CharacterItem item with the id
+        // This is the Select method to selects a single Spell item with the id
         // USAGE: <asp:FormView SelectMethod="GetItem">
-        public rpgmanager.Models.CharacterItem GetItem([FriendlyUrlSegmentsAttribute(0)]int? CharacterItemId)
+        public rpgmanager.Models.Spell GetItem([FriendlyUrlSegmentsAttribute(0)]int? SpellsId)
         {
-            if (CharacterItemId == null)
+            if (SpellsId == null)
             {
                 return null;
             }
 
             using (_db)
             {
-                return _db.CharacterItems.Find(CharacterItemId);
+                return _db.Spells.Find(SpellsId);
             }
         }
 
