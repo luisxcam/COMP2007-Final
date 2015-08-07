@@ -2,9 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+     <asp:PlaceHolder runat="server" ID="NotAuthenticatedHomePage" Visible="false">
     <div class="row">
         <div id="welcome_banner" class="jumbotron col-md-8 col-md-push-2 text-center">
-            <h1>Welcome to your personal Dungeon Manager</h1>
+            <h1><span class="no_mobile">Welcome to your personal</span> Dungeon Manager</h1>
             <p>Whichever tabletop game you play, we can help you manage all of your campaigns in one convenient location.</p>
             <div class="button-div">
                 <a class="btn btn-lg btn-custom" href="/Register.aspx">Create an account now!</a>
@@ -26,4 +28,14 @@
             <p>It's never been easier to be a DM. Pick from a database of inventory items, enmeies and NPCs, or add your own cutsom ones that you can share with other DMs.</p>
         </div>
     </div>
+         </asp:PlaceHolder>
+
+        <asp:PlaceHolder runat="server" ID="AuthenticatedHomePage" Visible="false">
+                    <div id="dashbaordHomePage">
+    <%--    <h1 id="login_greeting_header" class="align-center">
+            <asp:Literal runat="server" ID="StatusText" />
+        </h1>--%>
+                        <img style="width:100%;" src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg" alt="" />
+            </div>
+    </asp:PlaceHolder>
 </asp:Content>

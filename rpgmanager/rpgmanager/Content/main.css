@@ -1,4 +1,8 @@
 ﻿/*General    ****************************************************************************************************/
+html, body{
+    height:100%;
+}
+
 body {
     background-color: #394046;
       /* Margin bottom by footer height so that sticky footer doesnt cover*/
@@ -17,6 +21,10 @@ body.loggedOut
 }
 h1,h2,h3,h4,th{
      font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+h1,h2,h3,h4{
+    padding-left:15px;
+    padding-right:15px;
 }
 p,td{
     font-family: 'Vollkorn', serif;
@@ -74,10 +82,7 @@ p,td{
     font-size:1.1em;
 }
 /*Logged in-landing Page    ***********************************************************************************/
-#dashbaordHomePage{
-    background-image:url("http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg");
-    height:100%;
-}
+
 #login_greeting_header{
    text-align:center;
    padding:20px;
@@ -95,7 +100,12 @@ footer .navbar{
 .dashboard_page{
     margin-left:180px;
 }
-
+#dashbaordHomePage{
+    height:100%;
+}
+#sidenavwrapper{
+    background-image:url(http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg);
+}
 /*Campaign DASHBAORD ****************************************************************************************************/
 
 #charactersFormToggle{
@@ -536,4 +546,9 @@ padding:20px;
     padding:0 80px;
     }
 }
+    /*Utlilty Classes **********************************************************************************/
 
+    @media only screen and (max-width : 780px) {
+    .no_mobile {
+        display:none;
+    }
