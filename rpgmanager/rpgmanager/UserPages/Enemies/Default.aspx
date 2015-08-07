@@ -15,7 +15,7 @@
                     There are no entries found for Enemies
                 </EmptyDataTemplate>
                 <LayoutTemplate>
-                    <table id="styledTable" class="table">
+                    <table class="table table-responsive" id="styledTable">
                         <thead>
                             <tr>
                                 <th>
