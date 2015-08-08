@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CampaignEdit" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.Campaigns.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Campaign" DefaultMode="Edit" DataKeyNames="CampaignId"
@@ -12,24 +12,27 @@
             <EditItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Edit Campaign</legend>
-					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  />                 
+					<asp:ValidationSummary runat="server" CssClass="alert alert-danger"  /> 
+                            <asp:Label ID="UserLabel" runat="server" Text="User"></asp:Label>                
 							<asp:DynamicControl Mode="Edit" 
 								DataField="UsernameId" 
 								DataTypeName="rpgmanager.Models.User" 
 								DataTextField="Username" 
 								DataValueField="UsernameId" 
 								UIHint="ForeignKey" runat="server" />
+                            <asp:Label ID="TitleLabel" runat="server" Text="Title"></asp:Label>
 						    <asp:DynamicControl Mode="Edit" DataField="Title" runat="server" />
+                            <asp:Label ID="DescriptionLabel" runat="server" Text="Description"></asp:Label>
 						    <asp:DynamicControl Mode="Edit" DataField="Description" runat="server" />
 						    <!--<asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />-->
                             <div>
                                 <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-                                <asp:TextBox ID="CreationDateTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
+                                <asp:TextBox ID="CreationDateTextBox" CssClass="form-control datepicker" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
                             </div>
                             <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
                             <div>
                                 <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-                                <asp:TextBox ID="NextSessionTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
+                                <asp:TextBox ID="NextSessionTextBox" CssClass="form-control datepicker" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
                             </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
