@@ -12,10 +12,10 @@
             </EmptyDataTemplate>
             <ItemTemplate>
                 <fieldset class="form-horizontal">
-                    <legend>CampaignEnemy Details</legend>
+                    <legend>Campaign Enemies</legend>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>CampaignId</strong>
+									<strong>Campaign</strong>
 								</div>
 								<div class="col-sm-4">
 									<%#: Item.Campaign != null ? Item.Campaign.Title : "" %>
@@ -23,7 +23,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>EnemyId</strong>
+									<strong>Enemy</strong>
 								</div>
 								<div class="col-sm-4">
 									<%#: Item.Enemy != null ? Item.Enemy.Name : "" %>
