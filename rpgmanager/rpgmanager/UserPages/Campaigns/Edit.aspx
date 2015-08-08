@@ -21,15 +21,15 @@
 								UIHint="ForeignKey" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Title" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Description" runat="server" />
-						    <!--<asp:DynamicControl Mode="Edit" DataField="CreationDate" runat="server" />-->
+						    <!--<asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />-->
                             <div>
                                 <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-                                <asp:Calendar ID="CreationDateCalendar" runat="server" SelectedDate="<%# BindItem.CreationDate %>"></asp:Calendar>
+                                <asp:TextBox ID="CreationDateTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
                             </div>
-						    <!--<asp:DynamicControl Mode="Edit" DataField="NextSessionDate" runat="server" />-->
+                            <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
                             <div>
                                 <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-                                <asp:Calendar ID="NextSessionDateCalendar" runat="server" SelectedDate="<%# BindItem.NextSessionDate %>"></asp:Calendar>
+                                <asp:TextBox ID="NextSessionTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
                             </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">

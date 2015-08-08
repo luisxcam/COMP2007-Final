@@ -4,15 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using rpgmanager.Models;
 using System.Data.Entity;
+using rpgmanager.Models;
 
 namespace rpgmanager
 {
     public partial class Default : System.Web.UI.MasterPage
     {
-
+        //instance variables
         protected rpgmanager.Models.rpg_entities _db = new rpgmanager.Models.rpg_entities();
+        bool valid = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,6 +32,7 @@ namespace rpgmanager
                 body.Attributes.Remove("loggedOut");
             }
         }
+
         // This is the Insert method to insert the entered Campaign item
         // USAGE: <asp:FormView InsertMethod="InsertItem">
         public void InsertItem()
@@ -41,11 +43,27 @@ namespace rpgmanager
 
                 TryUpdateModel(item);
 
-                // Save changes
-                _db.Campaigns.Add(item);
-                _db.SaveChanges();
+                foreach(User u in _db.Users)
+                {
+                    if (item.UsernameId == u.UsernameId)
+                    {
+                        valid = true;
+                    } //if ends
+                } //foreach ends
 
-                Response.Redirect("Default");
+                if (valid)
+                {
+                    // Save changes
+                    _db.Campaigns.Add(item);
+                    _db.SaveChanges();
+                    Page.ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Campaign successfully added!');", true);
+                } //if ends
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Campaign was not added.\\nPlease ensure a valid user was selected.');", true);
+                } //else ends
+
+                //Response.Redirect("Default");
             }
         }
 
