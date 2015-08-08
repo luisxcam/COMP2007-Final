@@ -111,12 +111,18 @@
                                             <li><a href="/UserPages/Items/Default">Items</a></li>
                                             <li><a href="/UserPages/Enemies/Default">Enemies</a></li>
                                             <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
+                                            <li><a href="/UserPages/CampaignEnemies/Default">Campaign<br />
+                                                Enemies</a></li>
+                                            <li><a href="/UserPages/CampaignNPCs/Default">NPCs</a></li>
+                                            <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
+
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                    </nav><!-- /#mobile_side_nav -->
+                    </nav>
+                    <!-- /#mobile_side_nav -->
                     <!--SIDE NAV ##########################################################-->
                     <div id="sidenavwrapper" class="active">
                         <div id="sidebar-wrapper">
@@ -133,6 +139,10 @@
                                 <li><a href="/UserPages/Items/Default.aspx">Items<span></span></a></li>
                                 <li><a href="/UserPages/Enemies/Default.aspx">Enemies<span></span></a></li>
                                 <li><a href="/UserPages/NPCs/Default.aspx">NPCs<span></span></a></li>
+                                <li><a href="/UserPages/CampaignEnemies/Default">Campaign<br /> 
+                                    Enemies</a></li>
+                                <li><a href="/UserPages/CampaignNPCs/Default">Campaign<br /> NPC</a></li>
+                                <li><a href="/UserPages/CampaignPlayers/Default">Campaign<br /> Players</a></li>
                             </ul>
                         </div>
                 </asp:PlaceHolder>
