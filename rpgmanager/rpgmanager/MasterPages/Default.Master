@@ -111,11 +111,6 @@
                                             <li><a href="/UserPages/Items/Default">Items</a></li>
                                             <li><a href="/UserPages/Enemies/Default">Enemies</a></li>
                                             <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
-                                            <li><a href="/UserPages/CampaignEnemies/Default">Campaign<br />
-                                                Enemies</a></li>
-                                            <li><a href="/UserPages/CampaignNPCs/Default">NPCs</a></li>
-                                            <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
-
                                         </ul>
                                     </li>
                                 </ul>
@@ -133,16 +128,17 @@
                                 <li style="color: ghostwhite;">New Campaign<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
                                     data-target="#createCampaignModal"><span class="button_icon glyphicon glyphicon-plus-sign"></span></a></li>
                                 <li style="color: ghostwhite;">New Character<a class="icon nav-inline-glyph" href="/UserPages/CharacterSheet.aspx"><span class="button_icon glyphicon glyphicon-knight"></span></a></li>
-                                <li><a href="/UserPages/Campaigns/Default.aspx">Campaigns<span></span></a></li>
+                                <!--<li><a href="/UserPages/Campaigns/Default.aspx">Campaigns<span></span></a></li>-->
+                                <li><a href="/UserPages/ViewCampaign.aspx">Campaigns<span></span></a></li>
                                 <li><a href="/UserPages/Characters/Default.aspx">Characters<span></span></a></li>
+                                <!--<li><a href="../UserPages/ViewCharacters.aspx">Characters<span></span></a></li>-->
                                 <li><a href="/UserPages/Armours/Default.aspx">Armours<span></span></a></li>
                                 <li><a href="/UserPages/Items/Default.aspx">Items<span></span></a></li>
                                 <li><a href="/UserPages/Enemies/Default.aspx">Enemies<span></span></a></li>
                                 <li><a href="/UserPages/NPCs/Default.aspx">NPCs<span></span></a></li>
-                                <li><a href="/UserPages/CampaignEnemies/Default">Campaign<br /> 
-                                    Enemies</a></li>
-                                <li><a href="/UserPages/CampaignNPCs/Default">Campaign<br /> NPC</a></li>
-                                <li><a href="/UserPages/CampaignPlayers/Default">Campaign<br /> Players</a></li>
+                                <!--<li><a href="/UserPages/CampaignEnemies/Default">Campaign Enemies</a></li>
+                                <li><a href="/UserPages/CampaignNPCs/Default">Campaign NPC</a></li>
+                                <li><a href="/UserPages/CampaignPlayers/Default">Campaign Players</a></li>-->
                             </ul>
                         </div>
                 </asp:PlaceHolder>
