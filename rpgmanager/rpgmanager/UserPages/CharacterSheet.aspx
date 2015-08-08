@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div  class="dashboard_container">
+    <div  class="dashboard_container panel">
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Character" DefaultMode="Insert"
             InsertItemPosition="FirstItem" InsertMethod="InsertItem"

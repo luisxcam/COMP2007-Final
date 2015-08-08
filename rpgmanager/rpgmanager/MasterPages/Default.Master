@@ -98,7 +98,6 @@
                     </div>
                     <!-- Mobile SIDE NAV ################################################## -->
                     <nav id="mobile_side_nav" class="navbar navbar-inverse navbar-fixed-top">
-                        <div class="container-fluid">
                             <div>
                                 <ul class="nav navbar-nav">
                                     <li class="dropdown">
@@ -115,7 +114,6 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
                     </nav><!-- /#mobile_side_nav -->
                     <!--SIDE NAV ##########################################################-->
                     <div id="sidenavwrapper" class="active">
