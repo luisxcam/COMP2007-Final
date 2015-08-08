@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CharacterSpellEdit" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.CharacterSpells.Edit" %>
+﻿<%@ Page Title="CharacterSpellEdit" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.CharacterSpells.Edit" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container panel">
@@ -14,14 +14,14 @@
                 <fieldset class="form-horizontal">
                     <legend>Edit CharacterSpell</legend>
                     <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
-                    <asp:Label runat="server" Text="Character Name:" />
+                    <asp:Label ID="CharacterLabel" runat="server" Text="Character"></asp:Label>
                     <asp:DynamicControl Mode="Edit"
                         DataField="CharacterId"
                         DataTypeName="rpgmanager.Models.Character"
                         DataTextField="CharacterName"
                         DataValueField="CharacterId"
                         UIHint="ForeignKey" runat="server" />
-                    <asp:Label runat="server" Text="Spell:" />
+                    <asp:Label ID="SpellsLabel" runat="server" Text="Spell"></asp:Label>
                     <asp:DynamicControl Mode="Edit"
                         DataField="SpellId"
                         DataTypeName="rpgmanager.Models.Spell"

@@ -13,29 +13,29 @@
             <EditItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Edit Character</legend>
-                    <asp:Label runat="server">Username:</asp:Label>
                     <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                    <asp:Label ID="UserLabel" runat="server" Text="User"></asp:Label>
                     <asp:DynamicControl Mode="Edit"
                         DataField="UsernameId"
                         DataTypeName="rpgmanager.Models.User"
                         DataTextField="Username"
                         DataValueField="UsernameId"
                         UIHint="ForeignKey" runat="server" />
-                    <asp:Label runat="server">Weapon:</asp:Label>
+                    <asp:Label ID="WeaponLabel" runat="server" Text="Weapon"></asp:Label>
                     <asp:DynamicControl Mode="Edit"
                         DataField="WeaponId"
                         DataTypeName="rpgmanager.Models.Weapon"
                         DataTextField="Name"
                         DataValueField="WeaponId"
                         UIHint="ForeignKey" runat="server" />
-                    <asp:Label runat="server">Armour:</asp:Label>
+                    <asp:Label ID="ArmourLabel" runat="server" Text="Armour"></asp:Label>
                     <asp:DynamicControl Mode="Edit"
                         DataField="ArmourId"
                         DataTypeName="rpgmanager.Models.Armour"
                         DataTextField="Name"
                         DataValueField="ArmourId"
                         UIHint="ForeignKey" runat="server" />
-                    <asp:Label runat="server">Name:</asp:Label>
+                    <asp:Label ID="NameLabel" runat="server" Text="Name"></asp:Label>
                     <asp:DynamicControl Mode="Edit" DataField="CharacterName" runat="server" />
                     <!--<asp:DynamicControl Mode="Edit" DataField="CharClass" runat="server" />-->
                     <div>
@@ -49,7 +49,7 @@
                         </asp:DropDownList>
                     </div>
                     <div>
-                        <asp:Label runat="server">Level</asp:Label>
+                        <asp:Label ID="LevelLabel" runat="server" Text="Character Level"></asp:Label>
                         <asp:DynamicControl Mode="Edit" CssClass="form-control" DataField="CharLevel" runat="server" />
                     </div>
                     <!--<asp:DynamicControl Mode="Edit" DataField="Gender" runat="server" />-->
