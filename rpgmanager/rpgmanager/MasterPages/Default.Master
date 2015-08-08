@@ -175,13 +175,13 @@
                                             <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
                                             <!--<asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />-->
                                             <div>
-                                                <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-                                                <asp:TextBox ID="CreationDateTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
+                                                <asp:Label ID="MasterCreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
+                                                <asp:TextBox ID="MasterCreationDateTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
                                             </div>
                                             <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
                                             <div>
-                                                <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-                                                <asp:TextBox ID="NextSessionTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
+                                                <asp:Label ID="MasterNextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
+                                                <asp:TextBox ID="MasterNextSessionTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
@@ -208,11 +208,16 @@
         </nav>
     </footer>
 
-    <!-- JavaScript Section -->
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/jquery-2.1.4.min.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/bootstrap.min.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/jquery-ui.min.js") %>"></script>
+    <script src="<%= Page.ResolveClientUrl("~/Scripts/main.js") %>"></script>
+
+    <!-- JavaScript Section
     <script src="../Scripts/jquery-2.1.4.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/jquery-ui.min.js"></script>
-    <script src="../Scripts/main.js"></script>
+    <script src="../Scripts/main.js"></script>-->
 </body>
 </html>
 
