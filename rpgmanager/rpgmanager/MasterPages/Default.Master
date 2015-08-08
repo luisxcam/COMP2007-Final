@@ -86,15 +86,15 @@
                                         <li><a href="/ContactUs.aspx">Contact Us</a></li>
                                     </ul>
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li id="welcome-text" class="navbar-text">Welcome,
+                                        <li id="welcome-text" class="navbar-text no_mobile">Welcome,
                                         <asp:LoginName ID="LoginName1" runat="server" />
                                         </li>
-                                        <li><a href="/Logout.aspx">Logout</a></li>
+                                        <li><a href="/Logout.aspx">Logout</a></li>                    
                                     </ul>
 
                                     <div class="visible-xs">
-                                        <ul class="nav navbar-nav">
-                                            <li><a href="/UserPages/Campaigns/Default">Campaigns</a></li>
+                                        <ul class="nav navbar-nav">                                      
+                                           <li><a href="/UserPages/Campaigns/Default">Campaigns</a></li>
                                             <li><a href="/UserPages/Characters/Default">Characters</a></li>
                                             <li><a href="/UserPages/Armours/Default">Armours</a></li>
                                             <li><a href="/UserPages/Weapons/Default">Weapons</a></li>
@@ -109,7 +109,10 @@
                                             <li><a href="/UserPages/CharacterItems/Default.aspx">Character Items</a></li>
                                             <li><a href="/UserPages/CharacterSkills/Default.aspx">Character Skills</a></li>
                                             <li><a href="/UserPages/CharacterSpells/Default.aspx">Character Spells</a></li>
+           
                                         </ul>
+
+                                          
                                     </div>
                                 </div>
                                 <!-- /.navbar-collapse -->

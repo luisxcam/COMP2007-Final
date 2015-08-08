@@ -38,7 +38,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>CharClass</strong>
+									<strong>Class</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CharClass" ID="CharClass" Mode="ReadOnly" />
@@ -70,7 +70,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>ManaRequired</strong>
+									<strong>Mana Required</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="ManaRequired" ID="ManaRequired" Mode="ReadOnly" />
@@ -78,7 +78,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>ChantingTime</strong>
+									<strong>Chanting Time</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="ChantingTime" ID="ChantingTime" Mode="ReadOnly" />
