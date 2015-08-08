@@ -39,7 +39,7 @@ namespace rpgmanager.Campaigns
                 {
                     // Save changes here
                     _db.SaveChanges();
-                    Response.Redirect("../Default");
+                    Response.Redirect("~/UserPages/ViewCampaign.aspx");
                 }
             }
         }
@@ -63,7 +63,7 @@ namespace rpgmanager.Campaigns
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
-                Response.Redirect("../Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
     }
