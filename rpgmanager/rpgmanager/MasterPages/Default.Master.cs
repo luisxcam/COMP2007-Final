@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.Entity;
 using rpgmanager.Models;
+using System.Data.Entity;
 
 namespace rpgmanager
 {
@@ -63,7 +63,7 @@ namespace rpgmanager
                     Page.ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Campaign was not added.\\nPlease ensure a valid user was selected.');", true);
                 } //else ends
 
-                Response.Redirect("Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
 
