@@ -14,11 +14,12 @@
                 <fieldset class="form-horizontal">
                     <legend>Edit Weapon</legend>
                     <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
-                    <asp:DynamicControl Mode="Edit" DataField="Name" runat="server" />
+                    <asp:Label runat="server" Text="Name:"/>
+                    <asp:DynamicControl Mode="Edit" DataField="Name" runat="server"  CssClass="form-control"/>
                     <!--<asp:DynamicControl Mode="Edit" DataField="WeaponType" runat="server" />-->
                     <div>
                         <asp:Label ID="WeaponTypeLabel" runat="server" Text="WeaponType"></asp:Label>
-                        <asp:DropDownList ID="WeaponTypeDropDownList" runat="server" SelectedValue="<%# BindItem.WeaponType %>">
+                        <asp:DropDownList ID="WeaponTypeDropDownList" runat="server" SelectedValue="<%# BindItem.WeaponType %>" CssClass="form-control">
                             <asp:ListItem Value="Bow"></asp:ListItem>
                             <asp:ListItem Value="Crossbow"></asp:ListItem>
                             <asp:ListItem Value="Dagger"></asp:ListItem>
@@ -31,7 +32,7 @@
                     <!--<asp:DynamicControl Mode="Edit" DataField="JobSpecific" runat="server" />-->
                     <div>
                         <asp:Label ID="JobSpecificLabel" runat="server" Text="JobSpecific"></asp:Label>
-                        <asp:DropDownList ID="JobSpecificDropDownList" runat="server" SelectedValue="<%# BindItem.JobSpecific %>">
+                        <asp:DropDownList ID="JobSpecificDropDownList" runat="server" SelectedValue="<%# BindItem.JobSpecific %>"  CssClass="form-control">
                             <asp:ListItem Value="None"></asp:ListItem>
                             <asp:ListItem Value="Warrior"></asp:ListItem>
                             <asp:ListItem Value="Archer"></asp:ListItem>
@@ -40,13 +41,16 @@
                             <asp:ListItem Value="Black Mage"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <asp:DynamicControl Mode="Edit" DataField="AttackRate" runat="server" />
-                    <asp:DynamicControl Mode="Edit" DataField="MagicAttack" runat="server" />
-                    <asp:DynamicControl Mode="Edit" DataField="Weight" runat="server" />
+                    <asp:Label runat="server" Text="Attack Rate:"/>
+                    <asp:DynamicControl Mode="Edit" DataField="AttackRate" runat="server"  CssClass="form-control"/>
+                    <asp:Label runat="server" Text="Magic Attack:"/>
+                    <asp:DynamicControl Mode="Edit" DataField="MagicAttack" runat="server"  CssClass="form-control"/>
+                    <asp:Label runat="server" Text="Weight:"/>
+                    <asp:DynamicControl Mode="Edit" DataField="Weight" runat="server"  CssClass="form-control"/>
                     <!--<asp:DynamicControl Mode="Edit" DataField="Attribute" runat="server" />-->
                     <div>
                         <asp:Label ID="AttributeLabel" runat="server" Text="Attribute"></asp:Label>
-                        <asp:DropDownList ID="AttributeDropDownList" runat="server" SelectedValue="<%# BindItem.Attribute %>">
+                        <asp:DropDownList ID="AttributeDropDownList" runat="server" SelectedValue="<%# BindItem.Attribute %>" CssClass="form-control">
                             <asp:ListItem Value="None"></asp:ListItem>
                             <asp:ListItem Value="Air"></asp:ListItem>
                             <asp:ListItem Value="Earth"></asp:ListItem>
@@ -57,12 +61,14 @@
                             <asp:ListItem Value="Dark"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <asp:DynamicControl Mode="Edit" DataField="Enchantment" runat="server" />
-                    <asp:DynamicControl Mode="Edit" DataField="MonetaryValue" runat="server" />
+                    <asp:Label runat="server" Text="Enchantment:"/>
+                    <asp:DynamicControl Mode="Edit" DataField="Enchantment" runat="server"  CssClass="form-control"/>
+                    <asp:Label runat="server" Text="Value:"/>
+                    <asp:DynamicControl Mode="Edit" DataField="MonetaryValue" runat="server"  CssClass="form-control"/>
                     <!--<asp:DynamicControl Mode="Edit" DataField="Rarity" runat="server" />-->
                     <div>
                         <asp:Label ID="RarityLabel" runat="server" Text="Rarity"></asp:Label>
-                        <asp:DropDownList ID="RarityDropDownList" runat="server" SelectedValue="<%# BindItem.Rarity %>">
+                        <asp:DropDownList ID="RarityDropDownList" runat="server" SelectedValue="<%# BindItem.Rarity %>" CssClass="form-control">
                             <asp:ListItem Value="Common"></asp:ListItem>
                             <asp:ListItem Value="Uncommon"></asp:ListItem>
                             <asp:ListItem Value="Rare"></asp:ListItem>
