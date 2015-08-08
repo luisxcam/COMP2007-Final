@@ -30,5 +30,5 @@
 
 //Datepickerfunction from https://jqueryui.com/datepicker/
 $(function () {
-    $(".datepicker").datepicker();
+    $(".datepicker").datepicker({ dateFormat: "yy-mm-dd" }).val();
 });

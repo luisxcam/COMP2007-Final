@@ -17,6 +17,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/jquery-ui.min.css" rel="stylesheet" />
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
     <link href="../Content/main.css" rel="stylesheet" />
@@ -141,6 +142,7 @@
                                 <li><a href="/UserPages/CampaignPlayers/Default">Campaign Players</a></li>-->
                             </ul>
                         </div>
+                    </div>
                 </asp:PlaceHolder>
                 <!-- PrivateNav -->
 
@@ -174,12 +176,12 @@
                                             <!--<asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />-->
                                             <div>
                                                 <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-                                                <asp:TextBox ID="CreationDateTextBox" CssClass="datepicker" ClientIDMode="Static" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
+                                                <asp:TextBox ID="CreationDateTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
                                             </div>
                                             <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
                                             <div>
                                                 <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-                                                <asp:TextBox ID="NextSessionTextBox" CssClass="datepicker" ClientIDMode="Static" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
+                                                <asp:TextBox ID="NextSessionTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
@@ -209,7 +211,7 @@
     <!-- JavaScript Section -->
     <script src="../Scripts/jquery-2.1.4.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/jquery-ui.js"></script>
+    <script src="../Scripts/jquery-ui.min.js"></script>
     <script src="../Scripts/main.js"></script>
 </body>
 </html>
