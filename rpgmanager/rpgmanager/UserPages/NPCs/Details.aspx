@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="NPC Details" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.UserPages.NPCs.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
       
         <asp:FormView runat="server"
@@ -13,14 +13,14 @@
             <ItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>NPC Details</legend>
-							<div class="row">
+							<!--<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>NPCId</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="NPCId" ID="NPCId" Mode="ReadOnly" />
 								</div>
-							</div>
+							</div>-->
 							<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>Name</strong>
