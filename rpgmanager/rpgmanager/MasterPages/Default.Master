@@ -142,7 +142,7 @@
                                 <li><a href="/UserPages/CampaignPlayers/Default">Campaign Players</a></li>-->
                             </ul>
                         </div>
-                    </div>
+            
                 </asp:PlaceHolder>
                 <!-- PrivateNav -->
 

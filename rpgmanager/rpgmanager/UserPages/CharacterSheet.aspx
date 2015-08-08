@@ -3,16 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Character" DefaultMode="Insert"
             InsertItemPosition="FirstItem" InsertMethod="InsertItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <InsertItemTemplate>
-
+                      <div id="characterSheet">
                 <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
-                <h1>Character Creation Sheet</h1>
-                <div id="characterSheet">
+                <h1>Character Creation Sheet</h1> 
                     <div id="characterDetails" class="row">
                         <div class="col-md-8 col-md-push-4">
                             <div>
@@ -75,8 +74,8 @@
                         </div>
                     </div>
                     <!-- /#characterDetails row -->
-                    <div id="stats" class="row">
-                        <div id="attributes" class="col-md-5">
+                    <div  class="row">
+                        <div id="stats" class="col-md-5">
                             <div class="alignedLabel">
                                 <label class="alignedLabel">STR <span style="font-size: x-small">(STRENGTH)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="Strength" runat="server" />
@@ -103,7 +102,6 @@
                             <div class="alignedLabel">
                                 <label>CHA <span style="font-size: x-small">(CHARISMA)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="Charisma" runat="server" />
-
                             </div>
                         </div>
                         <!-- / col-4-->
