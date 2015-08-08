@@ -22,6 +22,11 @@ namespace rpgmanager.UserPages
 
         }
 
+        public IQueryable<rpgmanager.Models.Campaign> GetDataCampaign()
+        {
+            return _db.Campaigns.Include(m => m.User);
+        }
+
         // Model binding method to get List of Character entries
         // USAGE: <asp:ListView SelectMethod="GetData">
         public IQueryable<rpgmanager.Models.Character> GetData()
