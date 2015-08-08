@@ -7,6 +7,8 @@
             <div>
                 <h1>Contact Us</h1>
             </div>
+
+            <!-- Contact Info-->
             <div class="col-md-5">
                 <p>We would love to hear from you. If you have any questions or concerns with using our product feel free to contact us.</p>
                 <p class="contact-info"><i class="fa fa-phone"></i>Phone:705-555-5555</p>
@@ -20,6 +22,7 @@
                 </p>
             </div>
 
+            <!-- Contact Form-->
             <div class="col-md-7">
                 <div class="form-group">
                     <label>What name do you go by? </label>
