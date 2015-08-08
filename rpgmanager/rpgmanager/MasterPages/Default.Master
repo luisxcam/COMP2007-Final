@@ -109,6 +109,7 @@
                                             <li><a href="/UserPages/Campaigns/Default">Campaigns</a></li>
                                             <li><a href="/UserPages/Characters/Default">Characters</a></li>
                                             <li><a href="/UserPages/Armours/Default">Armours</a></li>
+                                            <li><a href="/UserPages/Weapons/Default">Weapons</a></li>
                                             <li><a href="/UserPages/Items/Default">Items</a></li>
                                             <li><a href="/UserPages/Enemies/Default">Enemies</a></li>
                                             <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
@@ -136,6 +137,7 @@
                                 <li><a href="/UserPages/Characters/Default.aspx">Characters<span></span></a></li>
                                 <!--<li><a href="../UserPages/ViewCharacters.aspx">Characters<span></span></a></li>-->
                                 <li><a href="/UserPages/Armours/Default.aspx">Armours<span></span></a></li>
+                                <li><a href="/UserPages/Weapons/Default.aspx">Weapons<span></span></a></li>
                                 <li><a href="/UserPages/Items/Default.aspx">Items<span></span></a></li>
                                 <li><a href="/UserPages/Enemies/Default.aspx">Enemies<span></span></a></li>
                                 <li><a href="/UserPages/NPCs/Default.aspx">NPCs<span></span></a></li>

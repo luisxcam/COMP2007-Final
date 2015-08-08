@@ -312,8 +312,8 @@
                     </div>
                     <!-- / #charactersForm -->
                     <div class="text-right">
-                        <asp:HyperLink runat="server" NavigateUrl="CharacterSkills/Insert" Text="Add Skill to Character" CssClass="btn btn-custom" />
-                        <asp:HyperLink runat="server" NavigateUrl="CharacterSpells/Insert" Text="Add Spell to Character" CssClass="btn btn-custom" />
+                        <asp:HyperLink runat="server" NavigateUrl="CharacterSkills/Default" Text="Check Character Skills" CssClass="btn btn-custom" />
+                        <asp:HyperLink runat="server" NavigateUrl="CharacterSpells/Default" Text="Check Character Spells" CssClass="btn btn-custom" />
                     </div>
                 </div>
                 <!-- / .panel-body -->
