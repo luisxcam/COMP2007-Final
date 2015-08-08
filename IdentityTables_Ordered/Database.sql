@@ -328,6 +328,6 @@ INSERT INTO [dbo].[Skill] VALUES ('Slash','Pokemon kind of attack','Warrior',10,
 
 INSERT INTO [dbo].[Spells] VALUES ('Fire Ball','Duh...','Black Mage','Fire',10,10,10,10),('Heal','Again, duh...','White Mage','Light',10,10,10,10);
 
-INSERT INTO [dbo].[Weapon] VALUES('The Torn','Sword','Warrior',20,0,20,'none','none',60,'none'),('Magnus Staff','Staff','Black Mage',1,50,5,'Dark','+2 Int',1200,'Very rare');
+INSERT INTO [dbo].[Weapon] VALUES('The Torn','Sword','Warrior',20,0,20,'Dark','none',60,'Commmon'),('Magnus Staff','Staff','Black Mage',1,50,5,'Dark','+2 Int',1200,'Commmon');
 
 

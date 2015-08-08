@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CharacterSkillInsert" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.UserPages.CharacterSkills.Insert" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.CharacterSkill" DefaultMode="Insert"
@@ -10,12 +10,14 @@
                 <fieldset class="form-horizontal">
 				<legend>Insert CharacterSkill</legend>
 		        <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                    <asp:Label ID="CharacterLabel" runat="server" Text="Character Name:"></asp:Label>
 							<asp:DynamicControl Mode="Insert" 
 								DataField="CharacterId" 
 								DataTypeName="rpgmanager.Models.Character" 
 								DataTextField="CharacterName" 
 								DataValueField="CharacterId" 
 								UIHint="ForeignKey" runat="server" />
+                    <asp:Label ID="CharacterLabelSkill" runat="server" Text="Skill:"></asp:Label>
 							<asp:DynamicControl Mode="Insert" 
 								DataField="SkillId" 
 								DataTypeName="rpgmanager.Models.Skill" 
