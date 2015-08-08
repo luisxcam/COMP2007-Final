@@ -4,9 +4,9 @@
 
 <html lang="en">
 
-<!-- Author:-->
-<!-- Web App Name:-->
-<!-- Creation Date:-->
+<!-- Author: Luis Acevedo, Stephen Ciprian, and Blaine Parr-->
+<!-- Web App Name: rpgmanager-->
+<!-- Creation Date: August 2015-->
 <head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -191,6 +191,7 @@
         </form>
     </div>
 
+    <!-- Footer -->
     <footer>
         <nav class=" navbar navbar-inverse navbar-fixed-bottom">
             <div class="container-fluid">

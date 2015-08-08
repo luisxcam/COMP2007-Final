@@ -16,7 +16,7 @@
                     There are no entries found for Items
                 </EmptyDataTemplate>
                 <LayoutTemplate>
-                    <table id="styledTable" class="table">
+                    <table id="styledTable" class="table table-responsive">
                         <thead>
                             <tr>
                                 <th>
