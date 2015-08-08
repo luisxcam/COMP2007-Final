@@ -80,11 +80,11 @@
                                         <asp:DynamicControl runat="server" DataField="NextSessionDate" ID="NextSessionDate" Mode="ReadOnly" />
                                     </td>
                                     <td>
-                                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Campaigns/Details", Item.CampaignId) %>' Text="Details" />
+                                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Campaigns/Details/", Item.CampaignId) %>' Text="Details" />
                                         | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Campaigns/Edit", Item.CampaignId) %>' Text="Edit" />
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Campaigns/Edit/", Item.CampaignId) %>' Text="Edit" />
                                         | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Campaigns/Delete", Item.CampaignId) %>' Text="Delete" />
+                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Campaigns/Delete/", Item.CampaignId) %>' Text="Delete" />
                                     </td>
                                 </tr>
                             </ItemTemplate>
@@ -299,11 +299,11 @@
                                         <asp:DynamicControl runat="server" DataField="StatPoints" ID="StatPoints" Mode="ReadOnly" />
                                     </td>
                                     <td id="crud_function_td">
-                                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Characters/Details", Item.CharacterId) %>' Text="Details" />
+                                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Characters/Details/", Item.CharacterId) %>' Text="Details" />
                                         | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Characters/Edit", Item.CharacterId) %>' Text="Edit" />
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Characters/Edit/", Item.CharacterId) %>' Text="Edit" />
                                         | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/Characters/Delete", Item.CharacterId) %>' Text="Delete" />
+                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Characters/Delete/", Item.CharacterId) %>' Text="Delete" />
                                     </td>
                                 </tr>
                             </ItemTemplate>
@@ -385,11 +385,11 @@
                                         <asp:DynamicControl runat="server" DataField="Quantity" ID="Quantity" Mode="ReadOnly" />
                                     </td>
                                     <td>
-                                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Details", Item.CharacterItemId) %>' Text="Details" />
+                                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/CharacterItems/Details/", Item.CharacterItemId) %>' Text="Details" />
                                         | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Edit", Item.CharacterItemId) %>' Text="Edit" />
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/CharacterItems/Edit/", Item.CharacterItemId) %>' Text="Edit" />
                                         | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/CharacterItems/Delete", Item.CharacterItemId) %>' Text="Delete" />
+                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/CharacterItems/Delete/", Item.CharacterItemId) %>' Text="Delete" />
                                     </td>
                                 </tr>
                             </ItemTemplate>
