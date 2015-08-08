@@ -627,25 +627,31 @@ div#sidenavwrapper.active, #sidenavwrapper.active{
 /*text box fields in form*/
 
 #characterSheet h1{
-    text-shadow: 2px 1px 1px seashell;
+    text-shadow: 4px 4px 3px black;
     font-weight: bold;
     font-size: 40px;
-    color: black;
+    color: seashell;
 }
-#characterDetails input, #stats input {
-    margin-top: 5px;
-    margin-bottom: 5px;
+div.alignedLabel{
+    height:48px;
+}
+#characterSheet  input {
+margin-bottom:23px;
+border:none;
+margin-left:-6px;
     vertical-align: middle;
-    border-radius: 3px;
-    height: 29px;
+    height: 100%;
     width: 60%;
 }
-
+#attributes input{
+    width:35%;
+}
+#attributes input , #stats input{
+    font-size:30px;
+}
 /*labels for whole character sheet*/
 #characterSheet label {
     border-radius: 2px;
-    padding: 5px 10px 2px 10px;
-    width: 80px;
     margin: 0;
      background-color: hsl(75, 9%, 30%) !important;
   background-repeat: repeat-x;
@@ -662,26 +668,31 @@ div#sidenavwrapper.active, #sidenavwrapper.active{
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
   -webkit-font-smoothing: antialiased;
 }
-
-/*label for top portion of sheet*/
-#stats label {
-    text-align: center;
+#characterDetails label{
+    padding:2px 6px;
+        width:80px;
+        margin-right:-9px;
+}
+#stats label{
+    padding: 5px 10px 2px 10px;
+        text-align: center;
     width: 100px;
     line-height: 20px;
     margin: 0;
 }
-
-.statBox, .modifierBox {
-    height: 45px;
-    margin-bottom: 19px;
-    margin-top: 0;
+#attributes label{
+    width: 120px;
+     padding: 25px 10px 2px 10px;
+       line-height: 20px;
+        text-align: center;
+        margin:0;
 }
 
-.statBox {
-    width: 40%;
+/*label for top portion of sheet*/
+
+#characterDetails div,#stats div, #attributes div{
+   
 }
-
-
 .alignedLabel {
     height: 45px;
     margin-top: 10px;
@@ -689,15 +700,16 @@ div#sidenavwrapper.active, #sidenavwrapper.active{
 
 #characterDetails .form-control {
     display: inline-block;
-    width: 30%;
+    border-radius:0;
+    width: 50%;
     height: 29px;
     margin: 5px;
     padding: 2px 12px;
 }
 
 #characterDetails img {
-    width: 100%;
-    padding: 20px;
+    width: 80%;
+    border: 2px solid black;
 }
 
 .button-div-scaffold {
@@ -706,15 +718,12 @@ div#sidenavwrapper.active, #sidenavwrapper.active{
 
 @media only screen and (max-width : 780px) {
     #attributes input, #stats input {
-        width: 30%;
+        width: 60%;
     }
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
     /*keep character images the same size*/
-    #characterDetails img {
-        padding: 0 40px 20px 0;
-    }
 
     #characterSheet div {
         padding: 0;
@@ -725,6 +734,9 @@ div#sidenavwrapper.active, #sidenavwrapper.active{
     }
 }
 /*Utlilty Classes **********************************************************************************/
+.castle_background{
+    background:url(http://res.cloudinary.com/dffqiamzz/image/upload/c_scale,q_23,w_1629/v1439015512/castle_background_xmtx25.jpg);
+}
 
 @media only screen and (max-width : 780px) {
     .no_mobile {
