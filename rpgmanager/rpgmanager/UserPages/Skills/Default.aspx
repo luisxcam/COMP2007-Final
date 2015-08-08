@@ -1,27 +1,27 @@
-﻿<%@ Page Title="SpellList" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Default.aspx.cs" Inherits="rpgmanager.UserPages.Spells.Default" %>
+﻿<%@ Page Title="SkillList" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Default.aspx.cs" Inherits="rpgmanager.UserPages.Skills.Default" %>
 
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container panel">
-        <h2>Spells List</h2>
+        <h2>Skills List</h2>
         <p>
             <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
         </p>
         <div>
             <asp:ListView ID="ListView1" runat="server"
-                DataKeyNames="SpellsId"
-                ItemType="rpgmanager.Models.Spell"
+                DataKeyNames="SkillId"
+                ItemType="rpgmanager.Models.Skill"
                 SelectMethod="GetData">
                 <EmptyDataTemplate>
-                    There are no entries found for Spells
+                    There are no entries found for Skills
                 </EmptyDataTemplate>
                 <LayoutTemplate>
                     <table id="styledTable" class="table table-responsive">
                         <thead>
                             <tr>
                                 <!--<th>
-								<asp:LinkButton Text="SpellsId" CommandName="Sort" CommandArgument="SpellsId" runat="Server" />
-							</th>-->
+                                    <asp:LinkButton Text="SkillId" CommandName="Sort" CommandArgument="SkillId" runat="Server" />
+                                </th>-->
                                 <th>
                                     <asp:LinkButton Text="Name" CommandName="Sort" CommandArgument="Name" runat="Server" />
                                 </th>
@@ -32,19 +32,13 @@
                                     <asp:LinkButton Text="Class" CommandName="Sort" CommandArgument="CharClass" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="Attribute" CommandName="Sort" CommandArgument="Attribute" runat="Server" />
-                                </th>
-                                <th>
                                     <asp:LinkButton Text="Rate" CommandName="Sort" CommandArgument="Rate" runat="Server" />
                                 </th>
                                 <th>
                                     <asp:LinkButton Text="Efficiency" CommandName="Sort" CommandArgument="Efficiency" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="Mana Requirement" CommandName="Sort" CommandArgument="ManaRequired" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Chanting Time" CommandName="Sort" CommandArgument="ChantingTime" runat="Server" />
+                                    <asp:LinkButton Text="Uses-Per-Day" CommandName="Sort" CommandArgument="UsesPerDay" runat="Server" />
                                 </th>
                                 <th>&nbsp;</th>
                             </tr>
@@ -64,8 +58,8 @@
                 <ItemTemplate>
                     <tr>
                         <!--<td>
-								<asp:DynamicControl runat="server" DataField="SpellsId" ID="SpellsId" Mode="ReadOnly" />
-							</td>-->
+                            <asp:DynamicControl runat="server" DataField="SkillId" ID="SkillId" Mode="ReadOnly" />
+                        </td>-->
                         <td>
                             <asp:DynamicControl runat="server" DataField="Name" ID="Name" Mode="ReadOnly" />
                         </td>
@@ -76,26 +70,20 @@
                             <asp:DynamicControl runat="server" DataField="CharClass" ID="CharClass" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:DynamicControl runat="server" DataField="Attribute" ID="Attribute" Mode="ReadOnly" />
-                        </td>
-                        <td>
                             <asp:DynamicControl runat="server" DataField="Rate" ID="Rate" Mode="ReadOnly" />
                         </td>
                         <td>
                             <asp:DynamicControl runat="server" DataField="Efficiency" ID="Efficiency" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:DynamicControl runat="server" DataField="ManaRequired" ID="ManaRequired" Mode="ReadOnly" />
+                            <asp:DynamicControl runat="server" DataField="UsesPerDay" ID="UsesPerDay" Mode="ReadOnly" />
                         </td>
                         <td>
-                            <asp:DynamicControl runat="server" DataField="ChantingTime" ID="ChantingTime" Mode="ReadOnly" />
-                        </td>
-                        <td>
-                            <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Spells/Details", Item.SpellsId) %>' Text="Details" />
+                            <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Skills/Details", Item.SkillId) %>' Text="Details" />
                             | 
-					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Spells/Edit", Item.SpellsId) %>' Text="Edit" />
+					    <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Skills/Edit", Item.SkillId) %>' Text="Edit" />
                             | 
-                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Spells/Delete", Item.SpellsId) %>' Text="Delete" />
+                        <asp:HyperLink runat="server" NavigateUrl='<%# FriendlyUrl.Href("~/UserPages/Skills/Delete", Item.SkillId) %>' Text="Delete" />
                         </td>
                     </tr>
                 </ItemTemplate>

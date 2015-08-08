@@ -1,23 +1,23 @@
-﻿<%@ Page Title="Spell Details" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.UserPages.Spells.Details" %>
+﻿<%@ Page Title="Skill Details" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.UserPages.Skills.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
-            ItemType="rpgmanager.Models.Spell" DataKeyNames="SpellsId"
+            ItemType="rpgmanager.Models.Skill" DataKeyNames="SkillId"
             SelectMethod="GetItem"
             OnItemCommand="ItemCommand" RenderOuterTable="false">
             <EmptyDataTemplate>
-                Cannot find the Spell with SpellsId <%: Request.QueryString["SpellsId"] %>
+                Cannot find the Skill with SkillId <%: Request.QueryString["SkillId"] %>
             </EmptyDataTemplate>
             <ItemTemplate>
                 <fieldset class="form-horizontal">
-                    <legend>Spell Details</legend>
+                    <legend>Skill Details</legend>
 							<!--<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>SpellsId</strong>
+									<strong>SkillId</strong>
 								</div>
 								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="SpellsId" ID="SpellsId" Mode="ReadOnly" />
+									<asp:DynamicControl runat="server" DataField="SkillId" ID="SkillId" Mode="ReadOnly" />
 								</div>
 							</div>-->
 							<div class="row">
@@ -38,18 +38,10 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>CharClass</strong>
+									<strong>Class</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CharClass" ID="CharClass" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>Attribute</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="Attribute" ID="Attribute" Mode="ReadOnly" />
 								</div>
 							</div>
 							<div class="row">
@@ -70,18 +62,10 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>ManaRequired</strong>
+									<strong>Uses-Per-Day</strong>
 								</div>
 								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="ManaRequired" ID="ManaRequired" Mode="ReadOnly" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>ChantingTime</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="ChantingTime" ID="ChantingTime" Mode="ReadOnly" />
+									<asp:DynamicControl runat="server" DataField="UsesPerDay" ID="UsesPerDay" Mode="ReadOnly" />
 								</div>
 							</div>
                  	<div class="row">

@@ -308,8 +308,13 @@
                                 </tr>
                             </ItemTemplate>
                         </asp:ListView>
+
                     </div>
                     <!-- / #charactersForm -->
+                    <div class="text-right">
+                        <asp:HyperLink runat="server" NavigateUrl="CharacterSkills/Default" Text="Check Character Skills" CssClass="btn btn-custom" />
+                        <asp:HyperLink runat="server" NavigateUrl="CharacterSpells/Default" Text="Check Character Spells" CssClass="btn btn-custom" />
+                    </div>
                 </div>
                 <!-- / .panel-body -->
             </div>
@@ -391,7 +396,7 @@
                         </asp:ListView>
                     </div>
                     <p class="text-right">
-                        <asp:HyperLink runat="server" NavigateUrl="CharacterItems/Insert" Text="Give Character Item" CssClass="btn btn-custom" />
+                        <asp:HyperLink runat="server" NavigateUrl="CharacterItems/Insert" Text="Add Item to Character" CssClass="btn btn-custom" />
                     </p>
                 </div>
                 <!-- .panel-body -->

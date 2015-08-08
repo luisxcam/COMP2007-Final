@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="ArmourInsert" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.UserPages.Armours.Insert" %>
-
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container panel">
         <p>&nbsp;</p>

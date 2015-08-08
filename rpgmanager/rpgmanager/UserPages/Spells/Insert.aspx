@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="SpellInsert" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.UserPages.Spells.Insert" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Spell" DefaultMode="Insert"
@@ -14,7 +14,7 @@
                     <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
                     <!--<asp:DynamicControl Mode="Insert" DataField="CharClass" runat="server" />-->
                     <div>
-                        <asp:Label ID="CharClassLabel" runat="server" Text="CharClass"></asp:Label>
+                        <asp:Label ID="CharClassLabel" runat="server" Text="Class"></asp:Label>
                         <asp:DropDownList ID="CharClassDropDownList" runat="server" SelectedValue="<%# BindItem.CharClass %>">
                             <asp:ListItem Value="Warrior"></asp:ListItem>
                             <asp:ListItem Value="Archer"></asp:ListItem>

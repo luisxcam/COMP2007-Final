@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rpgmanager.UserPages.Spells {
+namespace rpgmanager.UserPages.Skills {
     
     
     public partial class Details {
