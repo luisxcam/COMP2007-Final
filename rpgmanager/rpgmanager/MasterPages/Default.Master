@@ -112,6 +112,8 @@
                                             <li><a href="/UserPages/Items/Default">Items</a></li>
                                             <li><a href="/UserPages/Enemies/Default">Enemies</a></li>
                                             <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
+                                            <li><a href="/UserPages/Skills/Default">Skills</a></li>
+                                            <li><a href="/UserPages/Spells/Default">Spells</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -140,6 +142,8 @@
                                 <!--<li><a href="/UserPages/CampaignEnemies/Default">Campaign Enemies</a></li>
                                 <li><a href="/UserPages/CampaignNPCs/Default">Campaign NPC</a></li>
                                 <li><a href="/UserPages/CampaignPlayers/Default">Campaign Players</a></li>-->
+                                <li><a href="/UserPages/Spells/Default.aspx">Spells<span></span></a></li>
+                                <li><a href="/UserPages/Skills/Default.aspx">Skills<span></span></a></li>
                             </ul>
                         </div>
             
