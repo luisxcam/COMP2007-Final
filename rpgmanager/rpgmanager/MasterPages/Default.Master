@@ -91,6 +91,24 @@
                                         </li>
                                         <li><a href="/Logout.aspx">Logout</a></li>
                                     </ul>
+
+                                    <div class="visible-xs">
+                                        <ul>
+                                            <li><a href="/UserPages/ViewCampaign.aspx">Campaigns</a></li>
+                                            <li><a href="/UserPages/ViewCharacters.aspx">Campaigns</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="/UserPages/Campaigns/Default">Campaigns</a></li>
+                                            <li><a href="/UserPages/Characters/Default">Characters</a></li>
+                                            <li><a href="/UserPages/Armours/Default">Armours</a></li>
+                                            <li><a href="/UserPages/Weapons/Default">Weapons</a></li>
+                                            <li><a href="/UserPages/Items/Default">Items</a></li>
+                                            <li><a href="/UserPages/Enemies/Default">Enemies</a></li>
+                                            <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
+                                            <li><a href="/UserPages/Skills/Default">Skills</a></li>
+                                            <li><a href="/UserPages/Spells/Default">Spells</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <!-- /.navbar-collapse -->
                             </div>
@@ -98,7 +116,7 @@
                         </nav>
                     </div>
                     <!-- Mobile SIDE NAV ################################################## -->
-                    <nav id="mobile_side_nav" class="navbar navbar-inverse navbar-fixed-top">
+                    <!--<nav id="mobile_side_nav" class="navbar navbar-inverse navbar-fixed-top">
                         <div class="container-fluid">
                             <div>
                                 <ul class="nav navbar-nav">
@@ -120,7 +138,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </nav>
+                    </nav>-->
                     <!-- /#mobile_side_nav -->
                     <!--SIDE NAV ##########################################################-->
                     <div id="sidenavwrapper" class="active">
@@ -148,7 +166,6 @@
                                 <li><a href="/UserPages/Skills/Default.aspx">Skills<span></span></a></li>
                             </ul>
                         </div>
-            
                 </asp:PlaceHolder>
                 <!-- PrivateNav -->
 
