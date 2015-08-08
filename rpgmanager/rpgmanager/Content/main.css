@@ -64,6 +64,7 @@ p.btn.btn-default {
     .dashboard_container {
          margin-bottom: 30px;
     }
+
 }
 #sidenavwrapper.active .dashboard_container {
     /*gives space from the side-nav for all dashboard pages*/
@@ -748,4 +749,5 @@ margin-left:-6px;
     .no_mobile {
         display: none;
     }
+
 }
