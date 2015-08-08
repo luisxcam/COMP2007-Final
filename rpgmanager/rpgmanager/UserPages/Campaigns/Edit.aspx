@@ -21,8 +21,16 @@
 								UIHint="ForeignKey" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Title" runat="server" />
 						    <asp:DynamicControl Mode="Edit" DataField="Description" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="CreationDate" runat="server" />
-						    <asp:DynamicControl Mode="Edit" DataField="NextSessionDate" runat="server" />
+						    <!--<asp:DynamicControl Mode="Edit" DataField="CreationDate" runat="server" />-->
+                            <div>
+                                <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
+                                <asp:Calendar ID="CreationDateCalendar" runat="server" SelectedDate="<%# BindItem.CreationDate %>"></asp:Calendar>
+                            </div>
+						    <!--<asp:DynamicControl Mode="Edit" DataField="NextSessionDate" runat="server" />-->
+                            <div>
+                                <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
+                                <asp:Calendar ID="NextSessionDateCalendar" runat="server" SelectedDate="<%# BindItem.NextSessionDate %>"></asp:Calendar>
+                            </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
 							<asp:Button runat="server" ID="UpdateButton" CommandName="Update" Text="Update" CssClass="btn btn-primary" />
