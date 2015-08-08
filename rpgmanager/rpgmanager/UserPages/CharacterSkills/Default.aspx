@@ -17,9 +17,9 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>
+                            <!--<th>
 								<asp:LinkButton Text="CharacterSkillsId" CommandName="Sort" CommandArgument="CharacterSkillsId" runat="Server" />
-							</th>
+							</th>-->
                             <th>
 								<asp:LinkButton Text="CharacterId" CommandName="Sort" CommandArgument="CharacterId" runat="Server" />
 							</th>
@@ -43,9 +43,9 @@
             </LayoutTemplate>
             <ItemTemplate>
                 <tr>
-							<td>
+							<!--<td>
 								<asp:DynamicControl runat="server" DataField="CharacterSkillsId" ID="CharacterSkillsId" Mode="ReadOnly" />
-							</td>
+							</td>-->
 							<td>
 								<%#: Item.Character != null ? Item.Character.CharacterName : "" %>
 							</td>

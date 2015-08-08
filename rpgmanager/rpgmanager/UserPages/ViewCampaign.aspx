@@ -18,11 +18,11 @@
                     <table class="table" id="styledTable">
                         <thead>
                             <tr>
-                                <th>
+                                <!--<th>
                                     <asp:LinkButton Text="CampaignId" CommandName="Sort" CommandArgument="CampaignId" runat="Server" />
-                                </th>
+                                </th>-->
                                 <th>
-                                    <asp:LinkButton Text="UsernameId" CommandName="Sort" CommandArgument="UsernameId" runat="Server" />
+                                    <asp:LinkButton Text="Username" CommandName="Sort" CommandArgument="UsernameId" runat="Server" />
                                 </th>
                                 <th>
                                     <asp:LinkButton Text="Title" CommandName="Sort" CommandArgument="Title" runat="Server" />
@@ -31,10 +31,10 @@
                                     <asp:LinkButton Text="Description" CommandName="Sort" CommandArgument="Description" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="CreationDate" CommandName="Sort" CommandArgument="CreationDate" runat="Server" />
+                                    <asp:LinkButton Text="Creation Date" CommandName="Sort" CommandArgument="CreationDate" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="NextSessionDate" CommandName="Sort" CommandArgument="NextSessionDate" runat="Server" />
+                                    <asp:LinkButton Text="Next Session Date" CommandName="Sort" CommandArgument="NextSessionDate" runat="Server" />
                                 </th>
                                 <th>&nbsp;</th>
                             </tr>
@@ -53,9 +53,9 @@
                 </LayoutTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td>
+                        <!--<td>
                             <asp:DynamicControl runat="server" DataField="CampaignId" ID="CampaignId" Mode="ReadOnly" />
-                        </td>
+                        </td>-->
                         <td>
                             <%#: Item.User != null ? Item.User.Username : "" %>
                         </td>
@@ -172,7 +172,7 @@
                                                     </th>
 
                                                     <th>
-                                                        <asp:LinkButton Text="HitPoints" CommandName="Sort" CommandArgument="HP" runat="Server" />
+                                                        <asp:LinkButton Text="Hit Points" CommandName="Sort" CommandArgument="HP" runat="Server" />
                                                     </th>
                                                     <th>
                                                         <asp:LinkButton Text="Mana" CommandName="Sort" CommandArgument="Mana" runat="Server" />
@@ -199,7 +199,7 @@
                                                         <asp:LinkButton Text="Speed" CommandName="Sort" CommandArgument="Speed" runat="Server" />
                                                     </th>
                                                     <th>
-                                                        <asp:LinkButton Text="CarryWeight" CommandName="Sort" CommandArgument="CarryWeight" runat="Server" />
+                                                        <asp:LinkButton Text="Carry Weight" CommandName="Sort" CommandArgument="CarryWeight" runat="Server" />
                                                     </th>
                                                     <th>
                                                         <asp:LinkButton Text="Skill Points" CommandName="Sort" CommandArgument="SkillPoints" runat="Server" />
@@ -328,14 +328,14 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>
+                                                <!--<th>
                                                     <asp:LinkButton Text="CharacterItemId" CommandName="Sort" CommandArgument="CharacterItemId" runat="Server" />
+                                                </th>-->
+                                                <th>
+                                                    <asp:LinkButton Text="Character" CommandName="Sort" CommandArgument="CharacterId" runat="Server" />
                                                 </th>
                                                 <th>
-                                                    <asp:LinkButton Text="CharacterId" CommandName="Sort" CommandArgument="CharacterId" runat="Server" />
-                                                </th>
-                                                <th>
-                                                    <asp:LinkButton Text="ItemId" CommandName="Sort" CommandArgument="ItemId" runat="Server" />
+                                                    <asp:LinkButton Text="Item" CommandName="Sort" CommandArgument="ItemId" runat="Server" />
                                                 </th>
                                                 <th>
                                                     <asp:LinkButton Text="Quantity" CommandName="Sort" CommandArgument="Quantity" runat="Server" />
@@ -357,9 +357,9 @@
                                 </LayoutTemplate>
                                 <ItemTemplate>
                                     <tr>
-                                        <td>
+                                        <!--<td>
                                             <asp:DynamicControl runat="server" DataField="CharacterItemId" ID="CharacterItemId" Mode="ReadOnly" />
-                                        </td>
+                                        </td>-->
                                         <td>
                                             <%#: Item.Character != null ? Item.Character.CharacterName : "" %>
                                         </td>

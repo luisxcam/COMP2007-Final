@@ -53,9 +53,9 @@ namespace rpgmanager
 
                 if (valid)
                 {
-                    // Save changes
-                    _db.Campaigns.Add(item);
-                    _db.SaveChanges();
+                // Save changes
+                _db.Campaigns.Add(item);
+                _db.SaveChanges();
                     Page.ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Campaign successfully added!');", true);
                 } //if ends
                 else
@@ -63,7 +63,7 @@ namespace rpgmanager
                     Page.ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Campaign was not added.\\nPlease ensure a valid user was selected.');", true);
                 } //else ends
 
-                //Response.Redirect("Default");
+                Response.Redirect("Default");
             }
         }
 
@@ -72,7 +72,7 @@ namespace rpgmanager
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
 
-                Response.Redirect("Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
     }

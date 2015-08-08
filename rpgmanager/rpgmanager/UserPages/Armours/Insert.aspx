@@ -14,7 +14,7 @@
                     <asp:DynamicControl Mode="Insert" DataField="Name" runat="server" />
                     <!--<asp:DynamicControl Mode="Insert" DataField="ArmourType" runat="server" />-->
                     <div>
-                        <asp:Label ID="ArmourTypeLabel" runat="server" Text="ArmourType"></asp:Label>
+                        <asp:Label ID="ArmourTypeLabel" runat="server" Text="Armour Type"></asp:Label>
                         <asp:DropDownList ID="ArmourTypeDropDownList" runat="server" SelectedValue="<%# BindItem.ArmourType %>">
                             <asp:ListItem Value="Cloth"></asp:ListItem>
                             <asp:ListItem Value="Leather"></asp:ListItem>
@@ -24,7 +24,7 @@
                     </div>
                     <!--<asp:DynamicControl Mode="Insert" DataField="JobSpecific" runat="server" />-->
                     <div>
-                        <asp:Label ID="JobSpecificLabel" runat="server" Text="JobSpecific"></asp:Label>
+                        <asp:Label ID="JobSpecificLabel" runat="server" Text="Job Specific"></asp:Label>
                         <asp:DropDownList ID="JobSpecificDropDownList" runat="server" SelectedValue="<%# BindItem.JobSpecific %>">
                             <asp:ListItem Value="None"></asp:ListItem>
                             <asp:ListItem Value="Warrior"></asp:ListItem>

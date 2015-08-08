@@ -33,7 +33,7 @@ namespace rpgmanager.Campaigns
                     _db.SaveChanges();
                 }
             }
-            Response.Redirect("../Default");
+            Response.Redirect("~/UserPages/ViewCampaign.aspx");
         }
 
         // This is the Select methd to selects a single Campaign item with the id
@@ -55,7 +55,7 @@ namespace rpgmanager.Campaigns
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
-                Response.Redirect("../Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
     }

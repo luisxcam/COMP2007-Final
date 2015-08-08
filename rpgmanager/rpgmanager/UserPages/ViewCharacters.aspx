@@ -15,10 +15,10 @@
             <ItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Character Details</legend>
-                    <div>
+                    <!--<div>
                         <label>CharacterId</label>
                         <asp:DynamicControl runat="server" DataField="CharacterId" ID="CharacterId" Mode="ReadOnly" />
-                    </div>
+                    </div>-->
                     <div>
                         <label>UsernameId</label>
                         <%#: Item.User != null ? Item.User.Username : "" %>

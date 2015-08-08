@@ -18,14 +18,14 @@
                     <table class="table table-responsive" id="styledTable">
                         <thead>
                             <tr>
-                                <th>
+                                <!--<th>
                                     <asp:LinkButton Text="CampaignEnemyId" CommandName="Sort" CommandArgument="CampaignEnemyId" runat="Server" />
+                                </th>-->
+                                <th>
+                                    <asp:LinkButton Text="Campaign" CommandName="Sort" CommandArgument="CampaignId" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="CampaignId" CommandName="Sort" CommandArgument="CampaignId" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="EnemyId" CommandName="Sort" CommandArgument="EnemyId" runat="Server" />
+                                    <asp:LinkButton Text="Enemy" CommandName="Sort" CommandArgument="EnemyId" runat="Server" />
                                 </th>
                                 <th>&nbsp;</th>
                             </tr>
@@ -44,9 +44,9 @@
                 </LayoutTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td>
+                        <!--<td>
                             <asp:DynamicControl runat="server" DataField="CampaignEnemyId" ID="CampaignEnemyId" Mode="ReadOnly" />
-                        </td>
+                        </td>-->
                         <td>
                             <%#: Item.Campaign != null ? Item.Campaign.Title : "" %>
                         </td>
