@@ -103,6 +103,9 @@
     <Content Include="ContactUs.aspx" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\bsl_blaine.JPG" />
+    <Content Include="Content\images\bsl_luis.JPG" />
+    <Content Include="Content\images\bsl_steve.JPG" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
     <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
