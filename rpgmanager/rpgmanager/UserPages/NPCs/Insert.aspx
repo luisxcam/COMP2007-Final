@@ -1,4 +1,4 @@
-﻿<%@ Page Title="NPCInsert" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.UserPages.NPCs.Insert" %>
+﻿<%@ Page Title="NPCInsert" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Insert.aspx.cs" Inherits="rpgmanager.UserPages.NPCs.Insert" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container panel">
