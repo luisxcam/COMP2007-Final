@@ -56,14 +56,12 @@ namespace rpgmanager
                 // Save changes
                 _db.Campaigns.Add(item);
                 _db.SaveChanges();
-                    Page.ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Campaign successfully added!');", true);
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
                 } //if ends
                 else
                 {
                     Page.ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Campaign was not added.\\nPlease ensure a valid user was selected.');", true);
                 } //else ends
-
-                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
 

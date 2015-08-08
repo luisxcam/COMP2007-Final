@@ -171,6 +171,7 @@
                                 <li><a href="/UserPages/Skills/Default.aspx">Skills<span></span></a></li>
                             </ul>
                         </div>
+                    </div>
                 </asp:PlaceHolder>
                 <!-- PrivateNav -->
 
