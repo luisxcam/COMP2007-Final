@@ -10,13 +10,15 @@
                 <fieldset class="form-horizontal">
 				<legend>Insert CharacterSpell</legend>
 		        <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
-							<asp:DynamicControl Mode="Insert" 
+					<asp:Label runat="server" Text="Character Name:"></asp:Label>		
+                    <asp:DynamicControl Mode="Insert" 
 								DataField="CharacterId" 
 								DataTypeName="rpgmanager.Models.Character" 
 								DataTextField="CharacterName" 
 								DataValueField="CharacterId" 
 								UIHint="ForeignKey" runat="server" />
-							<asp:DynamicControl Mode="Insert" 
+					<asp:Label runat="server" Text="Spells:"></asp:Label>		
+                    <asp:DynamicControl Mode="Insert" 
 								DataField="SpellId" 
 								DataTypeName="rpgmanager.Models.Spell" 
 								DataTextField="Name" 

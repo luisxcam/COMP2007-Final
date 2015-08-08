@@ -19,8 +19,8 @@
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CharacterSkillsId" ID="CharacterSkillsId" Mode="ReadOnly" />
-								</div>-->
-							</div>
+								</div>
+							</div>-->
 							<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>Character</strong>
