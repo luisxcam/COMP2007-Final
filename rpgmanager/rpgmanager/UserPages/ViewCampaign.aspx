@@ -5,8 +5,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="dashboard_container">
-        <div class="panel">
+    <div id="campaign_details_page" class="dashboard_container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Campaigns <span class="caret"></span></a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
             <asp:ListView ID="ListView3" runat="server"
                 DataKeyNames="CampaignId"
                 ItemType="rpgmanager.Models.Campaign"
@@ -81,6 +89,7 @@
                     </tr>
                 </ItemTemplate>
             </asp:ListView>
+                  
             <!--<asp:FormView runat="server"
                 ItemType="rpgmanager.Models.Campaign" DataKeyNames="CampaignId"
                 SelectMethod="GetItemCampaign"
@@ -121,17 +130,20 @@
                 <a href="CampaignPlayers/Default.aspx">Check Players in Campaign</a>
             </div>
         </div>
+                    </div>
         <!-- /.panel -->
+                          </div>
+            </div>
 
 
-        <div class="panel-group" id="accordion">
+        
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Characters</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Characters <span class="caret"></span></a>
                     </h4>
                 </div>
-                <div id="collapse1" class="panel-collapse collapse in">
+                <div id="collapse2" class="panel-collapse collapse in">
                     <div class="panel-body">
                         <div id="charactersForm">
                             <asp:ListView ID="ListView1" runat="server"
@@ -307,10 +319,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Character inventories</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Character inventories <span class="caret"></span></a>
                     </h4>
                 </div>
-                <div id="collapse2" class="panel-collapse collapse">
+                <div id="collapse3" class="panel-collapse collapse">
                     <div class="panel-body">
                         <div>
                             <p class="btn btn-custom">
@@ -389,4 +401,5 @@
             <!-- #accordian -->
         </div>
         <!-- /dashboard_container-->
+    
 </asp:Content>

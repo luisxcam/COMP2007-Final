@@ -136,10 +136,7 @@ footer .navbar {
 #welcome_banner img {
     height: 100%;
 }
-/*Campaign DASHBAORD ****************************************************************************************************/
 
-#charactersFormToggle {
-}
 
 /*Tables *****************************************************************************************************/
 legend, .panel h2{
@@ -150,11 +147,9 @@ legend, .panel h2{
     color: black;
 }
 
-.panel a , #styledTable td a{
+.panel a {
     color:#182662;
     font-size:16px;
-    background-color:#706c6c;
-    border:black 1px solid;
 }
 #styledTable a{
     border:none;
@@ -258,6 +253,12 @@ td#styledTable a {
             text-align: center;
         }
 }
+
+/* Campaign Details Page ***********************************************************************************/
+#campaign_details_page div.panel-default{
+  
+}
+
 /* Forms    **************************************************************************************************/
 
 label {
@@ -310,10 +311,10 @@ p.contact-info{
     text-align: center;    
 }
 @media only screen and (min-width : 768px) {
-    #login-form h1, #contact-form h1, #about-form h1, #signup-form h1{
-    text-align: left;
-}
-    
+    #login-form h1, #contact-form h1, #about-form h1, #signup-form h1 {
+        text-align: left;
+    }
+
 #signup-form, #login-form, #contact-form, #about-form {
     margin-bottom: 20px;
 }
@@ -710,3 +711,4 @@ div#sidenavwrapper.active, #sidenavwrapper.active{
     .no_mobile {
         display: none;
     }
+}
