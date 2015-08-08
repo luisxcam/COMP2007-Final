@@ -29,7 +29,7 @@
                                     <asp:LinkButton Text="Description" CommandName="Sort" CommandArgument="Description" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="CharClass" CommandName="Sort" CommandArgument="CharClass" runat="Server" />
+                                    <asp:LinkButton Text="Class" CommandName="Sort" CommandArgument="CharClass" runat="Server" />
                                 </th>
                                 <th>
                                     <asp:LinkButton Text="Attribute" CommandName="Sort" CommandArgument="Attribute" runat="Server" />
@@ -41,10 +41,10 @@
                                     <asp:LinkButton Text="Efficiency" CommandName="Sort" CommandArgument="Efficiency" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="ManaRequired" CommandName="Sort" CommandArgument="ManaRequired" runat="Server" />
+                                    <asp:LinkButton Text="Mana Requirement" CommandName="Sort" CommandArgument="ManaRequired" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="ChantingTime" CommandName="Sort" CommandArgument="ChantingTime" runat="Server" />
+                                    <asp:LinkButton Text="Chanting Time" CommandName="Sort" CommandArgument="ChantingTime" runat="Server" />
                                 </th>
                                 <th>&nbsp;</th>
                             </tr>

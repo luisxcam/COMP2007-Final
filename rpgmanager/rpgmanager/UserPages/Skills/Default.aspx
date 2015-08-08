@@ -19,9 +19,9 @@
                     <table id="styledTable" class="table table-responsive">
                         <thead>
                             <tr>
-                                <th>
+                                <!--<th>
                                     <asp:LinkButton Text="SkillId" CommandName="Sort" CommandArgument="SkillId" runat="Server" />
-                                </th>
+                                </th>-->
                                 <th>
                                     <asp:LinkButton Text="Name" CommandName="Sort" CommandArgument="Name" runat="Server" />
                                 </th>
@@ -29,7 +29,7 @@
                                     <asp:LinkButton Text="Description" CommandName="Sort" CommandArgument="Description" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="CharClass" CommandName="Sort" CommandArgument="CharClass" runat="Server" />
+                                    <asp:LinkButton Text="Class" CommandName="Sort" CommandArgument="CharClass" runat="Server" />
                                 </th>
                                 <th>
                                     <asp:LinkButton Text="Rate" CommandName="Sort" CommandArgument="Rate" runat="Server" />
@@ -38,7 +38,7 @@
                                     <asp:LinkButton Text="Efficiency" CommandName="Sort" CommandArgument="Efficiency" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="UsesPerDay" CommandName="Sort" CommandArgument="UsesPerDay" runat="Server" />
+                                    <asp:LinkButton Text="Uses-Per-Day" CommandName="Sort" CommandArgument="UsesPerDay" runat="Server" />
                                 </th>
                                 <th>&nbsp;</th>
                             </tr>
@@ -57,9 +57,9 @@
                 </LayoutTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td>
+                        <!--<td>
                             <asp:DynamicControl runat="server" DataField="SkillId" ID="SkillId" Mode="ReadOnly" />
-                        </td>
+                        </td>-->
                         <td>
                             <asp:DynamicControl runat="server" DataField="Name" ID="Name" Mode="ReadOnly" />
                         </td>
