@@ -15,7 +15,7 @@
                     <legend>Delete Character</legend>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>UsernameId</strong>
+									<strong>Username</strong>
 								</div>
 								<div class="col-sm-4">
 									<%#: Item.User != null ? Item.User.Username : "" %>
@@ -23,7 +23,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>WeaponId</strong>
+									<strong>Weapon</strong>
 								</div>
 								<div class="col-sm-4">
 									<%#: Item.Weapon != null ? Item.Weapon.Name : "" %>
@@ -31,7 +31,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>ArmourId</strong>
+									<strong>Armour</strong>
 								</div>
 								<div class="col-sm-4">
 									<%#: Item.Armour != null ? Item.Armour.Name : "" %>
@@ -39,7 +39,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>CharacterName</strong>
+									<strong>Name</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CharacterName" ID="CharacterName" Mode="ReadOnly" />
@@ -47,7 +47,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>CharClass</strong>
+									<strong>Class</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CharClass" ID="CharClass" Mode="ReadOnly" />
@@ -55,7 +55,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>CharLevel</strong>
+									<strong>Level</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CharLevel" ID="CharLevel" Mode="ReadOnly" />
@@ -135,7 +135,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>SkillPoints</strong>
+									<strong>Skill Points</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="SkillPoints" ID="SkillPoints" Mode="ReadOnly" />
@@ -143,7 +143,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>StatPoints</strong>
+									<strong>Stat Points</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="StatPoints" ID="StatPoints" Mode="ReadOnly" />
@@ -175,7 +175,7 @@
 							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<strong>CarryWeight</strong>
+									<strong>Carry Weight</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CarryWeight" ID="CarryWeight" Mode="ReadOnly" />

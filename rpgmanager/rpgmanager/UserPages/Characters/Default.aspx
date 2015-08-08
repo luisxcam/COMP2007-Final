@@ -12,82 +12,84 @@
                     There are no entries found for Characters
                 </EmptyDataTemplate>
                 <LayoutTemplate>
-                    <table class="table table-responsive" id="styledTable">
-                        <thead>
-                            <tr>
-                                <!--<th>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-responsive" id="styledTable">
+                            <thead>
+                                <tr>
+                                    <!--<th>
                                     <asp:LinkButton Text="CharacterId" CommandName="Sort" CommandArgument="CharacterId" runat="Server" />
                                 </th>-->
-                                <th>
-                                    <asp:LinkButton Text="UsernameId" CommandName="Sort" CommandArgument="UsernameId" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="WeaponId" CommandName="Sort" CommandArgument="WeaponId" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="ArmourId" CommandName="Sort" CommandArgument="ArmourId" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="CharacterName" CommandName="Sort" CommandArgument="CharacterName" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="CharClass" CommandName="Sort" CommandArgument="CharClass" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="CharLevel" CommandName="Sort" CommandArgument="CharLevel" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Gender" CommandName="Sort" CommandArgument="Gender" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="HP" CommandName="Sort" CommandArgument="HP" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Mana" CommandName="Sort" CommandArgument="Mana" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Strength" CommandName="Sort" CommandArgument="Strength" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Dexterity" CommandName="Sort" CommandArgument="Dexterity" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Constitution" CommandName="Sort" CommandArgument="Constitution" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Intelligence" CommandName="Sort" CommandArgument="Intelligence" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Wisdom" CommandName="Sort" CommandArgument="Wisdom" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Charisma" CommandName="Sort" CommandArgument="Charisma" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="SkillPoints" CommandName="Sort" CommandArgument="SkillPoints" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="StatPoints" CommandName="Sort" CommandArgument="StatPoints" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Speed" CommandName="Sort" CommandArgument="Speed" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Gold" CommandName="Sort" CommandArgument="Gold" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="Experience" CommandName="Sort" CommandArgument="Experience" runat="Server" />
-                                </th>
-                                <th>
-                                    <asp:LinkButton Text="CarryWeight" CommandName="Sort" CommandArgument="CarryWeight" runat="Server" />
-                                </th>
-                                <th>&nbsp;</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr runat="server" id="itemPlaceholder" />
-                        </tbody>
-                    </table>
+                                    <th>
+                                        <asp:LinkButton Text="Username" CommandName="Sort" CommandArgument="UsernameId" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Weapon" CommandName="Sort" CommandArgument="WeaponId" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Armour" CommandName="Sort" CommandArgument="ArmourId" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Name" CommandName="Sort" CommandArgument="CharacterName" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Class" CommandName="Sort" CommandArgument="CharClass" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Level" CommandName="Sort" CommandArgument="CharLevel" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Gender" CommandName="Sort" CommandArgument="Gender" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="HP" CommandName="Sort" CommandArgument="HP" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Mana" CommandName="Sort" CommandArgument="Mana" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Strength" CommandName="Sort" CommandArgument="Strength" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Dexterity" CommandName="Sort" CommandArgument="Dexterity" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Constitution" CommandName="Sort" CommandArgument="Constitution" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Intelligence" CommandName="Sort" CommandArgument="Intelligence" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Wisdom" CommandName="Sort" CommandArgument="Wisdom" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Charisma" CommandName="Sort" CommandArgument="Charisma" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Skill Points" CommandName="Sort" CommandArgument="SkillPoints" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Stat Points" CommandName="Sort" CommandArgument="StatPoints" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Speed" CommandName="Sort" CommandArgument="Speed" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Gold" CommandName="Sort" CommandArgument="Gold" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Experience" CommandName="Sort" CommandArgument="Experience" runat="Server" />
+                                    </th>
+                                    <th>
+                                        <asp:LinkButton Text="Carry Weight" CommandName="Sort" CommandArgument="CarryWeight" runat="Server" />
+                                    </th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr runat="server" id="itemPlaceholder" />
+                            </tbody>
+                        </table>
+                    </div>
                     <asp:DataPager PageSize="5" runat="server">
                         <Fields>
                             <asp:NextPreviousPagerField ShowLastPageButton="False" ShowNextPageButton="False" ButtonType="Button" ButtonCssClass="btn" />
