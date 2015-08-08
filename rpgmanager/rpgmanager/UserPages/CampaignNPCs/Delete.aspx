@@ -13,14 +13,14 @@
             <ItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Delete CampaignNPC</legend>
-							<div class="row">
+							<!--<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>CampaignNPCId</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CampaignNPCId" ID="CampaignNPCId" Mode="ReadOnly" />
 								</div>
-							</div>
+							</div>-->
 							<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>CampaignId</strong>

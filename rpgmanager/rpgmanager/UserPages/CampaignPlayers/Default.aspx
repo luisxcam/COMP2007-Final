@@ -22,10 +22,10 @@
                                     <asp:LinkButton Text="CampaignPlayerId" CommandName="Sort" CommandArgument="CampaignPlayerId" runat="Server" />
                                 </th>-->
                                 <th>
-                                    <asp:LinkButton Text="CharacterId" CommandName="Sort" CommandArgument="CharacterId" runat="Server" />
+                                    <asp:LinkButton Text="Character" CommandName="Sort" CommandArgument="CharacterId" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="CampaignId" CommandName="Sort" CommandArgument="CampaignId" runat="Server" />
+                                    <asp:LinkButton Text="Campaign" CommandName="Sort" CommandArgument="CampaignId" runat="Server" />
                                 </th>
                                 <th>&nbsp;</th>
                             </tr>

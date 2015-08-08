@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CharacterSpellDelete" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.UserPages.CharacterSpells.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this CharacterSpell?</h3>
         <asp:FormView runat="server"
@@ -13,14 +13,14 @@
             <ItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Delete CharacterSpell</legend>
-							<div class="row">
+							<!--<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>CharacterSpellsId</strong>
 								</div>
 								<div class="col-sm-4">
 									<asp:DynamicControl runat="server" DataField="CharacterSpellsId" ID="CharacterSpellsId" Mode="ReadOnly" />
 								</div>
-							</div>
+							</div>-->
 							<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>CharacterId</strong>
