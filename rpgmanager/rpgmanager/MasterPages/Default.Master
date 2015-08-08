@@ -93,11 +93,7 @@
                                     </ul>
 
                                     <div class="visible-xs">
-                                        <ul>
-                                            <li><a href="/UserPages/ViewCampaign.aspx">Campaigns</a></li>
-                                            <li><a href="/UserPages/ViewCharacters.aspx">Campaigns</a></li>
-                                        </ul>
-                                        <ul>
+                                        <ul class="nav navbar-nav">
                                             <li><a href="/UserPages/Campaigns/Default">Campaigns</a></li>
                                             <li><a href="/UserPages/Characters/Default">Characters</a></li>
                                             <li><a href="/UserPages/Armours/Default">Armours</a></li>
@@ -107,6 +103,12 @@
                                             <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
                                             <li><a href="/UserPages/Skills/Default">Skills</a></li>
                                             <li><a href="/UserPages/Spells/Default">Spells</a></li>
+                                            <li><a href="/UserPages/CampaignEnemies/Default.aspx">Campaign Enemies</a></li>
+                                            <li><a href="/UserPages/CampaignNPCs/Default.aspx">Campaign NPC</a></li>
+                                            <li><a href="/UserPages/CampaignPlayers/Default.aspx">Campaign Players</a></li>
+                                            <li><a href="/UserPages/CharacterItems/Default.aspx">Character Items</a></li>
+                                            <li><a href="/UserPages/CharacterSkills/Default.aspx">Character Skills</a></li>
+                                            <li><a href="/UserPages/CharacterSpells/Default.aspx">Character Spells</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -188,28 +190,31 @@
                                     <InsertItemTemplate>
                                         <fieldset class="form-horizontal">
                                             <asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                                            <asp:Label runat="server" Text="Username:" />
                                             <asp:DynamicControl Mode="Insert"
                                                 DataField="UsernameId"
                                                 DataTypeName="rpgmanager.Models.User"
                                                 DataTextField="Username"
                                                 DataValueField="UsernameId"
                                                 UIHint="ForeignKey" runat="server" />
+                                            <asp:Label runat="server" Text="Title:" />
                                             <asp:DynamicControl Mode="Insert" DataField="Title" runat="server" />
+                                            <asp:Label runat="server" Text="Description:" />
                                             <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
                                             <!--<asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />-->
                                             <div>
-                                                <asp:Label ID="MasterCreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-                                                <asp:TextBox ID="MasterCreationDateTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
-                                            </div>
-                                            <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
-                                            <div>
-                                                <asp:Label ID="MasterNextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-                                                <asp:TextBox ID="MasterNextSessionTextBox" CssClass="datepicker" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-sm-offset-2 col-sm-10">
-                                                    <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
+                                                <div class="row">
+                                                    <asp:Label ID="MasterCreationDateLabel" runat="server" Text="Creation Date" CssClass="col-xs-6"></asp:Label>
+                                                    <asp:TextBox ID="MasterCreationDateTextBox" CssClass="datepicker col-xs-6" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
                                                 </div>
+                                                <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
+                                                <div class="row">
+                                                    <asp:Label ID="MasterNextSessionDateLabel" runat="server" Text="Next Session Date" CssClass="col-xs-6"></asp:Label>
+                                                    <asp:TextBox ID="MasterNextSessionTextBox" CssClass="datepicker col-xs-6" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
                                             </div>
                                         </fieldset>
                                     </InsertItemTemplate>
