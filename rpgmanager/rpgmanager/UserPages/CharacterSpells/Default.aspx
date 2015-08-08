@@ -2,7 +2,7 @@
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <h2>CharacterSpells List</h2>
-    <p>
+    <p class="btn btn-default">
         <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
     </p>
     <div>

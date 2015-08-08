@@ -39,9 +39,13 @@
                             <asp:ListItem Value="Dark"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
+                    <label>Rate</label>
                     <asp:DynamicControl Mode="Edit" DataField="Rate" runat="server" />
+                    <label>Efficiency</label>
                     <asp:DynamicControl Mode="Edit" DataField="Efficiency" runat="server" />
+                    <label>Mana Required</label>
                     <asp:DynamicControl Mode="Edit" DataField="ManaRequired" runat="server" />
+                    <label>Chanting Time</label>
                     <asp:DynamicControl Mode="Edit" DataField="ChantingTime" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
