@@ -1,6 +1,4 @@
-﻿
-
-$(document).ready(function () {
+﻿$(document).ready(function () {
 
     //SIDEBAR add elipses when campaign name is too long
     var MAXCHAR = 16;
@@ -30,3 +28,7 @@ $(document).ready(function () {
     });
 });
 
+//Datepickerfunction from https://jqueryui.com/datepicker/
+$(function () {
+    $(".datepicker").datepicker();
+});

@@ -124,6 +124,7 @@
     <Content Include="ErrorPage.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="MasterPages\Default.Master" />
+    <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Site.Mobile.Master" />
     <EntityDeploy Include="Models\rpg_model.edmx">

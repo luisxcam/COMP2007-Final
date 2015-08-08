@@ -166,20 +166,15 @@
                                             <asp:DynamicControl Mode="Insert" DataField="Title" runat="server" />
                                             <asp:DynamicControl Mode="Insert" DataField="Description" runat="server" />
                                             <!--<asp:DynamicControl Mode="Insert" DataField="CreationDate" runat="server" />-->
-                                            <asp:ScriptManager runat="server" />
-                                            <asp:UpdatePanel runat="server">
-                                                <ContentTemplate>
-                                                    <div>
-                                                        <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
-
-                                                    </div>
-                                                    <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
-                                                    <div>
-                                                        <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
-
-                                                    </div>
-                                                </ContentTemplate>
-                                            </asp:UpdatePanel>
+                                            <div>
+                                                <asp:Label ID="CreationDateLabel" runat="server" Text="CreationDate"></asp:Label>
+                                                <asp:TextBox ID="CreationDateTextBox" CssClass="datepicker" ClientIDMode="Static" runat="server" Text="<%# BindItem.CreationDate %>"></asp:TextBox>
+                                            </div>
+                                            <!--<asp:DynamicControl Mode="Insert" DataField="NextSessionDate" runat="server" />-->
+                                            <div>
+                                                <asp:Label ID="NextSessionDateLabel" runat="server" Text="NextSessionDate"></asp:Label>
+                                                <asp:TextBox ID="NextSessionTextBox" CssClass="datepicker" ClientIDMode="Static" runat="server" Text="<%# BindItem.NextSessionDate %>"></asp:TextBox>
+                                            </div>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
                                                     <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" CssClass="btn btn-primary" />
@@ -207,6 +202,7 @@
     <!-- JavaScript Section -->
     <script src="../Scripts/jquery-2.1.4.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-ui.js"></script>
     <script src="../Scripts/main.js"></script>
 </body>
 </html>
