@@ -51,6 +51,9 @@ p, td {
     margin-left: 0;
     margin-bottom: 50px;
 }
+p.btn.btn-default {
+    margin-bottom: 10px;
+}
 @media only screen and (min-width : 768px) {
     body {
         margin-bottom: 60px;
@@ -719,6 +722,9 @@ margin-left:-6px;
 @media only screen and (max-width : 780px) {
     #attributes input, #stats input {
         width: 60%;
+    }
+    #attributes label {
+        width:100px;
     }
 }
 /* Medium Devices, Desktops */

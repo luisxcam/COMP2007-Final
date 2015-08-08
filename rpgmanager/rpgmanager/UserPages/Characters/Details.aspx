@@ -20,7 +20,7 @@
                             </h1>
                         </div>
                         <div class="col-md-3">
-                            <asp:Image ID="img" CssClass="img" runat="server" ImageUrl="../Content/images/archer.jpg" />
+                            <asp:Image ID="img" CssClass="img" runat="server" ImageUrl="http://res.cloudinary.com/dffqiamzz/image/upload/v1438866077/archer_zk5z9s.jpg" />
                         </div>
                         <div class="col-md-4">
                             <div>

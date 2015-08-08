@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="SpellEdit" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.Spells.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Spell" DefaultMode="Edit" DataKeyNames="SpellsId"
@@ -13,7 +13,9 @@
                 <fieldset class="form-horizontal">
                     <legend>Edit Spell</legend>
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                    <label>Spell Name</label>
                     <asp:DynamicControl Mode="Edit" DataField="Name" runat="server" />
+                    <label>Description</label>
                     <asp:DynamicControl Mode="Edit" DataField="Description" runat="server" />
                     <!--<asp:DynamicControl Mode="Edit" DataField="CharClass" runat="server" />-->
                     <div>
@@ -39,9 +41,13 @@
                             <asp:ListItem Value="Dark"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
+                    <label>Rate</label>
                     <asp:DynamicControl Mode="Edit" DataField="Rate" runat="server" />
+                    <label>Efficiency</label>
                     <asp:DynamicControl Mode="Edit" DataField="Efficiency" runat="server" />
+                    <label>Mana Required</label>
                     <asp:DynamicControl Mode="Edit" DataField="ManaRequired" runat="server" />
+                    <label>Chanting Time</label>
                     <asp:DynamicControl Mode="Edit" DataField="ChantingTime" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">

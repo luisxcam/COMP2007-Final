@@ -4,10 +4,11 @@
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
     <div class="dashboard_container panel">
         <h2>Spells List</h2>
-        <p>
+
+        <p class="btn btn-default">
             <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
         </p>
-        <div>
+
             <asp:ListView ID="ListView1" runat="server"
                 DataKeyNames="SpellsId"
                 ItemType="rpgmanager.Models.Spell"
