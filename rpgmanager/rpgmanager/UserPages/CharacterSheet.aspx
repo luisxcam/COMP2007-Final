@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="dashboard_container panel">
+    <div class="dashboard_container panel castle_background">
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Character" DefaultMode="Insert"
             InsertItemPosition="FirstItem" InsertMethod="InsertItem"
@@ -77,7 +77,7 @@
                     <div  class="row">
                         <div id="stats" class="col-md-5">
                             <div class="alignedLabel">
-                                <label class="alignedLabel">STR <span style="font-size: x-small">(STRENGTH)</span></label>
+                                <label >STR <span style="font-size: x-small">(STRENGTH)</span></label>
                                 <asp:DynamicControl Mode="Insert" DataField="Strength" runat="server" />
                             </div>
                             <div class="alignedLabel">
@@ -107,7 +107,7 @@
                         <!-- / col-4-->
                         <div id="attributes" class="col-md-7">
                             <div class="alignedLabel">
-                                <label>HP <span style="font-size: x-small">(HIT POINTS)</span></label>
+                                <label>HP</label>
                                 <asp:DynamicControl Mode="Insert" DataField="HP" runat="server" />
                             </div>
                             <div class="alignedLabel">
@@ -115,11 +115,11 @@
                                 <asp:DynamicControl Mode="Insert" DataField="Mana" runat="server" />
                             </div>
                             <div class="alignedLabel">
-                                <label>SPEED</label>
+                                <label>Speed</label>
                                 <asp:DynamicControl Mode="Insert" DataField="Speed" runat="server" />
                             </div>
                             <div class="alignedLabel">
-                                <label>MAX CARRY WEIGHT</label>
+                                <label>Carry Weight</label>
                                 <asp:DynamicControl Mode="Insert" DataField="CarryWeight" runat="server" />
                             </div>
                         </div>
