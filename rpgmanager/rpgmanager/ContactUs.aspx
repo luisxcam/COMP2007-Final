@@ -9,9 +9,9 @@
             </div>
             <div class="col-md-5">
                 <p>We would love to hear from you. If you have any questions or concerns with using our product feel free to contact us.</p>
-                <p><i class="fa fa-phone"></i>Phone:705-555-5555</p>
-                <p><i class="fa fa-envelope"></i>Email:BTS@DungeonManaager.com</p>
-                <p>
+                <p class="contact-info"><i class="fa fa-phone"></i>Phone:705-555-5555</p>
+                <p class="contact-info"><i class="fa fa-envelope"></i>Email:BTS@DungeonManaager.com</p>
+                <p class="contact-info">
                     <i class="fa fa-map-marker"></i>Address:
                     <br />
                     4368 Commerce Park<br />

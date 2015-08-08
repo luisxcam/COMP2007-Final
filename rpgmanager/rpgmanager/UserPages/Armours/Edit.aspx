@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="ArmourEdit" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.Armours.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Armour" DefaultMode="Edit" DataKeyNames="ArmourId"
@@ -36,8 +36,11 @@
                             <asp:ListItem Value="Black Mage"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
+                    <label>Defence Rate</label>
                     <asp:DynamicControl Mode="Edit" DataField="DefenseRate" runat="server" />
+                    <label>Magic Defence</label>
                     <asp:DynamicControl Mode="Edit" DataField="MagicDefense" runat="server" />
+                    <label>Weight</label>
                     <asp:DynamicControl Mode="Edit" DataField="Weight" runat="server" />
                     <!--<asp:DynamicControl Mode="Edit" DataField="Attribute" runat="server" />-->
                     <div>
@@ -53,7 +56,9 @@
                             <asp:ListItem Value="Dark"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
+                    <label>Enchantment</label>
                     <asp:DynamicControl Mode="Edit" DataField="Enchantment" runat="server" />
+                    <label>Monetary Value</label>
                     <asp:DynamicControl Mode="Edit" DataField="MonetaryValue" runat="server" />
                     <!--<asp:DynamicControl Mode="Edit" DataField="Rarity" runat="server" />-->
                     <div>

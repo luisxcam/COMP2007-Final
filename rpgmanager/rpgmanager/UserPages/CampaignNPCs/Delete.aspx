@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CampaignNPCDelete" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.UserPages.CampaignNPCs.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this CampaignNPC?</h3>
         <asp:FormView runat="server"

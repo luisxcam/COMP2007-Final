@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Item Details" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.UserPages.Items.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
       
         <asp:FormView runat="server"

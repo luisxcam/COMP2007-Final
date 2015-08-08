@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CampaignEnemyDelete" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.UserPages.CampaignEnemies.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this CampaignEnemy?</h3>
         <asp:FormView runat="server"
@@ -22,19 +22,13 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>CampaignId</strong>
-								</div>
 								<div class="col-sm-4">
-									<%#: Item.Campaign != null ? Item.Campaign.Title : "" %>
+									<%#: Item.Campaign != null ? Item.Campaign.Title : "no campaign selected" %>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>EnemyId</strong>
-								</div>
 								<div class="col-sm-4">
-									<%#: Item.Enemy != null ? Item.Enemy.Name : "" %>
+									<%#: Item.Enemy != null ? Item.Enemy.Name : "no enemey" %>
 								</div>
 							</div>
                  	<div class="row">

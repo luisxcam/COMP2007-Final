@@ -6,9 +6,9 @@
     <div class="container-fluid">
     <div class="row">
         <div id="signup-form" class="col-md-6 col-md-push-3">
-            <h3>Register <span class="no_mobile">a new user</span></h3>
+            <h1>Register <span class="no_mobile">a new user</span></h1>
             <hr />
-            <p>
+            <p style="padding:0">
                 <asp:Literal runat="server" ID="StatusMessage" />
             </p>
             <div class="form-group">

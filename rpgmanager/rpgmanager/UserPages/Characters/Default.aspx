@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="CharacterList" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Default.aspx.cs" Inherits="rpgmanager.Characters.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
         <h2>Characters List</h2>
         <div>
             <asp:ListView ID="ListView1" runat="server"

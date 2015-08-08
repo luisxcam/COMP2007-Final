@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="CharacterItemList" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Default.aspx.cs" Inherits="rpgmanager.CharacterItems.Default" %>
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
         <h2>CharacterItems List</h2>
         <p>
             <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />

@@ -96,7 +96,27 @@
                             <!-- /.container-fluid -->
                         </nav>
                     </div>
-
+                    <!-- Mobile SIDE NAV ################################################## -->
+                    <nav id="mobile_side_nav" class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container-fluid">
+                            <div>
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/UserPages/Campaigns/Default">Campaigns</a></li>
+                                            <li><a href="/UserPages/Characters/Default">Characters</a></li>
+                                            <li><a href="/UserPages/Armours/Default">Armours</a></li>
+                                            <li><a href="/UserPages/Items/Default">Items</a></li>
+                                            <li><a href="/UserPages/Enemies/Default">Enemies</a></li>
+                                            <li><a href="/UserPages/NPCs/Default">NPCs</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav><!-- /#mobile_side_nav -->
                     <!--SIDE NAV ##########################################################-->
                     <div id="sidenavwrapper" class="active">
                         <div id="sidebar-wrapper">
@@ -104,9 +124,9 @@
                                 <li class="sidebar-brand"><a id="menu-toggle" href="#">Dashboard<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
                             </ul>
                             <ul id="sidebar" class="sidebar-nav">
-                                <li style="color: ghostwhite; text-indent: 30px;">New Campaign<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
+                                <li style="color: ghostwhite;">New Campaign<a class="icon nav-inline-glyph" href="#" data-toggle="modal"
                                     data-target="#createCampaignModal"><span class="button_icon glyphicon glyphicon-plus-sign"></span></a></li>
-                                <li style="color: ghostwhite; text-indent: 30px;">New Character<a class="icon nav-inline-glyph" href="/UserPages/CharacterSheet.aspx"><span class="button_icon glyphicon glyphicon-knight"></span></a></li>
+                                <li style="color: ghostwhite;">New Character<a class="icon nav-inline-glyph" href="/UserPages/CharacterSheet.aspx"><span class="button_icon glyphicon glyphicon-knight"></span></a></li>
                                 <li><a href="/UserPages/Campaigns/Default.aspx">Campaigns<span></span></a></li>
                                 <li><a href="/UserPages/Characters/Default.aspx">Characters<span></span></a></li>
                                 <li><a href="/UserPages/Armours/Default.aspx">Armours<span></span></a></li>

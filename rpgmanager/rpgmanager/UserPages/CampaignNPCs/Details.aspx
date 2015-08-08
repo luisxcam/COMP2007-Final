@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CampaignNPC Details" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.UserPages.CampaignNPCs.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
       
         <asp:FormView runat="server"

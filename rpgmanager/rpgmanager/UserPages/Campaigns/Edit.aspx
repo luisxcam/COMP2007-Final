@@ -19,9 +19,13 @@
 								DataTextField="Username" 
 								DataValueField="UsernameId" 
 								UIHint="ForeignKey" runat="server" />
+                    <label>Title</label>
 						    <asp:DynamicControl Mode="Edit" DataField="Title" runat="server" />
+                    <label>Description</label>
 						    <asp:DynamicControl Mode="Edit" DataField="Description" runat="server" />
+                    <label>Creation Date</label>
 						    <asp:DynamicControl Mode="Edit" DataField="CreationDate" runat="server" />
+                    <label>Next Session Date</label>
 						    <asp:DynamicControl Mode="Edit" DataField="NextSessionDate" runat="server" />
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CharacterItemEdit" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.CharacterItems.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.CharacterItem" DefaultMode="Edit" DataKeyNames="CharacterItemId"

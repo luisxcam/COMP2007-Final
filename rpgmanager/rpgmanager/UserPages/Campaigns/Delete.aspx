@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="CampaignDelete" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Delete.aspx.cs" Inherits="rpgmanager.Campaigns.Delete" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <h3>Are you sure want to delete this Campaign?</h3>
         <asp:FormView runat="server"
@@ -13,14 +13,6 @@
             <ItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Delete Campaign</legend>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>CampaignId</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="CampaignId" ID="CampaignId" Mode="ReadOnly" />
-								</div>
-							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>UsernameId</strong>

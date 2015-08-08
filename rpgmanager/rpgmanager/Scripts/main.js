@@ -18,12 +18,6 @@ $(document).ready(function () {
         $("#sidenavwrapper").toggleClass("active");
     });
 
-    $(function () {
-        $("#datepicker").datepicker();
-        $("#format").change(function () {
-            $("#datepicker").datepicker("option", "dateFormat", $(this).val());
-        });
-    });
 
     $("#charactersFormToggle").click(function (e) {
         var pageButtons = document.getElementById("charactersForm").getElementsByTagName('span')[0];

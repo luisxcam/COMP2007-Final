@@ -2,7 +2,7 @@
 
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
         <h2>NPCs List</h2>
         <p>
             <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
@@ -16,7 +16,7 @@
                     There are no entries found for NPCs
                 </EmptyDataTemplate>
                 <LayoutTemplate>
-                    <table id="styledTable" class="table">
+                    <table id="styledTable" class="table table-responsive">
                         <thead>
                             <tr>
                                 <th>

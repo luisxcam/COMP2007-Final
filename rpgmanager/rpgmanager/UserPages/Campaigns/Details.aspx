@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Campaign Details" Language="C#" MasterPageFile="~/MasterPages/Default.Master" CodeBehind="Details.aspx.cs" Inherits="rpgmanager.Campaigns.Details" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
       
         <asp:FormView runat="server"
@@ -13,14 +13,6 @@
             <ItemTemplate>
                 <fieldset class="form-horizontal">
                     <legend>Campaign Details</legend>
-							<div class="row">
-								<div class="col-sm-2 text-right">
-									<strong>CampaignId</strong>
-								</div>
-								<div class="col-sm-4">
-									<asp:DynamicControl runat="server" DataField="CampaignId" ID="CampaignId" Mode="ReadOnly" />
-								</div>
-							</div>
 							<div class="row">
 								<div class="col-sm-2 text-right">
 									<strong>UsernameId</strong>
