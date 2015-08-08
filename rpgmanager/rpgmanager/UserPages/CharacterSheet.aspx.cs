@@ -33,7 +33,7 @@ namespace rpgmanager.UserPages
                     _db.Characters.Add(item);
                     _db.SaveChanges();
 
-                    Response.Redirect("Default");
+                    Response.Redirect("~/UserPages/ViewCampaign.aspx");
                 }
             }
         }
@@ -42,7 +42,7 @@ namespace rpgmanager.UserPages
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
-                Response.Redirect("Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
     }

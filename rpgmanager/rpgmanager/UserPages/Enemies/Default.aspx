@@ -18,9 +18,9 @@
                     <table class="table table-responsive" id="styledTable">
                         <thead>
                             <tr>
-                                <th>
+                                <!--<th>
                                     <asp:LinkButton Text="EnemyId" CommandName="Sort" CommandArgument="EnemyId" runat="Server" />
-                                </th>
+                                </th>-->
                                 <th>
                                     <asp:LinkButton Text="Name" CommandName="Sort" CommandArgument="Name" runat="Server" />
                                 </th>
@@ -71,9 +71,9 @@
                 </LayoutTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td>
+                        <!--<td>
                             <asp:DynamicControl runat="server" DataField="EnemyId" ID="EnemyId" Mode="ReadOnly" />
-                        </td>
+                        </td>-->
                         <td>
                             <asp:DynamicControl runat="server" DataField="Name" ID="Name" Mode="ReadOnly" />
                         </td>

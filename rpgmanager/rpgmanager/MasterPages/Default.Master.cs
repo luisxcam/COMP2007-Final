@@ -45,7 +45,7 @@ namespace rpgmanager
                 _db.Campaigns.Add(item);
                 _db.SaveChanges();
 
-                Response.Redirect("Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
 
@@ -54,7 +54,7 @@ namespace rpgmanager
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
 
-                Response.Redirect("Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
     }

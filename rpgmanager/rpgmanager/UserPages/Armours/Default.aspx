@@ -2,7 +2,7 @@
 
 <%@ Register TagPrefix="FriendlyUrls" Namespace="Microsoft.AspNet.FriendlyUrls" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div class="dashboard_container">
+    <div class="dashboard_container panel">
         <h2>Armours List</h2>
         <p>
             <asp:HyperLink runat="server" NavigateUrl="Insert" Text="Create new" />
@@ -19,23 +19,23 @@
                     <table id="styledTable" class="table table-responsive">
                         <thead>
                             <tr>
-                                <th>
+                                <!--<th>
                                     <asp:LinkButton Text="ArmourId" CommandName="Sort" CommandArgument="ArmourId" runat="Server" />
-                                </th>
+                                </th>-->
                                 <th>
                                     <asp:LinkButton Text="Name" CommandName="Sort" CommandArgument="Name" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="ArmourType" CommandName="Sort" CommandArgument="ArmourType" runat="Server" />
+                                    <asp:LinkButton Text="Type" CommandName="Sort" CommandArgument="ArmourType" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="JobSpecific" CommandName="Sort" CommandArgument="JobSpecific" runat="Server" />
+                                    <asp:LinkButton Text="Job Specific" CommandName="Sort" CommandArgument="JobSpecific" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="DefenseRate" CommandName="Sort" CommandArgument="DefenseRate" runat="Server" />
+                                    <asp:LinkButton Text="Defense Rate" CommandName="Sort" CommandArgument="DefenseRate" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="MagicDefense" CommandName="Sort" CommandArgument="MagicDefense" runat="Server" />
+                                    <asp:LinkButton Text="Magic Defense" CommandName="Sort" CommandArgument="MagicDefense" runat="Server" />
                                 </th>
                                 <th>
                                     <asp:LinkButton Text="Weight" CommandName="Sort" CommandArgument="Weight" runat="Server" />
@@ -47,7 +47,7 @@
                                     <asp:LinkButton Text="Enchantment" CommandName="Sort" CommandArgument="Enchantment" runat="Server" />
                                 </th>
                                 <th>
-                                    <asp:LinkButton Text="MonetaryValue" CommandName="Sort" CommandArgument="MonetaryValue" runat="Server" />
+                                    <asp:LinkButton Text="Value" CommandName="Sort" CommandArgument="MonetaryValue" runat="Server" />
                                 </th>
                                 <th>
                                     <asp:LinkButton Text="Rarity" CommandName="Sort" CommandArgument="Rarity" runat="Server" />
@@ -69,9 +69,9 @@
                 </LayoutTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td>
+                        <!--<td>
                             <asp:DynamicControl runat="server" DataField="ArmourId" ID="ArmourId" Mode="ReadOnly" />
-                        </td>
+                        </td>-->
                         <td>
                             <asp:DynamicControl runat="server" DataField="Name" ID="Name" Mode="ReadOnly" />
                         </td>

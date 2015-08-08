@@ -39,7 +39,7 @@ namespace rpgmanager.UserPages
         {
             if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
             {
-                Response.Redirect("../Default");
+                Response.Redirect("~/UserPages/ViewCampaign.aspx");
             }
         }
     }
