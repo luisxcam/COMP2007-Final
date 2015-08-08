@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="SpellEdit" Language="C#" MasterPageFile="~/MasterPages\Default.Master" CodeBehind="Edit.aspx.cs" Inherits="rpgmanager.UserPages.Spells.Edit" %>
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <div>
+    <div class="dashboard_container panel">
 		<p>&nbsp;</p>
         <asp:FormView runat="server"
             ItemType="rpgmanager.Models.Spell" DefaultMode="Edit" DataKeyNames="SpellsId"
@@ -13,7 +13,9 @@
                 <fieldset class="form-horizontal">
                     <legend>Edit Spell</legend>
 					<asp:ValidationSummary runat="server" CssClass="alert alert-danger" />
+                    <label>Spell Name</label>
                     <asp:DynamicControl Mode="Edit" DataField="Name" runat="server" />
+                    <label>Description</label>
                     <asp:DynamicControl Mode="Edit" DataField="Description" runat="server" />
                     <!--<asp:DynamicControl Mode="Edit" DataField="CharClass" runat="server" />-->
                     <div>
