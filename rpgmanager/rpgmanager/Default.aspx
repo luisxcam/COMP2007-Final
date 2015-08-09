@@ -36,11 +36,12 @@
 
     <!--Authenticated webpage-->
     <asp:PlaceHolder runat="server" ID="AuthenticatedHomePage" Visible="false">
-        <div id="dashbaordHomePage">
-            <%--    <h1 id="login_greeting_header" class="align-center">
-            <asp:Literal runat="server" ID="StatusText" />
-        </h1>--%>
-            <%--<img style="width:100%;" src="http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg" alt="" />--%>
+        <div class="screencast container-fluid">
+            <div class="text-center">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WVi0d7oqDvs"></iframe>
+                </div>
+            </div>
         </div>
     </asp:PlaceHolder>
 </asp:Content>

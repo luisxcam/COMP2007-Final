@@ -751,3 +751,13 @@ margin-left:-6px;
     }
 
 }
+
+/*IFrame **********************************************************************************/
+.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video{
+    max-width:1080px;
+    max-height:720px;
+}
+
+.screencast.container-fluid {
+    margin-left: 20%;
+}
