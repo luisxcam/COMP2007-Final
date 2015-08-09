@@ -13,30 +13,34 @@
             <h2>The Team</h2>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-4">
-                        <div class="thumbnail">
-                            <img src="Content/images/bsl_blaine.JPG" class="visible-lg" />
-                            <div class="caption">
-                                <h3>Blaine Parr</h3>
-                                <p>Troubleshooting, Back-End Development, C# Master</p>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img src="Content/images/bsl_blaine.JPG" class="visible-lg" />
+                                    <div class="caption">
+                                        <h3>Blaine Parr</h3>
+                                        <p>Troubleshooting, Back-End Development, C# Master</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="thumbnail">
-                            <img src="Content/images/bsl_luis.JPG" class="visible-lg" />
-                            <div class="caption">
-                                <h3>Luis Acevedo</h3>
-                                <p>Troubleshooting, Back-End Support, Database Management, Git Management</p>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img src="Content/images/bsl_luis.JPG" class="visible-lg" />
+                                    <div class="caption">
+                                        <h3>Luis Acevedo</h3>
+                                        <p>Troubleshooting, Back-End Support, Database Management, Git Management</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="thumbnail">
-                            <img src="Content/images/bsl_steve.JPG" class="visible-lg" />
-                            <div class="caption">
-                                <h3>Stephen Ciprian</h3>
-                                <p>Troubleshooting, Front End Development, Javascript, Bootstrap, Back-End Support</p>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <img src="Content/images/bsl_steve.JPG" class="visible-lg" />
+                                    <div class="caption">
+                                        <h3>Stephen Ciprian</h3>
+                                        <p>Troubleshooting, Front End Development, Javascript, Bootstrap, Back-End Support</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
