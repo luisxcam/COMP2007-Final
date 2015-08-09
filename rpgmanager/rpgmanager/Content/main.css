@@ -5,12 +5,12 @@ body {
     margin-bottom: 80px;
 }
 
-    .loggedIn {
-        overflow: hidden;
-        background: url(http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg) no-repeat center center fixed ;
-        background-position-x:left;
-        background-position-y:top;
-    }
+.loggedIn {
+    overflow: hidden;
+    background: url(http://res.cloudinary.com/dffqiamzz/image/upload/v1438821379/loginDashboardBackground_ucb031.jpg) no-repeat center center fixed;
+    background-position-x: left;
+    background-position-y: top;
+}
 
 body.loggedOut {
     background: url(http://res.cloudinary.com/dffqiamzz/image/upload/v1438086539/dungeons_and_dragons_party_ztbbve.jpg) no-repeat center center fixed;
@@ -23,12 +23,13 @@ h1, h2, h3, h4, th {
 }
 
 h1, h2, h3 {
-    padding:15px;
+    padding: 15px;
 }
 
-h3{
-    color:hsl(360, 95%, 34%);
+h3 {
+    color: hsl(360, 95%, 34%);
 }
+
 p, td {
     font-family: 'Vollkorn', serif;
 }
@@ -39,33 +40,39 @@ p, td {
 
 .panel {
     padding: 10px;
-    background-color:#999;
+    background-color: #999;
 }
-.panel span, .panel label, .panel strong{
-    font-size: 16px;
-    color:black;
-    font-weight:700;
+
+    .panel span, .panel label, .panel strong {
+        font-size: 16px;
+        color: black;
+        font-weight: 700;
         font-family: 'Vollkorn', Georgia, Times, serif;
-}
+    }
+
 .dashboard_container {
     margin-left: 0;
     margin-bottom: 50px;
 }
+
 p.btn.btn-default {
     margin-bottom: 10px;
 }
+
 @media only screen and (min-width : 768px) {
     body {
         margin-bottom: 60px;
     }
-        .loggedIn {
+
+    .loggedIn {
         background-position: unset;
-}
-    .dashboard_container {
-         margin-bottom: 30px;
     }
 
+    .dashboard_container {
+        margin-bottom: 30px;
+    }
 }
+
 #sidenavwrapper.active .dashboard_container {
     /*gives space from the side-nav for all dashboard pages*/
     margin-left: 30px;
@@ -143,7 +150,7 @@ footer .navbar {
 
 
 /*Tables *****************************************************************************************************/
-legend, .panel h2{
+legend, .panel h2 {
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
     text-shadow: 2px 1px 1px seashell;
     font-weight: bold;
@@ -152,17 +159,20 @@ legend, .panel h2{
 }
 
 .panel a {
-    color:#182662;
-    font-size:16px;
+    color: #182662;
+    font-size: 16px;
 }
-#styledTable a{
-    border:none;
-    background-color:transparent;
+
+#styledTable a {
+    border: none;
+    background-color: transparent;
 }
-th a{
-    border:none;
-    background-color:none;
+
+th a {
+    border: none;
+    background-color: none;
 }
+
 #styledTable {
     border: 1px solid #000000;
 }
@@ -259,8 +269,7 @@ td#styledTable a {
 }
 
 /* Campaign Details Page ***********************************************************************************/
-#campaign_details_page div.panel-default{
-  
+#campaign_details_page div.panel-default {
 }
 
 /* Forms    **************************************************************************************************/
@@ -280,48 +289,60 @@ hr {
     margin-bottom: 15px;
     border-radius: 6px;
     background-color: rgba(245, 245, 245, 0.5);
+}
 
-}
-#signup-form p, #login-form p, #contact-form p, #about-form  p{
-    color:black;
-        padding:15px;
-}
-#contact-form p, #login-form p{
-    font-weight:bold;
-    padding:0;
-}
-#login-form a{
-    color:mediumblue;
-}
-    #login-form h4 {
-        color:red;
+    #signup-form p, #login-form p, #contact-form p, #about-form p {
+        color: black;
+        padding: 15px;
     }
 
-p.contact-info{
-    font-weight:normal;
+    #contact-form p, #login-form p {
+        font-weight: bold;
+        padding: 0;
+    }
+
+    #login-form a {
+        color: mediumblue;
+    }
+
+    #login-form h4 {
+        color: red;
+    }
+
+p.contact-info {
+    font-weight: normal;
 }
-#signup-form label, #login-form label, #contact-form label, #about-form  label{
-    color:black;
-        font-size:18px;
-    font-weight:bold;
+
+#signup-form label, #login-form label, #contact-form label, #about-form label {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
 }
-#signup-form h1, #login-form h1, #contact-form h1, #about-form  h1{
-    color:black;
+
+#signup-form h1, #login-form h1, #contact-form h1, #about-form h1 {
+    color: black;
 }
+
 .button-div {
     text-align: right;
 }
-    #login-form h1, #contact-form h1, #about-form h1, #signup-form h1{
-    text-align: center;    
+
+#login-form h1, #contact-form h1, #about-form h1, #signup-form h1 {
+    text-align: center;
 }
+
 @media only screen and (min-width : 768px) {
     #login-form h1, #contact-form h1, #about-form h1, #signup-form h1 {
         text-align: left;
     }
 
-#signup-form, #login-form, #contact-form, #about-form {
-    margin-bottom: 20px;
-}
+    .screencast.container-fluid {
+        margin-left: 20%;
+    }
+
+    #signup-form, #login-form, #contact-form, #about-form {
+        margin-bottom: 20px;
+    }
 }
 /*Buttons    ******************************************************************************/
 .btn-custom {
@@ -391,67 +412,74 @@ p.contact-info{
 
 /*Side Bar********************************************************************************************/
 
-#mobile_side_nav{
-     border-width: 0px;
+#mobile_side_nav {
+    border-width: 0px;
     -webkit-box-shadow: 0px 0px;
     box-shadow: 0px 0px;
     background-color: rgba(0,0,0,0.0);
-    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0%, rgba(0,0,0,0.00)),color-stop( 100%, rgba(0,0,0,0.00)));
     background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
     background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-    margin-top:40px;
-    width:20px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-top: 40px;
+    width: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
     #mobile_side_nav ul.dropdown-menu {
         background-color: white;
-        margin:auto;
+        margin: auto;
     }
-#mobile_side_nav i{
-    font-size:20px;
-    background-color: rgba(245, 245, 245, 0.2);
-    border-radius:3px;
-}
+
+    #mobile_side_nav i {
+        font-size: 20px;
+        background-color: rgba(245, 245, 245, 0.2);
+        border-radius: 3px;
+    }
+
     #mobile_side_nav.navbar-inverse .navbar-nav > li > a:hover {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
     }
 
-#mobile_side_nav a {
-    margin:0;
-}
-#sidebar-wrapper{
-    display:none;
+    #mobile_side_nav a {
+        margin: 0;
+    }
+
+#sidebar-wrapper {
+    display: none;
 }
 
 @media only screen and (max-width : 768px) {
-div#sidenavwrapper, #sidenavwrapper{
-    padding:0;
-    margin:0;
-}
-div#sidenavwrapper.active, #sidenavwrapper.active{
-    padding:0;
-    margin:0;
-}
-#sidenavwrapper.active{
-    padding:0;
-}
+    div#sidenavwrapper, #sidenavwrapper {
+        padding: 0;
+        margin: 0;
+    }
 
-#sidenavwrapper.active .dashboard_container{
-    margin:0;
-}
+        div#sidenavwrapper.active, #sidenavwrapper.active {
+            padding: 0;
+            margin: 0;
+        }
+
+        #sidenavwrapper.active {
+            padding: 0;
+        }
+
+            #sidenavwrapper.active .dashboard_container {
+                margin: 0;
+            }
 }
 
 
 @media only screen and (min-width : 768px) {
-#mobile_side_nav{
-    display:none;
-}
-#sidebar-wrapper{
-    display:block;
-}
+    #mobile_side_nav {
+        display: none;
+    }
+
+    #sidebar-wrapper {
+        display: block;
+    }
 }
 
 #sidenavwrapper {
@@ -630,73 +658,80 @@ div#sidenavwrapper.active, #sidenavwrapper.active{
 /*Character Creation Form    ***********************************************************************/
 /*text box fields in form*/
 
-#characterSheet h1{
+#characterSheet h1 {
     text-shadow: 4px 4px 3px black;
     font-weight: bold;
     font-size: 40px;
     color: seashell;
 }
-div.alignedLabel{
-    height:48px;
+
+div.alignedLabel {
+    height: 48px;
 }
-#characterSheet  input {
-margin-bottom:23px;
-border:none;
-margin-left:-6px;
+
+#characterSheet input {
+    margin-bottom: 23px;
+    border: none;
+    margin-left: -6px;
     vertical-align: middle;
     height: 100%;
     width: 60%;
 }
-#attributes input{
-    width:35%;
+
+#attributes input {
+    width: 35%;
 }
-#attributes input , #stats input{
-    font-size:30px;
+
+#attributes input, #stats input {
+    font-size: 30px;
 }
 /*labels for whole character sheet*/
 #characterSheet label {
     border-radius: 2px;
     margin: 0;
-     background-color: hsl(75, 9%, 30%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4f5345", endColorstr="#4f5345");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#4f5345), to(#4f5345));
-  background-image: -moz-linear-gradient(top, #4f5345, #4f5345);
-  background-image: -ms-linear-gradient(top, #4f5345, #4f5345);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4f5345), color-stop(100%, #4f5345));
-  background-image: -webkit-linear-gradient(top, #4f5345, #4f5345);
-  background-image: -o-linear-gradient(top, #4f5345, #4f5345);
-  background-image: linear-gradient(#4f5345, #4f5345);
-  border-color: #4f5345 #4f5345 hsl(75, 9%, 30%);
-  color: #fff !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
-  -webkit-font-smoothing: antialiased;
+    background-color: hsl(75, 9%, 30%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4f5345", endColorstr="#4f5345");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#4f5345), to(#4f5345));
+    background-image: -moz-linear-gradient(top, #4f5345, #4f5345);
+    background-image: -ms-linear-gradient(top, #4f5345, #4f5345);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4f5345), color-stop(100%, #4f5345));
+    background-image: -webkit-linear-gradient(top, #4f5345, #4f5345);
+    background-image: -o-linear-gradient(top, #4f5345, #4f5345);
+    background-image: linear-gradient(#4f5345, #4f5345);
+    border-color: #4f5345 #4f5345 hsl(75, 9%, 30%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
+    -webkit-font-smoothing: antialiased;
 }
-#characterDetails label{
-    padding:2px 6px;
-        width:80px;
-        margin-right:-9px;
+
+#characterDetails label {
+    padding: 2px 6px;
+    width: 80px;
+    margin-right: -9px;
 }
-#stats label{
+
+#stats label {
     padding: 5px 10px 2px 10px;
-        text-align: center;
+    text-align: center;
     width: 100px;
     line-height: 20px;
     margin: 0;
 }
-#attributes label{
+
+#attributes label {
     width: 120px;
-     padding: 25px 10px 2px 10px;
-       line-height: 20px;
-        text-align: center;
-        margin:0;
+    padding: 25px 10px 2px 10px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0;
 }
 
 /*label for top portion of sheet*/
 
-#characterDetails div,#stats div, #attributes div{
-   
+#characterDetails div, #stats div, #attributes div {
 }
+
 .alignedLabel {
     height: 45px;
     margin-top: 10px;
@@ -704,7 +739,7 @@ margin-left:-6px;
 
 #characterDetails .form-control {
     display: inline-block;
-    border-radius:0;
+    border-radius: 0;
     width: 50%;
     height: 29px;
     margin: 5px;
@@ -724,8 +759,9 @@ margin-left:-6px;
     #attributes input, #stats input {
         width: 60%;
     }
+
     #attributes label {
-        width:100px;
+        width: 100px;
     }
 }
 /* Medium Devices, Desktops */
@@ -741,23 +777,18 @@ margin-left:-6px;
     }
 }
 /*Utlilty Classes **********************************************************************************/
-.castle_background{
-    background:url(http://res.cloudinary.com/dffqiamzz/image/upload/c_scale,q_23,w_1629/v1439015512/castle_background_xmtx25.jpg);
+.castle_background {
+    background: url(http://res.cloudinary.com/dffqiamzz/image/upload/c_scale,q_23,w_1629/v1439015512/castle_background_xmtx25.jpg);
 }
 
 @media only screen and (max-width : 780px) {
     .no_mobile {
         display: none;
     }
-
 }
 
 /*IFrame **********************************************************************************/
-.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video{
-    max-width:1080px;
-    max-height:720px;
-}
-
-.screencast.container-fluid {
-    margin-left: 20%;
+.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+    max-width: 1080px;
+    max-height: 720px;
 }
